@@ -12,6 +12,7 @@ import {
   Linkedin
 } from "lucide-react";
 import heroImage from "@/assets/hero-consulting.jpg";
+import esitLogo from "@/assets/esit-logo-light.png";
 
 const Index = () => {
   const services = [
@@ -58,7 +59,7 @@ const Index = () => {
       {/* Header */}
       <header className="border-b bg-card/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <h2 className="text-2xl font-bold text-primary">ESIT-Consulting</h2>
+          <img src={esitLogo} alt="ESIT-Consulting" className="h-10 md:h-12" />
           <nav className="hidden md:flex gap-6">
             <a href="#services" className="text-foreground hover:text-primary transition-colors">Services</a>
             <a href="#expertise" className="text-foreground hover:text-primary transition-colors">Expertise</a>
