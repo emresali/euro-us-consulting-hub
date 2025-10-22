@@ -16,6 +16,8 @@ import esitLogo from "@/assets/esit-logo-light.png";
 import profileImage from "@/assets/profile-2.jpg";
 import profileAlt1 from "@/assets/profile-1.jpg";
 import profileAlt2 from "@/assets/profile-3.jpg";
+import profileHero from "@/assets/profile-hero.jpg";
+import profileAdditional from "@/assets/profile-additional.jpg";
 import ContactForm from "@/components/ContactForm";
 import CaseStudies from "@/components/CaseStudies";
 
@@ -86,6 +88,16 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-[hsl(215,25%,15%)] via-[hsl(215,25%,15%,0.95)] to-[hsl(215,25%,15%,0.7)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(180,54%,57%,0.1),transparent_50%)]" />
         </div>
+        
+        {/* Subtle profile image in header - transparent and integrated */}
+        <div className="absolute top-20 right-8 hidden lg:block opacity-20 hover:opacity-30 transition-opacity duration-500">
+          <img 
+            src={profileHero} 
+            alt="Consultant" 
+            className="w-64 h-64 object-cover rounded-full blur-[2px]"
+          />
+        </div>
+        
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-white">
@@ -125,14 +137,18 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <div className="hidden md:block relative">
-              <div className="relative z-10">
+            <div className="hidden md:flex justify-center relative">
+              <div className="relative z-10 w-80">
                 <img 
-                  src={profileImage} 
+                  src={profileHero} 
                   alt="Professional IT Consultant" 
-                  className="rounded-2xl w-full shadow-2xl"
+                  className="rounded-full w-full shadow-2xl border-4 border-white/10"
                   style={{ boxShadow: 'var(--shadow-elevated)' }}
                 />
+                <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-6 py-3 rounded-xl shadow-lg">
+                  <p className="font-bold text-lg">15+ Years</p>
+                  <p className="text-xs">Expert</p>
+                </div>
               </div>
               <div className="absolute -bottom-8 -left-8 w-64 h-64 bg-primary/20 rounded-full blur-3xl" />
               <div className="absolute -top-8 -right-8 w-64 h-64 bg-accent/20 rounded-full blur-3xl" />
@@ -190,19 +206,19 @@ const Index = () => {
                   <img 
                     src={profileImage} 
                     alt="Professional consultant portrait" 
-                    className="rounded-2xl shadow-lg w-full col-span-2"
+                    className="rounded-2xl shadow-lg w-full col-span-2 hover:scale-105 transition-transform duration-300"
                     style={{ boxShadow: 'var(--shadow-card-hover)' }}
                   />
                   <img 
-                    src={profileAlt1} 
+                    src={profileAdditional} 
                     alt="Consultant profile" 
-                    className="rounded-xl shadow-md w-full"
+                    className="rounded-xl shadow-md w-full hover:scale-105 transition-transform duration-300"
                     style={{ boxShadow: 'var(--shadow-subtle)' }}
                   />
                   <img 
-                    src={profileAlt2} 
+                    src={profileAlt1} 
                     alt="Professional headshot" 
-                    className="rounded-xl shadow-md w-full"
+                    className="rounded-xl shadow-md w-full hover:scale-105 transition-transform duration-300"
                     style={{ boxShadow: 'var(--shadow-subtle)' }}
                   />
                 </div>
