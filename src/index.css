@@ -43,8 +43,11 @@ All colors MUST be HSL.
     /* Custom design tokens - ESIT Brand */
     --gradient-primary: linear-gradient(135deg, hsl(180 54% 57%), hsl(180 54% 70%));
     --gradient-hero: linear-gradient(180deg, hsl(200 15% 25% / 0.9), hsl(200 15% 20% / 0.95));
+    --gradient-overlay: linear-gradient(180deg, hsl(200 15% 25% / 0.1), hsl(200 15% 20% / 0.3));
     --shadow-card: 0 4px 20px hsl(180 50% 20% / 0.08);
     --shadow-card-hover: 0 8px 30px hsl(180 50% 20% / 0.12);
+    --shadow-elevated: 0 20px 60px hsl(180 50% 20% / 0.15);
+    --shadow-subtle: 0 2px 8px hsl(180 50% 20% / 0.05);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
@@ -96,8 +99,11 @@ All colors MUST be HSL.
     
     --gradient-primary: linear-gradient(135deg, hsl(180 54% 57%), hsl(180 54% 70%));
     --gradient-hero: linear-gradient(180deg, hsl(200 20% 10% / 0.9), hsl(200 15% 8% / 0.95));
+    --gradient-overlay: linear-gradient(180deg, hsl(200 20% 10% / 0.1), hsl(200 15% 8% / 0.3));
     --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.3);
     --shadow-card-hover: 0 8px 30px hsl(0 0% 0% / 0.4);
+    --shadow-elevated: 0 20px 60px hsl(0 0% 0% / 0.5);
+    --shadow-subtle: 0 2px 8px hsl(0 0% 0% / 0.2);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;

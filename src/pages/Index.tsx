@@ -8,12 +8,16 @@ import {
   Database,
   CheckCircle,
   Globe,
-  Mail,
-  Linkedin
+  Calendar,
+  ArrowRight
 } from "lucide-react";
 import heroImage from "@/assets/hero-consulting.jpg";
 import esitLogo from "@/assets/esit-logo-light.png";
 import profileImage from "@/assets/profile-2.jpg";
+import profileAlt1 from "@/assets/profile-1.jpg";
+import profileAlt2 from "@/assets/profile-3.jpg";
+import ContactForm from "@/components/ContactForm";
+import CaseStudies from "@/components/CaseStudies";
 
 const Index = () => {
   const services = [
@@ -58,13 +62,14 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b bg-card/50 backdrop-blur-sm sticky top-0 z-50">
+      <header className="border-b bg-card/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <img src={esitLogo} alt="ESIT-Consulting" className="h-10 md:h-12" />
-          <nav className="hidden md:flex gap-6">
-            <a href="#services" className="text-foreground hover:text-primary transition-colors">Services</a>
-            <a href="#expertise" className="text-foreground hover:text-primary transition-colors">Expertise</a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
+          <nav className="hidden md:flex gap-8">
+            <a href="#services" className="text-foreground hover:text-primary transition-colors font-medium">Services</a>
+            <a href="#cases" className="text-foreground hover:text-primary transition-colors font-medium">Case Studies</a>
+            <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">About</a>
+            <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium">Contact</a>
           </nav>
           <Button variant="hero" size="sm" asChild>
             <a href="#contact">Get in Touch</a>
@@ -73,64 +78,91 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[700px] flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(215,25%,15%)] via-[hsl(215,25%,15%,0.95)] to-[hsl(215,25%,15%,0.8)]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(215,25%,15%)] via-[hsl(215,25%,15%,0.95)] to-[hsl(215,25%,15%,0.7)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(180,54%,57%,0.1),transparent_50%)]" />
         </div>
-        <div className="container mx-auto px-4 relative z-10 text-center md:text-left">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-              Driving Excellence in IT Project Delivery
-            </h1>
-            <p className="text-lg md:text-xl mb-8 text-white/90">
-              Expert IT-PMO, Scrum Master, and Business Analysis consulting for European and US organizations seeking transformational results.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="lg" asChild>
-                <a href="#services">Explore Services</a>
-              </Button>
-              <Button variant="outline" size="lg" className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm" asChild>
-                <a href="#contact">Schedule Consultation</a>
-              </Button>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="text-white">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                Driving Excellence in IT Project Delivery
+              </h1>
+              <p className="text-xl mb-8 text-white/90 leading-relaxed">
+                Expert IT-PMO, Scrum Master, and Business Analysis consulting for European and US organizations seeking transformational results.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 mb-12">
+                <Button variant="hero" size="lg" asChild>
+                  <a href="#services">
+                    Explore Services
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </a>
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm" 
+                  asChild
+                >
+                  <a href="#contact">
+                    <Calendar className="w-5 h-5 mr-2" />
+                    Schedule Consultation
+                  </a>
+                </Button>
+              </div>
+              <div className="flex flex-wrap items-center gap-8 text-white/80">
+                <div className="flex items-center gap-2">
+                  <Globe className="w-5 h-5" />
+                  <span className="font-medium">EU & US Coverage</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5" />
+                  <span className="font-medium">15+ Years Experience</span>
+                </div>
+              </div>
             </div>
-            <div className="mt-12 flex items-center gap-6 text-white/80">
-              <div className="flex items-center gap-2">
-                <Globe className="w-5 h-5" />
-                <span>EU & US Coverage</span>
+            <div className="hidden md:block relative">
+              <div className="relative z-10">
+                <img 
+                  src={profileImage} 
+                  alt="Professional IT Consultant" 
+                  className="rounded-2xl w-full shadow-2xl"
+                  style={{ boxShadow: 'var(--shadow-elevated)' }}
+                />
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5" />
-                <span>15+ Years Experience</span>
-              </div>
+              <div className="absolute -bottom-8 -left-8 w-64 h-64 bg-primary/20 rounded-full blur-3xl" />
+              <div className="absolute -top-8 -right-8 w-64 h-64 bg-accent/20 rounded-full blur-3xl" />
             </div>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
+      <section id="services" className="py-24 bg-muted/30 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/50 to-transparent pointer-events-none" />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Professional Services</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">Professional Services</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Comprehensive IT consulting solutions tailored to your organization's needs
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <Card 
                 key={index} 
-                className="hover:shadow-lg transition-all duration-300 border-border/50 hover:border-primary/20"
+                className="group hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/30 hover:-translate-y-1"
                 style={{ boxShadow: 'var(--shadow-card)' }}
               >
                 <CardHeader>
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                    <service.icon className="w-6 h-6 text-primary" />
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <service.icon className="w-7 h-7 text-primary" />
                   </div>
-                  <CardTitle className="text-xl">{service.title}</CardTitle>
+                  <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-base leading-relaxed">
@@ -143,51 +175,77 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Case Studies */}
+      <CaseStudies />
+
       {/* About Section with Profile */}
-      <section id="expertise" className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section id="about" className="py-24 bg-background relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="order-2 md:order-1">
               <div className="relative">
-                <img 
-                  src={profileImage} 
-                  alt="Professional consultant portrait" 
-                  className="rounded-2xl shadow-lg w-full max-w-md mx-auto"
-                  style={{ boxShadow: 'var(--shadow-card-hover)' }}
-                />
-                <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground px-6 py-3 rounded-lg shadow-lg hidden md:block">
-                  <p className="font-semibold">15+ Years</p>
+                <div className="grid grid-cols-2 gap-4">
+                  <img 
+                    src={profileImage} 
+                    alt="Professional consultant portrait" 
+                    className="rounded-2xl shadow-lg w-full col-span-2"
+                    style={{ boxShadow: 'var(--shadow-card-hover)' }}
+                  />
+                  <img 
+                    src={profileAlt1} 
+                    alt="Consultant profile" 
+                    className="rounded-xl shadow-md w-full"
+                    style={{ boxShadow: 'var(--shadow-subtle)' }}
+                  />
+                  <img 
+                    src={profileAlt2} 
+                    alt="Professional headshot" 
+                    className="rounded-xl shadow-md w-full"
+                    style={{ boxShadow: 'var(--shadow-subtle)' }}
+                  />
+                </div>
+                <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground px-8 py-4 rounded-xl shadow-lg hidden lg:block">
+                  <p className="font-bold text-xl">15+ Years</p>
                   <p className="text-sm">Experience</p>
                 </div>
               </div>
             </div>
-            <div className="order-1 md:order-2">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Your IT Transformation Partner</h2>
-              <p className="text-lg text-muted-foreground mb-6">
-                As a seasoned IT professional, I bring comprehensive expertise in project management, agile methodologies, and strategic business analysis to drive your organization's success.
-              </p>
-              <p className="text-lg text-muted-foreground mb-8">
-                With extensive experience across multiple domains, I deliver comprehensive solutions that bridge technology, process, and people - helping European and US clients achieve transformational results.
-              </p>
-              <div className="grid grid-cols-1 gap-3 mb-8">
-                {expertise.map((item, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-accent shrink-0" />
-                    <span className="text-foreground">{item}</span>
-                  </div>
-                ))}
+            <div className="order-1 md:order-2 space-y-8">
+              <div>
+                <h2 className="text-3xl md:text-5xl font-bold mb-6">Your IT Transformation Partner</h2>
+                <p className="text-lg text-muted-foreground mb-4">
+                  As a seasoned IT professional, I bring comprehensive expertise in project management, agile methodologies, and strategic business analysis to drive your organization's success.
+                </p>
+                <p className="text-lg text-muted-foreground">
+                  With extensive experience across multiple domains, I deliver comprehensive solutions that bridge technology, process, and people - helping European and US clients achieve transformational results.
+                </p>
               </div>
-              <div className="space-y-4">
-                <div className="border-l-4 border-primary pl-4">
+              
+              <div className="space-y-3">
+                <h3 className="font-semibold text-xl mb-4">Core Expertise</h3>
+                <div className="grid grid-cols-1 gap-3">
+                  {expertise.slice(0, 6).map((item, index) => (
+                    <div key={index} className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50 transition-colors">
+                      <CheckCircle className="w-5 h-5 text-accent shrink-0" />
+                      <span className="text-foreground">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="grid sm:grid-cols-2 gap-6 pt-4">
+                <div className="p-6 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20">
                   <h4 className="font-semibold mb-2">International Expertise</h4>
-                  <p className="text-muted-foreground text-sm">
-                    Working seamlessly with German, Dutch, French, and US clients across diverse industries.
+                  <p className="text-sm text-muted-foreground">
+                    Seamlessly working with German, Dutch, French, and US clients.
                   </p>
                 </div>
-                <div className="border-l-4 border-primary pl-4">
-                  <h4 className="font-semibold mb-2">Proven Methodology</h4>
-                  <p className="text-muted-foreground text-sm">
-                    Structured approach combining Agile practices, PMO frameworks, and data-driven decision making.
+                <div className="p-6 rounded-xl bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20">
+                  <h4 className="font-semibold mb-2">Results-Focused</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Delivering measurable outcomes and sustainable improvement.
                   </p>
                 </div>
               </div>
@@ -197,46 +255,101 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Let's Collaborate</h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Ready to transform your IT operations? Get in touch to discuss how we can work together.
-            </p>
-            <Card className="p-8" style={{ boxShadow: 'var(--shadow-card)' }}>
-              <div className="space-y-6">
-                <div className="flex items-center justify-center gap-4">
-                  <Mail className="w-6 h-6 text-primary" />
-                  <a href="mailto:contact@esit-consulting.com" className="text-lg hover:text-primary transition-colors">
-                    contact@esit-consulting.com
-                  </a>
-                </div>
-                <div className="flex items-center justify-center gap-4">
-                  <Linkedin className="w-6 h-6 text-primary" />
-                  <a href="#" className="text-lg hover:text-primary transition-colors">
-                    Connect on LinkedIn
-                  </a>
-                </div>
-                <div className="pt-6 border-t">
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Serving clients in Germany, Netherlands, France, and United States
+      <section id="contact" className="py-24 bg-muted/30 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-transparent pointer-events-none" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-5xl font-bold mb-4">Let's Work Together</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Ready to transform your IT operations? Schedule a consultation or send me a message.
+              </p>
+            </div>
+            
+            <div className="grid lg:grid-cols-2 gap-12">
+              <Card className="p-8" style={{ boxShadow: 'var(--shadow-elevated)' }}>
+                <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
+                <ContactForm />
+              </Card>
+
+              <div className="space-y-8">
+                <Card className="p-8" style={{ boxShadow: 'var(--shadow-card)' }}>
+                  <h3 className="text-2xl font-bold mb-6">Schedule a Consultation</h3>
+                  <p className="text-muted-foreground mb-6">
+                    Book a 30-minute video call to discuss your project requirements and how I can help.
                   </p>
-                  <Button variant="hero" size="lg">
-                    Schedule a Consultation
+                  <Button variant="hero" size="lg" className="w-full" asChild>
+                    <a href="https://calendly.com/your-link" target="_blank" rel="noopener noreferrer">
+                      <Calendar className="w-5 h-5 mr-2" />
+                      Book a Meeting
+                    </a>
                   </Button>
-                </div>
+                  <p className="text-sm text-muted-foreground mt-4 text-center">
+                    Available for calls in multiple timezones
+                  </p>
+                </Card>
+
+                <Card className="p-8 bg-gradient-to-br from-primary/5 to-accent/5" style={{ boxShadow: 'var(--shadow-card)' }}>
+                  <h3 className="text-xl font-bold mb-4">Service Areas</h3>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold mb-2 flex items-center gap-2">
+                        <Globe className="w-4 h-4 text-primary" />
+                        Europe
+                      </h4>
+                      <p className="text-sm text-muted-foreground ml-6">
+                        Germany • Netherlands • France
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2 flex items-center gap-2">
+                        <Globe className="w-4 h-4 text-primary" />
+                        North America
+                      </h4>
+                      <p className="text-sm text-muted-foreground ml-6">
+                        United States
+                      </p>
+                    </div>
+                  </div>
+                </Card>
               </div>
-            </Card>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t py-8">
-        <div className="container mx-auto px-4 text-center text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} ESIT-Consulting. All rights reserved.</p>
-          <p className="text-sm mt-2">Professional IT Consulting Services | Europe & USA</p>
+      <footer className="border-t py-12 bg-card">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <img src={esitLogo} alt="ESIT-Consulting" className="h-10 mb-4" />
+              <p className="text-sm text-muted-foreground">
+                Professional IT consulting services for transformational business results.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Services</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li><a href="#services" className="hover:text-primary transition-colors">IT-PMO</a></li>
+                <li><a href="#services" className="hover:text-primary transition-colors">Scrum Master</a></li>
+                <li><a href="#services" className="hover:text-primary transition-colors">Business Analysis</a></li>
+                <li><a href="#services" className="hover:text-primary transition-colors">Data Analytics</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Connect</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li><a href="#contact" className="hover:text-primary transition-colors">Contact</a></li>
+                <li><a href="https://linkedin.com" className="hover:text-primary transition-colors">LinkedIn</a></li>
+                <li><a href="#cases" className="hover:text-primary transition-colors">Case Studies</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="border-t pt-8 text-center text-sm text-muted-foreground">
+            <p>&copy; {new Date().getFullYear()} ESIT-Consulting. All rights reserved.</p>
+            <p className="mt-2">Professional IT Consulting Services | Europe & USA</p>
+          </div>
         </div>
       </footer>
     </div>
