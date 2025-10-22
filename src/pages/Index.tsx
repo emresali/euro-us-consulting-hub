@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import heroImage from "@/assets/hero-consulting.jpg";
 import esitLogo from "@/assets/esit-logo-light.png";
+import profileImage from "@/assets/profile-2.jpg";
 
 const Index = () => {
   const services = [
@@ -142,16 +143,33 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Expertise Section */}
-      <section id="expertise" className="py-20">
+      {/* About Section with Profile */}
+      <section id="expertise" className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Core Expertise</h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                With extensive experience across multiple domains, I deliver comprehensive solutions that bridge technology, process, and people.
+            <div className="order-2 md:order-1">
+              <div className="relative">
+                <img 
+                  src={profileImage} 
+                  alt="Professional consultant portrait" 
+                  className="rounded-2xl shadow-lg w-full max-w-md mx-auto"
+                  style={{ boxShadow: 'var(--shadow-card-hover)' }}
+                />
+                <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground px-6 py-3 rounded-lg shadow-lg hidden md:block">
+                  <p className="font-semibold">15+ Years</p>
+                  <p className="text-sm">Experience</p>
+                </div>
+              </div>
+            </div>
+            <div className="order-1 md:order-2">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Your IT Transformation Partner</h2>
+              <p className="text-lg text-muted-foreground mb-6">
+                As a seasoned IT professional, I bring comprehensive expertise in project management, agile methodologies, and strategic business analysis to drive your organization's success.
               </p>
-              <div className="grid grid-cols-1 gap-3">
+              <p className="text-lg text-muted-foreground mb-8">
+                With extensive experience across multiple domains, I deliver comprehensive solutions that bridge technology, process, and people - helping European and US clients achieve transformational results.
+              </p>
+              <div className="grid grid-cols-1 gap-3 mb-8">
                 {expertise.map((item, index) => (
                   <div key={index} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-accent shrink-0" />
@@ -159,30 +177,21 @@ const Index = () => {
                   </div>
                 ))}
               </div>
-            </div>
-            <Card className="p-8" style={{ boxShadow: 'var(--shadow-card)' }}>
-              <h3 className="text-2xl font-bold mb-6">Why Choose ESIT-Consulting?</h3>
-              <div className="space-y-6">
-                <div>
-                  <h4 className="font-semibold mb-2 text-primary">International Expertise</h4>
-                  <p className="text-muted-foreground">
-                    Extensive experience working with German, Dutch, French, and US clients across diverse industries.
+              <div className="space-y-4">
+                <div className="border-l-4 border-primary pl-4">
+                  <h4 className="font-semibold mb-2">International Expertise</h4>
+                  <p className="text-muted-foreground text-sm">
+                    Working seamlessly with German, Dutch, French, and US clients across diverse industries.
                   </p>
                 </div>
-                <div>
-                  <h4 className="font-semibold mb-2 text-primary">Proven Methodology</h4>
-                  <p className="text-muted-foreground">
+                <div className="border-l-4 border-primary pl-4">
+                  <h4 className="font-semibold mb-2">Proven Methodology</h4>
+                  <p className="text-muted-foreground text-sm">
                     Structured approach combining Agile practices, PMO frameworks, and data-driven decision making.
                   </p>
                 </div>
-                <div>
-                  <h4 className="font-semibold mb-2 text-primary">Results-Focused</h4>
-                  <p className="text-muted-foreground">
-                    Dedicated to delivering measurable outcomes and sustainable organizational improvement.
-                  </p>
-                </div>
               </div>
-            </Card>
+            </div>
           </div>
         </div>
       </section>
