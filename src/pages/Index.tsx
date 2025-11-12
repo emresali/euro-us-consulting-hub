@@ -412,9 +412,9 @@ const Index = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
+                  <a href="https://www.linkedin.com/company/esit-consulting-exponential-scale" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2 font-semibold">
                     <Linkedin className="w-4 h-4" />
-                    LinkedIn
+                    Visit us on LinkedIn
                   </a>
                 </li>
                 <li>
