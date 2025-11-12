@@ -61,8 +61,8 @@ const CaseStudies = () => {
       <section id="cases" className="py-24 relative overflow-hidden" style={{ background: 'var(--section-secondary-bg)' }}>
         <div className="absolute inset-0 bg-gradient-to-b from-[hsl(180,54%,97%)] via-accent/5 to-[hsl(200,20%,98%)] pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">{t.title}</h2>
+          <div className="text-center mb-20">
+            <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">{t.title}</h2>
             <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
               {t.subtitle}
             </p>

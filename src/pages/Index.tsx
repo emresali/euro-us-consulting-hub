@@ -219,7 +219,7 @@ const Index = () => {
             </div>
             <div className="order-1 md:order-2 space-y-8 animate-slide-in-right">
               <div>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6">{t.about.title}</h2>
+                <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">{t.about.title}</h2>
                 <p className="text-lg text-foreground/75 mb-4 leading-relaxed">
                   {t.about.subtitle1}
                 </p>
@@ -264,8 +264,8 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-[hsl(180,54%,96%)] via-accent/8 to-[hsl(200,20%,96%)] pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">{t.contact.title}</h2>
+            <div className="text-center mb-20">
+              <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">{t.contact.title}</h2>
               <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
                 {t.contact.subtitle}
               </p>
