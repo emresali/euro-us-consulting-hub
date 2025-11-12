@@ -65,6 +65,11 @@ All colors MUST be HSL.
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Section backgrounds with color transitions */
+    --section-primary-bg: linear-gradient(180deg, hsl(180 54% 97%), hsl(180 54% 95%));
+    --section-secondary-bg: linear-gradient(180deg, hsl(200 20% 98%), hsl(200 20% 96%));
+    --section-accent-bg: linear-gradient(180deg, hsl(180 54% 96%), hsl(200 15% 97%));
   }
 
   .dark {

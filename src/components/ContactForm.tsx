@@ -5,9 +5,13 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, Loader2 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/translations/translations";
 
 const ContactForm = () => {
   const { toast } = useToast();
+  const { language } = useLanguage();
+  const t = translations[language].contact.form;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -24,8 +28,8 @@ const ContactForm = () => {
     // Simulate form submission
     setTimeout(() => {
       toast({
-        title: "Message Sent!",
-        description: "Thank you for reaching out. I'll get back to you within 24 hours.",
+        title: t.successTitle,
+        description: t.successDescription,
       });
       setFormData({ name: "", email: "", company: "", phone: "", message: "" });
       setIsSubmitting(false);
@@ -36,58 +40,58 @@ const ContactForm = () => {
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid md:grid-cols-2 gap-6">
         <div className="space-y-2">
-          <Label htmlFor="name">Name *</Label>
+          <Label htmlFor="name">{t.name} *</Label>
           <Input
             id="name"
             required
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            placeholder="Your full name"
+            placeholder={t.namePlaceholder}
           />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="email">Email *</Label>
+          <Label htmlFor="email">{t.email} *</Label>
           <Input
             id="email"
             type="email"
             required
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            placeholder="your@email.com"
+            placeholder={t.emailPlaceholder}
           />
         </div>
       </div>
 
       <div className="grid md:grid-cols-2 gap-6">
         <div className="space-y-2">
-          <Label htmlFor="company">Company</Label>
+          <Label htmlFor="company">{t.company}</Label>
           <Input
             id="company"
             value={formData.company}
             onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-            placeholder="Your company"
+            placeholder={t.companyPlaceholder}
           />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="phone">Phone</Label>
+          <Label htmlFor="phone">{t.phone}</Label>
           <Input
             id="phone"
             type="tel"
             value={formData.phone}
             onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-            placeholder="+1 (555) 000-0000"
+            placeholder={t.phonePlaceholder}
           />
         </div>
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="message">Message *</Label>
+        <Label htmlFor="message">{t.message} *</Label>
         <Textarea
           id="message"
           required
           value={formData.message}
           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-          placeholder="Tell me about your project or requirements..."
+          placeholder={t.messagePlaceholder}
           rows={6}
         />
       </div>
@@ -97,23 +101,23 @@ const ContactForm = () => {
           {isSubmitting ? (
             <>
               <Loader2 className="w-4 h-4 animate-spin" />
-              Sending...
+              {t.sending}
             </>
           ) : (
             <>
               <Mail className="w-4 h-4" />
-              Send Message
+              {t.send}
             </>
           )}
         </Button>
         <a href="tel:+1234567890" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
           <Phone className="w-4 h-4" />
-          <span className="text-sm">Or call directly</span>
+          <span className="text-sm">{t.callDirectly}</span>
         </a>
       </div>
 
       <p className="text-xs text-muted-foreground">
-        This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+        {t.recaptcha}
       </p>
     </form>
   );
