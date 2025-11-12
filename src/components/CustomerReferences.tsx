@@ -23,12 +23,12 @@ const CustomerReferences = () => {
         </div>
 
         <div className="relative">
-          <div className="flex gap-20 items-center justify-center flex-wrap md:flex-nowrap">
+          <div className="flex gap-24 items-center justify-center flex-wrap md:flex-nowrap">
             {customers.map((customer, index) => (
               <div
                 key={index}
                 className={`flex-shrink-0 flex items-center justify-center opacity-50 hover:opacity-100 transition-all duration-300 hover:scale-110 ${
-                  customer.name === "L'Oréal" ? "w-48 h-24" : "w-32 h-16"
+                  customer.name === "L'Oréal" ? "w-64 h-32" : "w-48 h-24"
                 }`}
               >
                 <img
