@@ -1,9 +1,9 @@
 const CustomerReferences = () => {
   const customers = [
-    { name: "Deloitte", logo: "/images/deloitte-logo.svg" },
+    { name: "Deloitte", logo: "/images/deloitte-logo.png" },
     { name: "L'Oréal", logo: "/images/loreal-logo.png" },
     { name: "DDA", logo: "/images/dda-logo.avif" },
-    { name: "Deloitte", logo: "/images/deloitte-logo.svg" },
+    { name: "Deloitte", logo: "/images/deloitte-logo.png" },
     { name: "L'Oréal", logo: "/images/loreal-logo.png" },
     { name: "DDA", logo: "/images/dda-logo.avif" },
   ];
@@ -22,11 +22,31 @@ const CustomerReferences = () => {
           </h3>
         </div>
 
-        <div className="relative">
-          <div className="flex gap-24 items-center justify-center flex-wrap md:flex-nowrap">
+        <div className="relative overflow-hidden">
+          <div className="flex gap-24 items-center animate-scroll">
             {customers.map((customer, index) => (
               <div
                 key={index}
+                className={`flex-shrink-0 flex items-center justify-center opacity-50 hover:opacity-100 transition-all duration-300 hover:scale-110 ${
+                  customer.name === "L'Oréal" ? "w-64 h-32" : "w-48 h-24"
+                }`}
+              >
+                <img
+                  src={customer.logo}
+                  alt={customer.name}
+                  className={`max-w-full max-h-full object-contain ${
+                    customer.name === "L'Oréal" ? "drop-shadow-[0_0_10px_rgba(0,0,0,0.3)] hover:drop-shadow-[0_0_20px_rgba(0,0,0,0.5)]" : ""
+                  }`}
+                  style={customer.name === "L'Oréal" ? {
+                    filter: "brightness(1.1) contrast(1.1)",
+                  } : undefined}
+                />
+              </div>
+            ))}
+            {/* Duplicate for seamless loop */}
+            {customers.map((customer, index) => (
+              <div
+                key={`duplicate-${index}`}
                 className={`flex-shrink-0 flex items-center justify-center opacity-50 hover:opacity-100 transition-all duration-300 hover:scale-110 ${
                   customer.name === "L'Oréal" ? "w-64 h-32" : "w-48 h-24"
                 }`}
