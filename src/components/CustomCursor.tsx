@@ -49,13 +49,13 @@ const CustomCursor = () => {
         {/* Outer glow ring */}
         <div
           className={`absolute inset-0 rounded-full transition-all duration-300 ${
-            isHovering ? "scale-150 opacity-60" : "scale-100 opacity-40"
+            isHovering ? "scale-150 opacity-70" : "scale-100 opacity-50"
           }`}
           style={{
-            width: "40px",
-            height: "40px",
+            width: "24px",
+            height: "24px",
             background: "radial-gradient(circle, hsl(var(--primary)) 0%, transparent 70%)",
-            filter: "blur(12px)",
+            filter: "blur(8px)",
             transform: "translate(-50%, -50%)",
           }}
         />
@@ -63,13 +63,13 @@ const CustomCursor = () => {
         {/* Middle shine */}
         <div
           className={`absolute inset-0 rounded-full transition-all duration-200 ${
-            isHovering ? "scale-125 opacity-80" : "scale-100 opacity-60"
+            isHovering ? "scale-125 opacity-90" : "scale-100 opacity-70"
           }`}
           style={{
-            width: "24px",
-            height: "24px",
+            width: "16px",
+            height: "16px",
             background: "radial-gradient(circle, hsl(var(--primary)) 0%, transparent 60%)",
-            filter: "blur(8px)",
+            filter: "blur(5px)",
             transform: "translate(-50%, -50%)",
           }}
         />
@@ -77,13 +77,13 @@ const CustomCursor = () => {
         {/* Inner bright spot */}
         <div
           className={`absolute inset-0 rounded-full transition-all duration-150 ${
-            isHovering ? "scale-110 opacity-100" : "scale-100 opacity-80"
+            isHovering ? "scale-110 opacity-100" : "scale-100 opacity-90"
           }`}
           style={{
-            width: "12px",
-            height: "12px",
+            width: "8px",
+            height: "8px",
             background: "radial-gradient(circle, hsl(var(--primary)) 0%, transparent 50%)",
-            filter: "blur(4px)",
+            filter: "blur(2px)",
             transform: "translate(-50%, -50%)",
           }}
         />
@@ -91,7 +91,7 @@ const CustomCursor = () => {
 
       {/* Trailing sparkle effect */}
       <div
-        className="pointer-events-none fixed z-40 transition-all duration-500 ease-out opacity-30"
+        className="pointer-events-none fixed z-40 transition-all duration-500 ease-out opacity-20"
         style={{
           left: `${position.x}px`,
           top: `${position.y}px`,
@@ -101,10 +101,10 @@ const CustomCursor = () => {
         <div
           className="absolute rounded-full animate-pulse"
           style={{
-            width: "60px",
-            height: "60px",
-            background: "radial-gradient(circle, hsl(var(--primary) / 0.4) 0%, transparent 60%)",
-            filter: "blur(16px)",
+            width: "32px",
+            height: "32px",
+            background: "radial-gradient(circle, hsl(var(--primary) / 0.3) 0%, transparent 60%)",
+            filter: "blur(10px)",
             transform: "translate(-50%, -50%)",
           }}
         />
