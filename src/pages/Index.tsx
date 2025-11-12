@@ -19,6 +19,7 @@ import ContactForm from "@/components/ContactForm";
 import CaseStudies from "@/components/CaseStudies";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import CustomCursor from "@/components/CustomCursor";
+import CustomerReferences from "@/components/CustomerReferences";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations/translations";
 
@@ -139,9 +140,10 @@ const Index = () => {
             </div>
           </div>
         </div>
-        {/* Smooth transition gradient */}
-        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent via-[hsl(180,54%,98%)] to-[hsl(180,54%,97%)] pointer-events-none" />
       </section>
+
+      {/* Customer References */}
+      <CustomerReferences />
 
       {/* Services Section */}
       <section id="services" className="py-16 relative" style={{ background: 'var(--section-primary-bg)' }}>
