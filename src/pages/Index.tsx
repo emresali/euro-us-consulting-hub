@@ -142,15 +142,17 @@ const Index = () => {
             </div>
           </div>
         </div>
+        {/* Smooth transition gradient */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[hsl(180,54%,97%)] pointer-events-none" />
       </section>
 
       {/* Services Section */}
       <section id="services" className="py-24 relative" style={{ background: 'var(--section-primary-bg)' }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(180,54%,97%)] via-primary/5 to-transparent pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-3xl md:text-5xl font-bold mb-4">{t.services.title}</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
               {t.services.subtitle}
             </p>
           </div>

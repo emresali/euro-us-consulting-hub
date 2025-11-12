@@ -4,27 +4,20 @@ import { Button } from "@/components/ui/button";
 const LanguageSwitcher = () => {
   const { language, setLanguage } = useLanguage();
 
+  const toggleLanguage = () => {
+    setLanguage(language === 'en' ? 'de' : 'en');
+  };
+
   return (
-    <div className="flex items-center gap-2">
-      <Button
-        variant={language === 'en' ? 'default' : 'outline'}
-        size="sm"
-        onClick={() => setLanguage('en')}
-        className="gap-2 font-semibold"
-      >
-        <span className="text-xl">🇺🇸</span>
-        <span>EN</span>
-      </Button>
-      <Button
-        variant={language === 'de' ? 'default' : 'outline'}
-        size="sm"
-        onClick={() => setLanguage('de')}
-        className="gap-2 font-semibold"
-      >
-        <span className="text-xl">🇩🇪</span>
-        <span>DE</span>
-      </Button>
-    </div>
+    <Button
+      variant="outline"
+      size="sm"
+      onClick={toggleLanguage}
+      className="gap-2 font-semibold min-w-[100px] border-2"
+    >
+      <span className="text-xl">{language === 'en' ? '🇺🇸' : '🇩🇪'}</span>
+      <span>{language === 'en' ? 'EN' : 'DE'}</span>
+    </Button>
   );
 };
 
