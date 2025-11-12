@@ -215,13 +215,21 @@ const Index = () => {
                 </p>
               </div>
               
-              <div className="space-y-3">
-                <h3 className="font-semibold text-xl mb-4">{t.about.coreExpertise}</h3>
-                <div className="grid grid-cols-1 gap-3">
+              <div className="space-y-6">
+                <h3 className="font-bold text-2xl mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">{t.about.coreExpertise}</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {expertise.slice(0, 6).map((item, index) => (
-                    <div key={index} className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50 transition-colors">
-                      <CheckCircle className="w-5 h-5 text-accent shrink-0" />
-                      <span className="text-foreground">{item}</span>
+                    <div 
+                      key={index} 
+                      className="group relative p-5 rounded-xl bg-gradient-to-br from-primary/10 to-accent/5 border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg animate-fade-in"
+                      style={{ animationDelay: `${index * 0.1}s` }}
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform shrink-0">
+                          <CheckCircle className="w-6 h-6 text-primary" />
+                        </div>
+                        <span className="text-foreground font-semibold text-base">{item}</span>
+                      </div>
                     </div>
                   ))}
                 </div>
