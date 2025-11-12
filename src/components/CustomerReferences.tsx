@@ -11,12 +11,13 @@ const CustomerReferences = () => {
   ];
 
   return (
-    <section className="relative py-12 overflow-hidden bg-transparent">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-transparent pointer-events-none" />
+    <section className="relative py-16 overflow-hidden">
+      {/* Smooth gradient background that blends with surrounding sections */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[hsl(215,25%,15%)] via-background/60 to-[hsl(180,54%,97%)]" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-8">
-          <p className="text-sm uppercase tracking-wider text-muted-foreground font-semibold mb-2">
+        <div className="text-center mb-10">
+          <p className="text-sm uppercase tracking-wider text-muted-foreground/80 font-semibold mb-2">
             Trusted By
           </p>
           <h3 className="text-xl md:text-2xl font-bold text-foreground/80">
