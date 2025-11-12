@@ -55,10 +55,10 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <img src={esitLogo} alt="ESIT-Consulting" className="h-10 md:h-12" />
           <nav className="hidden md:flex gap-8">
-            <a href="#services" className="text-foreground hover:text-primary transition-colors font-medium">{t.nav.services}</a>
-            <a href="#cases" className="text-foreground hover:text-primary transition-colors font-medium">{t.nav.cases}</a>
-            <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">{t.nav.about}</a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium">{t.nav.contact}</a>
+            <a href="#services" className="text-foreground hover:text-primary transition-colors font-semibold text-base tracking-wide">{t.nav.services}</a>
+            <a href="#cases" className="text-foreground hover:text-primary transition-colors font-semibold text-base tracking-wide">{t.nav.cases}</a>
+            <a href="#about" className="text-foreground hover:text-primary transition-colors font-semibold text-base tracking-wide">{t.nav.about}</a>
+            <a href="#contact" className="text-foreground hover:text-primary transition-colors font-semibold text-base tracking-wide">{t.nav.contact}</a>
           </nav>
           <div className="flex items-center gap-4">
             <LanguageSwitcher />
