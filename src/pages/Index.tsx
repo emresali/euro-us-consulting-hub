@@ -47,6 +47,11 @@ const Index = () => {
       icon: Database,
       title: "Data Analytics",
       description: "Data-driven insights, reporting frameworks, and analytics strategy to support informed business decision-making."
+    },
+    {
+      icon: CheckCircle,
+      title: "Change & Escalation Management",
+      description: "Strategic change management, stakeholder engagement, and expert escalation management to navigate complex organizational transformations."
     }
   ];
 
@@ -133,7 +138,7 @@ const Index = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5" />
-                  <span className="font-medium">15+ Years Experience</span>
+                  <span className="font-medium">5+ Years Experience</span>
                 </div>
               </div>
             </div>
@@ -145,8 +150,8 @@ const Index = () => {
                   className="rounded-full w-full shadow-2xl border-4 border-white/10"
                   style={{ boxShadow: 'var(--shadow-elevated)' }}
                 />
-                <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-6 py-3 rounded-xl shadow-lg">
-                  <p className="font-bold text-lg">15+ Years</p>
+                <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-6 py-3 rounded-xl shadow-lg animate-pulse-glow">
+                  <p className="font-bold text-lg">5+ Years</p>
                   <p className="text-xs">Expert</p>
                 </div>
               </div>
@@ -161,7 +166,7 @@ const Index = () => {
       <section id="services" className="py-24 bg-muted/30 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/50 to-transparent pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-3xl md:text-5xl font-bold mb-4">Professional Services</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Comprehensive IT consulting solutions tailored to your organization's needs
@@ -171,12 +176,15 @@ const Index = () => {
             {services.map((service, index) => (
               <Card 
                 key={index} 
-                className="group hover:shadow-xl transition-all duration-300 border-border/50 hover:border-primary/30 hover:-translate-y-1"
-                style={{ boxShadow: 'var(--shadow-card)' }}
+                className="group hover:shadow-xl transition-all duration-500 border-border/50 hover:border-primary/30 hover:-translate-y-2 animate-fade-in-up"
+                style={{ 
+                  boxShadow: 'var(--shadow-card)',
+                  animationDelay: `${index * 0.1}s`
+                }}
               >
                 <CardHeader>
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                    <service.icon className="w-7 h-7 text-primary" />
+                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                    <service.icon className="w-7 h-7 text-primary group-hover:text-accent transition-colors" />
                   </div>
                   <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
                 </CardHeader>
@@ -196,39 +204,25 @@ const Index = () => {
 
       {/* About Section with Profile */}
       <section id="about" className="py-24 bg-background relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="order-2 md:order-1">
+            <div className="order-2 md:order-1 animate-slide-in-left">
               <div className="relative">
-                <div className="grid grid-cols-2 gap-4">
-                  <img 
-                    src={profileImage} 
-                    alt="Professional consultant portrait" 
-                    className="rounded-2xl shadow-lg w-full col-span-2 hover:scale-105 transition-transform duration-300"
-                    style={{ boxShadow: 'var(--shadow-card-hover)' }}
-                  />
-                  <img 
-                    src={profileAdditional} 
-                    alt="Consultant profile" 
-                    className="rounded-xl shadow-md w-full hover:scale-105 transition-transform duration-300"
-                    style={{ boxShadow: 'var(--shadow-subtle)' }}
-                  />
-                  <img 
-                    src={profileAlt1} 
-                    alt="Professional headshot" 
-                    className="rounded-xl shadow-md w-full hover:scale-105 transition-transform duration-300"
-                    style={{ boxShadow: 'var(--shadow-subtle)' }}
-                  />
-                </div>
-                <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground px-8 py-4 rounded-xl shadow-lg hidden lg:block">
-                  <p className="font-bold text-xl">15+ Years</p>
+                <img 
+                  src={profileImage} 
+                  alt="Professional consultant portrait" 
+                  className="rounded-2xl shadow-lg w-full hover:scale-105 transition-transform duration-500"
+                  style={{ boxShadow: 'var(--shadow-card-hover)' }}
+                />
+                <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground px-8 py-4 rounded-xl shadow-lg hidden lg:block animate-pulse-glow">
+                  <p className="font-bold text-xl">5+ Years</p>
                   <p className="text-sm">Experience</p>
                 </div>
               </div>
             </div>
-            <div className="order-1 md:order-2 space-y-8">
+            <div className="order-1 md:order-2 space-y-8 animate-slide-in-right">
               <div>
                 <h2 className="text-3xl md:text-5xl font-bold mb-6">Your IT Transformation Partner</h2>
                 <p className="text-lg text-muted-foreground mb-4">
