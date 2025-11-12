@@ -301,12 +301,12 @@ const Index = () => {
       </section>
 
       {/* LinkedIn CTA Section */}
-      <section className="py-12 relative overflow-hidden bg-gradient-to-br from-primary/10 via-primary/5 to-accent/10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(var(--primary)/0.15),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,hsl(var(--accent)/0.15),transparent_50%)]" />
+      <section className="py-12 relative overflow-hidden bg-gradient-to-br from-background via-primary/5 to-background">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(var(--primary)/0.2),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,hsl(var(--accent)/0.2),transparent_50%)]" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-card/80 to-card/60 backdrop-blur-xl rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-primary/20 relative overflow-hidden group hover:border-primary/40 transition-all duration-500">
+            <div className="bg-card backdrop-blur-xl rounded-3xl p-8 md:p-10 shadow-2xl border-2 border-primary/30 relative overflow-hidden group hover:border-primary/50 transition-all duration-500 hover:shadow-[0_0_50px_rgba(var(--primary-rgb),0.3)]">
               <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
               
