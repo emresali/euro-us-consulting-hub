@@ -14,45 +14,24 @@ import {
 import heroImage from "@/assets/hero-consulting.jpg";
 import esitLogo from "@/assets/esit-logo-light.png";
 import profileImage from "@/assets/profile-2.jpg";
-import profileAlt1 from "@/assets/profile-1.jpg";
-import profileAlt2 from "@/assets/profile-3.jpg";
 import profileHero from "@/assets/profile-hero.jpg";
-import profileAdditional from "@/assets/profile-additional.jpg";
 import ContactForm from "@/components/ContactForm";
 import CaseStudies from "@/components/CaseStudies";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/translations/translations";
 
 const Index = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   const services = [
-    {
-      icon: Target,
-      title: "IT-PMO",
-      description: "Strategic IT project portfolio management, governance frameworks, and PMO establishment for enterprise transformation."
-    },
-    {
-      icon: Users,
-      title: "Scrum Master",
-      description: "Expert facilitation of Agile teams, sprint planning, and coaching organizations in modern software delivery practices."
-    },
-    {
-      icon: Briefcase,
-      title: "Process Management",
-      description: "Business process optimization, workflow automation, and operational excellence consulting for efficiency gains."
-    },
-    {
-      icon: LineChart,
-      title: "Business Analysis",
-      description: "Requirements engineering, stakeholder management, and strategic business solution design for digital transformation."
-    },
-    {
-      icon: Database,
-      title: "Data Analytics",
-      description: "Data-driven insights, reporting frameworks, and analytics strategy to support informed business decision-making."
-    },
-    {
-      icon: CheckCircle,
-      title: "Change & Escalation Management",
-      description: "Strategic change management, stakeholder engagement, and expert escalation management to navigate complex organizational transformations."
-    }
+    { icon: Target, title: t.services.itPmo.title, description: t.services.itPmo.description },
+    { icon: Users, title: t.services.scrumMaster.title, description: t.services.scrumMaster.description },
+    { icon: Briefcase, title: t.services.processManagement.title, description: t.services.processManagement.description },
+    { icon: LineChart, title: t.services.businessAnalysis.title, description: t.services.businessAnalysis.description },
+    { icon: Database, title: t.services.dataAnalytics.title, description: t.services.dataAnalytics.description },
+    { icon: CheckCircle, title: t.services.changeManagement.title, description: t.services.changeManagement.description }
   ];
 
   const expertise = [
@@ -68,18 +47,19 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <LanguageSwitcher />
       {/* Header */}
       <header className="border-b bg-card/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <img src={esitLogo} alt="ESIT-Consulting" className="h-10 md:h-12" />
           <nav className="hidden md:flex gap-8">
-            <a href="#services" className="text-foreground hover:text-primary transition-colors font-medium">Services</a>
-            <a href="#cases" className="text-foreground hover:text-primary transition-colors font-medium">Case Studies</a>
-            <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">About</a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium">Contact</a>
+            <a href="#services" className="text-foreground hover:text-primary transition-colors font-medium">{t.nav.services}</a>
+            <a href="#cases" className="text-foreground hover:text-primary transition-colors font-medium">{t.nav.cases}</a>
+            <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">{t.nav.about}</a>
+            <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium">{t.nav.contact}</a>
           </nav>
           <Button variant="hero" size="sm" asChild>
-            <a href="#contact">Get in Touch</a>
+            <a href="#contact">{t.nav.getInTouch}</a>
           </Button>
         </div>
       </header>
@@ -107,15 +87,15 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="text-white">
               <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                Driving Excellence in IT Project Delivery
+                {t.hero.title}
               </h1>
               <p className="text-xl mb-8 text-white/90 leading-relaxed">
-                Expert IT-PMO, Scrum Master, and Business Analysis consulting for European and US organizations seeking transformational results.
+                {t.hero.subtitle}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
                 <Button variant="hero" size="lg" asChild>
                   <a href="#services">
-                    Explore Services
+                    {t.hero.exploreServices}
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </a>
                 </Button>
@@ -127,18 +107,18 @@ const Index = () => {
                 >
                   <a href="#contact">
                     <Calendar className="w-5 h-5 mr-2" />
-                    Schedule Consultation
+                    {t.hero.scheduleConsultation}
                   </a>
                 </Button>
               </div>
               <div className="flex flex-wrap items-center gap-8 text-white/80">
                 <div className="flex items-center gap-2">
                   <Globe className="w-5 h-5" />
-                  <span className="font-medium">EU & US Coverage</span>
+                  <span className="font-medium">{t.hero.euUseCoverage}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5" />
-                  <span className="font-medium">5+ Years Experience</span>
+                  <span className="font-medium">{t.hero.yearsExperience}</span>
                 </div>
               </div>
             </div>
@@ -151,8 +131,8 @@ const Index = () => {
                   style={{ boxShadow: 'var(--shadow-elevated)' }}
                 />
                 <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-6 py-3 rounded-xl shadow-lg animate-pulse-glow">
-                  <p className="font-bold text-lg">5+ Years</p>
-                  <p className="text-xs">Expert</p>
+                  <p className="font-bold text-lg">{t.hero.yearsExperience.split(' ')[0]}</p>
+                  <p className="text-xs">{t.hero.expert}</p>
                 </div>
               </div>
               <div className="absolute -bottom-8 -left-8 w-64 h-64 bg-primary/20 rounded-full blur-3xl" />
@@ -163,13 +143,13 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-24 bg-muted/30 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/50 to-transparent pointer-events-none" />
+      <section id="services" className="py-24 relative" style={{ background: 'var(--section-primary-bg)' }}>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Professional Services</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">{t.services.title}</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive IT consulting solutions tailored to your organization's needs
+              {t.services.subtitle}
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -203,7 +183,7 @@ const Index = () => {
       <CaseStudies />
 
       {/* About Section with Profile */}
-      <section id="about" className="py-24 bg-background relative overflow-hidden">
+      <section id="about" className="py-24 relative overflow-hidden" style={{ background: 'var(--section-accent-bg)' }}>
         <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
         <div className="container mx-auto px-4 relative z-10">
@@ -217,24 +197,24 @@ const Index = () => {
                   style={{ boxShadow: 'var(--shadow-card-hover)' }}
                 />
                 <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground px-8 py-4 rounded-xl shadow-lg hidden lg:block animate-pulse-glow">
-                  <p className="font-bold text-xl">5+ Years</p>
-                  <p className="text-sm">Experience</p>
+                  <p className="font-bold text-xl">{t.hero.yearsExperience.split(' ')[0]}</p>
+                  <p className="text-sm">{t.hero.yearsExperience.split(' ').slice(1).join(' ')}</p>
                 </div>
               </div>
             </div>
             <div className="order-1 md:order-2 space-y-8 animate-slide-in-right">
               <div>
-                <h2 className="text-3xl md:text-5xl font-bold mb-6">Your IT Transformation Partner</h2>
+                <h2 className="text-3xl md:text-5xl font-bold mb-6">{t.about.title}</h2>
                 <p className="text-lg text-muted-foreground mb-4">
-                  As a seasoned IT professional, I bring comprehensive expertise in project management, agile methodologies, and strategic business analysis to drive your organization's success.
+                  {t.about.subtitle1}
                 </p>
                 <p className="text-lg text-muted-foreground">
-                  With extensive experience across multiple domains, I deliver comprehensive solutions that bridge technology, process, and people - helping European and US clients achieve transformational results.
+                  {t.about.subtitle2}
                 </p>
               </div>
               
               <div className="space-y-3">
-                <h3 className="font-semibold text-xl mb-4">Core Expertise</h3>
+                <h3 className="font-semibold text-xl mb-4">{t.about.coreExpertise}</h3>
                 <div className="grid grid-cols-1 gap-3">
                   {expertise.slice(0, 6).map((item, index) => (
                     <div key={index} className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50 transition-colors">
@@ -247,15 +227,15 @@ const Index = () => {
 
               <div className="grid sm:grid-cols-2 gap-6 pt-4">
                 <div className="p-6 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20">
-                  <h4 className="font-semibold mb-2">International Expertise</h4>
+                  <h4 className="font-semibold mb-2">{t.about.international.title}</h4>
                   <p className="text-sm text-muted-foreground">
-                    Seamlessly working with German, Dutch, French, and US clients.
+                    {t.about.international.description}
                   </p>
                 </div>
                 <div className="p-6 rounded-xl bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20">
-                  <h4 className="font-semibold mb-2">Results-Focused</h4>
+                  <h4 className="font-semibold mb-2">{t.about.results.title}</h4>
                   <p className="text-sm text-muted-foreground">
-                    Delivering measurable outcomes and sustainable improvement.
+                    {t.about.results.description}
                   </p>
                 </div>
               </div>
@@ -265,47 +245,47 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-muted/30 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-transparent pointer-events-none" />
+      <section id="contact" className="py-24 relative overflow-hidden" style={{ background: 'var(--section-secondary-bg)' }}>
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/5 to-transparent pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold mb-4">Let's Work Together</h2>
+              <h2 className="text-3xl md:text-5xl font-bold mb-4">{t.contact.title}</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Ready to transform your IT operations? Schedule a consultation or send me a message.
+                {t.contact.subtitle}
               </p>
             </div>
             
             <div className="grid lg:grid-cols-2 gap-12">
               <Card className="p-8" style={{ boxShadow: 'var(--shadow-elevated)' }}>
-                <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
+                <h3 className="text-2xl font-bold mb-6">{t.contact.sendMessage}</h3>
                 <ContactForm />
               </Card>
 
               <div className="space-y-8">
                 <Card className="p-8" style={{ boxShadow: 'var(--shadow-card)' }}>
-                  <h3 className="text-2xl font-bold mb-6">Schedule a Consultation</h3>
+                  <h3 className="text-2xl font-bold mb-6">{t.contact.scheduleTitle}</h3>
                   <p className="text-muted-foreground mb-6">
-                    Book a 30-minute video call to discuss your project requirements and how I can help.
+                    {t.contact.scheduleDescription}
                   </p>
                   <Button variant="hero" size="lg" className="w-full" asChild>
                     <a href="https://calendly.com/your-link" target="_blank" rel="noopener noreferrer">
                       <Calendar className="w-5 h-5 mr-2" />
-                      Book a Meeting
+                      {t.contact.bookMeeting}
                     </a>
                   </Button>
                   <p className="text-sm text-muted-foreground mt-4 text-center">
-                    Available for calls in multiple timezones
+                    {t.contact.availableTimezones}
                   </p>
                 </Card>
 
                 <Card className="p-8 bg-gradient-to-br from-primary/5 to-accent/5" style={{ boxShadow: 'var(--shadow-card)' }}>
-                  <h3 className="text-xl font-bold mb-4">Service Areas</h3>
+                  <h3 className="text-xl font-bold mb-4">{t.contact.serviceAreas}</h3>
                   <div className="space-y-4">
                     <div>
                       <h4 className="font-semibold mb-2 flex items-center gap-2">
                         <Globe className="w-4 h-4 text-primary" />
-                        Europe
+                        {t.contact.europe}
                       </h4>
                       <p className="text-sm text-muted-foreground ml-6">
                         Germany • Netherlands • France
@@ -314,7 +294,7 @@ const Index = () => {
                     <div>
                       <h4 className="font-semibold mb-2 flex items-center gap-2">
                         <Globe className="w-4 h-4 text-primary" />
-                        North America
+                        {t.contact.northAmerica}
                       </h4>
                       <p className="text-sm text-muted-foreground ml-6">
                         United States
@@ -335,30 +315,30 @@ const Index = () => {
             <div>
               <img src={esitLogo} alt="ESIT-Consulting" className="h-10 mb-4" />
               <p className="text-sm text-muted-foreground">
-                Professional IT consulting services for transformational business results.
+                {t.footer.description}
               </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Services</h4>
+              <h4 className="font-semibold mb-4">{t.footer.services}</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#services" className="hover:text-primary transition-colors">IT-PMO</a></li>
-                <li><a href="#services" className="hover:text-primary transition-colors">Scrum Master</a></li>
-                <li><a href="#services" className="hover:text-primary transition-colors">Business Analysis</a></li>
-                <li><a href="#services" className="hover:text-primary transition-colors">Data Analytics</a></li>
+                <li><a href="#services" className="hover:text-primary transition-colors">{t.services.itPmo.title}</a></li>
+                <li><a href="#services" className="hover:text-primary transition-colors">{t.services.scrumMaster.title}</a></li>
+                <li><a href="#services" className="hover:text-primary transition-colors">{t.services.businessAnalysis.title}</a></li>
+                <li><a href="#services" className="hover:text-primary transition-colors">{t.services.dataAnalytics.title}</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Connect</h4>
+              <h4 className="font-semibold mb-4">{t.footer.connect}</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#contact" className="hover:text-primary transition-colors">Contact</a></li>
+                <li><a href="#contact" className="hover:text-primary transition-colors">{t.nav.contact}</a></li>
                 <li><a href="https://linkedin.com" className="hover:text-primary transition-colors">LinkedIn</a></li>
-                <li><a href="#cases" className="hover:text-primary transition-colors">Case Studies</a></li>
+                <li><a href="#cases" className="hover:text-primary transition-colors">{t.nav.cases}</a></li>
               </ul>
             </div>
           </div>
           <div className="border-t pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; {new Date().getFullYear()} ESIT-Consulting. All rights reserved.</p>
-            <p className="mt-2">Professional IT Consulting Services | Europe & USA</p>
+            <p>&copy; {new Date().getFullYear()} {t.footer.copyright}</p>
+            <p className="mt-2">{t.footer.tagline}</p>
           </div>
         </div>
       </footer>

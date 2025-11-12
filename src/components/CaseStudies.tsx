@@ -1,8 +1,12 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Building2, TrendingUp, Users, CheckCircle } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { translations } from "@/translations/translations";
 
 const CaseStudies = () => {
+  const { language } = useLanguage();
+  const t = translations[language].caseStudies;
   const caseStudies = [
     {
       icon: Building2,
@@ -49,13 +53,13 @@ const CaseStudies = () => {
   ];
 
   return (
-    <section className="py-20 bg-background relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-muted/50 to-transparent pointer-events-none" />
+    <section id="cases" className="py-20 relative overflow-hidden" style={{ background: 'var(--section-secondary-bg)' }}>
+      <div className="absolute inset-0 bg-gradient-to-b from-accent/5 to-transparent pointer-events-none" />
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Success Stories</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.title}</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Real results from European and US organizations transforming their IT operations
+            {t.subtitle}
           </p>
         </div>
 
@@ -78,15 +82,15 @@ const CaseStudies = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
-                  <h4 className="font-semibold text-sm mb-2">Challenge</h4>
+                  <h4 className="font-semibold text-sm mb-2">{t.challenge}</h4>
                   <p className="text-sm text-muted-foreground">{study.challenge}</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-sm mb-2">Solution</h4>
+                  <h4 className="font-semibold text-sm mb-2">{t.solution}</h4>
                   <p className="text-sm text-muted-foreground">{study.solution}</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-sm mb-2">Results</h4>
+                  <h4 className="font-semibold text-sm mb-2">{t.results}</h4>
                   <ul className="space-y-2">
                     {study.results.map((result, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm">
