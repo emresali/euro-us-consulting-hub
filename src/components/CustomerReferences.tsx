@@ -17,12 +17,12 @@ const CustomerReferences = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-14">
-          <p className="text-lg uppercase tracking-[0.3em] text-primary font-bold mb-4 animate-fade-in">
-            Trusted By
-          </p>
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground animate-fade-in">
+          <h3 className="text-4xl md:text-5xl font-bold text-foreground animate-fade-in mb-2">
             Leading Organizations
           </h3>
+          <p className="text-base text-foreground/60 font-medium">
+            Trusted partners in digital transformation
+          </p>
         </div>
 
         <div className="relative overflow-hidden">
