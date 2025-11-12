@@ -259,6 +259,10 @@ const Index = () => {
                         <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="Germany">🇩🇪</span>
                         <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="Netherlands">🇳🇱</span>
                         <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="France">🇫🇷</span>
+                        <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="Luxembourg">🇱🇺</span>
+                        <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="Switzerland">🇨🇭</span>
+                        <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="Austria">🇦🇹</span>
+                        <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="Belgium">🇧🇪</span>
                         <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="United States">🇺🇸</span>
                       </div>
                     </div>
