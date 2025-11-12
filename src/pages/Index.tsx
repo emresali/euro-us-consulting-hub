@@ -219,36 +219,59 @@ const Index = () => {
               
               <div className="space-y-6">
                 <h3 className="font-bold text-2xl mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">{t.about.coreExpertise}</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                   {expertise.slice(0, 6).map((item, index) => (
                     <div 
                       key={index} 
-                      className="group relative p-5 rounded-xl bg-gradient-to-br from-primary/10 to-accent/5 border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg animate-fade-in"
-                      style={{ animationDelay: `${index * 0.1}s` }}
+                      className="group relative p-6 rounded-2xl bg-gradient-to-br from-card via-card to-primary/5 backdrop-blur-sm border-2 border-primary/30 hover:border-primary/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl animate-fade-in overflow-hidden"
+                      style={{ 
+                        animationDelay: `${index * 0.1}s`,
+                        boxShadow: '0 4px 20px rgba(var(--primary-rgb), 0.1)'
+                      }}
                     >
-                      <div className="flex items-center gap-4">
-                        <div className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform shrink-0">
-                          <CheckCircle className="w-6 h-6 text-primary" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      <div className="relative flex items-center gap-4">
+                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/30 to-accent/20 flex items-center justify-center group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shrink-0 shadow-lg">
+                          <CheckCircle className="w-7 h-7 text-primary group-hover:text-accent transition-colors duration-500" />
                         </div>
-                        <span className="text-foreground font-semibold text-base">{item}</span>
+                        <span className="text-foreground font-bold text-base group-hover:text-primary transition-colors duration-300">{item}</span>
                       </div>
+                      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="grid sm:grid-cols-2 gap-6 pt-4">
-                <div className="p-6 rounded-xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20">
-                  <h4 className="font-semibold mb-2">{t.about.international.title}</h4>
-                  <p className="text-sm text-muted-foreground">
-                    {t.about.international.description}
-                  </p>
+              <div className="grid grid-cols-1 gap-6 pt-6">
+                <div className="relative p-8 rounded-2xl bg-gradient-to-br from-primary/15 via-primary/10 to-accent/5 backdrop-blur-sm border-2 border-primary/30 overflow-hidden group hover:shadow-2xl transition-all duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
+                  <div className="relative flex items-start gap-4">
+                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/40 to-accent/20 flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-500">
+                      <Globe className="w-7 h-7 text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-bold text-xl mb-3 text-foreground">{t.about.international.title}</h4>
+                      <p className="text-base text-foreground/80 leading-relaxed">
+                        {t.about.international.description}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div className="p-6 rounded-xl bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20">
-                  <h4 className="font-semibold mb-2">{t.about.results.title}</h4>
-                  <p className="text-sm text-muted-foreground">
-                    {t.about.results.description}
-                  </p>
+                <div className="relative p-8 rounded-2xl bg-gradient-to-br from-accent/15 via-accent/10 to-primary/5 backdrop-blur-sm border-2 border-accent/30 overflow-hidden group hover:shadow-2xl transition-all duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full blur-3xl" />
+                  <div className="relative flex items-start gap-4">
+                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-accent/40 to-primary/20 flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-500">
+                      <Target className="w-7 h-7 text-accent" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-bold text-xl mb-3 text-foreground">{t.about.results.title}</h4>
+                      <p className="text-base text-foreground/80 leading-relaxed">
+                        {t.about.results.description}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
