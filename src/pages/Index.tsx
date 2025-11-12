@@ -198,10 +198,6 @@ const Index = () => {
                   className="rounded-2xl shadow-lg w-full hover:scale-105 transition-transform duration-500"
                   style={{ boxShadow: 'var(--shadow-card-hover)' }}
                 />
-                <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground px-8 py-4 rounded-xl shadow-lg hidden lg:block animate-pulse-glow">
-                  <p className="font-bold text-xl">{t.hero.yearsExperience.split(' ')[0]}</p>
-                  <p className="text-sm">{t.hero.yearsExperience.split(' ').slice(1).join(' ')}</p>
-                </div>
               </div>
             </div>
             <div className="order-1 md:order-2 space-y-8 animate-slide-in-right">
