@@ -47,7 +47,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <LanguageSwitcher />
       {/* Header */}
       <header className="border-b bg-card/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -58,9 +57,12 @@ const Index = () => {
             <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">{t.nav.about}</a>
             <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium">{t.nav.contact}</a>
           </nav>
-          <Button variant="hero" size="sm" asChild>
-            <a href="#contact">{t.nav.getInTouch}</a>
-          </Button>
+          <div className="flex items-center gap-4">
+            <LanguageSwitcher />
+            <Button variant="hero" size="sm" asChild>
+              <a href="#contact">{t.nav.getInTouch}</a>
+            </Button>
+          </div>
         </div>
       </header>
 
@@ -123,20 +125,20 @@ const Index = () => {
               </div>
             </div>
             <div className="hidden md:flex justify-center relative">
-              <div className="relative z-10 w-80">
+              <div className="relative z-10 w-96">
                 <img 
                   src={profileHero} 
                   alt="Professional IT Consultant" 
                   className="rounded-full w-full shadow-2xl border-4 border-white/10"
                   style={{ boxShadow: 'var(--shadow-elevated)' }}
                 />
-                <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground px-6 py-3 rounded-xl shadow-lg animate-pulse-glow">
-                  <p className="font-bold text-lg">{t.hero.yearsExperience.split(' ')[0]}</p>
-                  <p className="text-xs">{t.hero.expert}</p>
+                <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground px-8 py-4 rounded-xl shadow-lg animate-pulse-glow">
+                  <p className="font-bold text-xl">{t.hero.yearsExperience.split(' ')[0]}</p>
+                  <p className="text-sm">{t.hero.expert}</p>
                 </div>
               </div>
-              <div className="absolute -bottom-8 -left-8 w-64 h-64 bg-primary/20 rounded-full blur-3xl" />
-              <div className="absolute -top-8 -right-8 w-64 h-64 bg-accent/20 rounded-full blur-3xl" />
+              <div className="absolute -bottom-12 -left-12 w-80 h-80 bg-primary/20 rounded-full blur-3xl" />
+              <div className="absolute -top-12 -right-12 w-80 h-80 bg-accent/20 rounded-full blur-3xl" />
             </div>
           </div>
         </div>
