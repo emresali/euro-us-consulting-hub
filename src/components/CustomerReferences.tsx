@@ -17,7 +17,7 @@ const CustomerReferences = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
-          <p className="text-base uppercase tracking-widest text-muted-foreground/80 font-bold mb-3 animate-fade-in">
+          <p className="text-base uppercase tracking-widest text-primary/90 font-bold mb-3 animate-fade-in">
             Trusted By
           </p>
           <h3 className="text-3xl md:text-4xl font-bold text-foreground animate-fade-in">
