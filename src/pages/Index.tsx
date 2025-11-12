@@ -114,15 +114,9 @@ const Index = () => {
                   </a>
                 </Button>
               </div>
-              <div className="flex flex-wrap items-center gap-8 text-white/80">
-                <div className="flex items-center gap-2">
-                  <Globe className="w-5 h-5" />
-                  <span className="font-medium">{t.hero.euUseCoverage}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5" />
-                  <span className="font-medium">{t.hero.yearsExperience}</span>
-                </div>
+              <div className="flex items-center gap-2">
+                <Globe className="w-5 h-5" />
+                <span className="font-medium">{t.hero.euUseCoverage}</span>
               </div>
             </div>
             <div className="hidden md:flex justify-center relative">
@@ -146,13 +140,6 @@ const Index = () => {
         {/* Smooth transition gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent via-[hsl(180,54%,98%)] to-[hsl(180,54%,97%)] pointer-events-none" />
       </section>
-
-      {/* Decorative divider */}
-      <div className="relative py-8">
-        <div className="container mx-auto px-4">
-          <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-        </div>
-      </div>
 
       {/* Services Section */}
       <section id="services" className="py-16 relative" style={{ background: 'var(--section-primary-bg)' }}>
