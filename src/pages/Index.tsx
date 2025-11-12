@@ -252,9 +252,15 @@ const Index = () => {
                     </div>
                     <div className="flex-1">
                       <h4 className="font-bold text-xl mb-3 text-foreground">{t.about.international.title}</h4>
-                      <p className="text-base text-foreground/80 leading-relaxed">
+                      <p className="text-base text-foreground/80 leading-relaxed mb-4">
                         {t.about.international.description}
                       </p>
+                      <div className="flex items-center gap-3 flex-wrap">
+                        <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="Germany">🇩🇪</span>
+                        <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="Netherlands">🇳🇱</span>
+                        <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="France">🇫🇷</span>
+                        <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="United States">🇺🇸</span>
+                      </div>
                     </div>
                   </div>
                 </div>
