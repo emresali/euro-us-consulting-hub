@@ -76,8 +76,20 @@ const Index = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(180,54%,57%,0.1),transparent_50%)]" />
         </div>
         
+        {/* Decorative ESIT branding sculpture */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
+          <div className="relative">
+            <div className="text-[20rem] font-bold text-primary/10 blur-sm animate-float" style={{ letterSpacing: '0.1em' }}>
+              ESIT
+            </div>
+            <div className="absolute inset-0 text-[20rem] font-bold bg-gradient-to-br from-primary/20 via-accent/15 to-primary/10 bg-clip-text text-transparent" style={{ letterSpacing: '0.1em' }}>
+              ESIT
+            </div>
+          </div>
+        </div>
+        
         {/* Subtle profile image in header - transparent and integrated */}
-        <div className="absolute top-20 right-8 hidden lg:block opacity-20 hover:opacity-30 transition-opacity duration-500">
+        <div className="absolute top-20 right-8 hidden lg:block opacity-20 hover:opacity-30 transition-opacity duration-500 z-10">
           <img 
             src={profileHero} 
             alt="Consultant" 
