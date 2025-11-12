@@ -67,6 +67,13 @@ export const translations = {
         description: "Delivering measurable outcomes and sustainable improvement."
       }
     },
+    linkedin: {
+      title: "Connect with ESIT-Consulting on LinkedIn",
+      description: "Stay updated with our latest insights, success stories, and industry expertise. Join our growing professional community.",
+      visitButton: "Visit Our Company Page",
+      followButton: "Follow Us",
+      subtitle: "Be part of our professional network and never miss an update"
+    },
     contact: {
       title: "Let's Work Together",
       subtitle: "Ready to transform your IT operations? Schedule a consultation or send me a message.",
@@ -183,6 +190,13 @@ export const translations = {
         title: "Ergebnisorientiert",
         description: "Lieferung messbarer Ergebnisse und nachhaltiger Verbesserung."
       }
+    },
+    linkedin: {
+      title: "Vernetzen Sie sich mit ESIT-Consulting auf LinkedIn",
+      description: "Bleiben Sie auf dem Laufenden über unsere neuesten Erkenntnisse, Erfolgsgeschichten und Branchenexpertise. Werden Sie Teil unserer wachsenden professionellen Community.",
+      visitButton: "Besuchen Sie unsere Unternehmensseite",
+      followButton: "Folgen Sie uns",
+      subtitle: "Seien Sie Teil unseres professionellen Netzwerks und verpassen Sie keine Updates"
     },
     contact: {
       title: "Lassen Sie uns zusammenarbeiten",

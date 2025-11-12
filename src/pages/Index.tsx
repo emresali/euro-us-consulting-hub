@@ -300,6 +300,63 @@ const Index = () => {
         </div>
       </section>
 
+      {/* LinkedIn CTA Section */}
+      <section className="py-20 relative overflow-hidden bg-gradient-to-br from-primary/10 via-primary/5 to-accent/10">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(var(--primary)/0.15),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,hsl(var(--accent)/0.15),transparent_50%)]" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-card/80 to-card/60 backdrop-blur-xl rounded-3xl p-12 md:p-16 shadow-2xl border-2 border-primary/20 relative overflow-hidden group hover:border-primary/40 transition-all duration-500">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
+              
+              <div className="relative text-center space-y-8">
+                <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-[#0077B5] to-[#00A0DC] shadow-xl group-hover:scale-110 transition-transform duration-500">
+                  <Linkedin className="w-10 h-10 text-white" />
+                </div>
+                
+                <div className="space-y-4">
+                  <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">
+                    {t.linkedin.title}
+                  </h2>
+                  <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
+                    {t.linkedin.description}
+                  </p>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+                  <Button 
+                    size="lg" 
+                    className="bg-[#0077B5] hover:bg-[#00669C] text-white font-semibold px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group/btn"
+                    asChild
+                  >
+                    <a href="https://www.linkedin.com/company/esit-consulting-exponential-scale" target="_blank" rel="noopener noreferrer">
+                      <Linkedin className="w-5 h-5 mr-2 group-hover/btn:animate-pulse" />
+                      {t.linkedin.visitButton}
+                    </a>
+                  </Button>
+                  
+                  <Button 
+                    size="lg" 
+                    variant="outline"
+                    className="font-semibold px-8 py-6 text-lg rounded-xl hover:bg-primary/10 border-2 border-primary/30 hover:border-primary/60 hover:scale-105 transition-all duration-300"
+                    asChild
+                  >
+                    <a href="https://www.linkedin.com/company/esit-consulting-exponential-scale" target="_blank" rel="noopener noreferrer">
+                      {t.linkedin.followButton}
+                    </a>
+                  </Button>
+                </div>
+
+                <p className="text-sm text-muted-foreground pt-4">
+                  {t.linkedin.subtitle}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-24 relative overflow-hidden" style={{ background: 'var(--section-secondary-bg)' }}>
         <div className="absolute inset-0 bg-gradient-to-b from-[hsl(180,54%,96%)] via-accent/8 to-[hsl(200,20%,96%)] pointer-events-none" />
