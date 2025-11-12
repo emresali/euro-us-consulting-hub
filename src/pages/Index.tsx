@@ -76,14 +76,20 @@ const Index = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(180,54%,57%,0.1),transparent_50%)]" />
         </div>
         
-        {/* Decorative ESIT branding sculpture */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
+        {/* Decorative ESIT branding accent */}
+        <div className="absolute bottom-12 left-12 pointer-events-none select-none hidden lg:block">
           <div className="relative">
-            <div className="text-[20rem] font-bold text-primary/10 blur-sm animate-float" style={{ letterSpacing: '0.1em' }}>
-              ESIT
+            <div className="text-[8rem] font-bold tracking-tight leading-none">
+              <span className="text-primary/15 blur-[1px]">E</span>
+              <span className="text-primary/20">S</span>
+              <span className="text-primary/15">I</span>
+              <span className="text-primary/20">T</span>
             </div>
-            <div className="absolute inset-0 text-[20rem] font-bold bg-gradient-to-br from-primary/20 via-accent/15 to-primary/10 bg-clip-text text-transparent" style={{ letterSpacing: '0.1em' }}>
-              ESIT
+            <div className="absolute inset-0 text-[8rem] font-bold tracking-tight leading-none bg-gradient-to-br from-primary/25 via-accent/20 to-primary/15 bg-clip-text text-transparent animate-float">
+              <span>E</span>
+              <span>S</span>
+              <span>I</span>
+              <span>T</span>
             </div>
           </div>
         </div>
