@@ -102,7 +102,18 @@ export const translations = {
       services: "Services",
       connect: "Connect",
       copyright: "ESIT-Consulting. All rights reserved.",
-      tagline: "Professional IT Consulting Services | Europe & USA"
+      tagline: "Professional IT Consulting Services | Europe & USA",
+      legal: "Legal"
+    },
+    legal: {
+      impressum: {
+        title: "Imprint",
+        link: "Imprint"
+      },
+      privacy: {
+        title: "Privacy Policy",
+        link: "Privacy Policy"
+      }
     }
   },
   de: {
@@ -208,7 +219,18 @@ export const translations = {
       services: "Dienstleistungen",
       connect: "Verbinden",
       copyright: "ESIT-Consulting. Alle Rechte vorbehalten.",
-      tagline: "Professionelle IT-Beratungsdienstleistungen | Europa & USA"
+      tagline: "Professionelle IT-Beratungsdienstleistungen | Europa & USA",
+      legal: "Rechtliches"
+    },
+    legal: {
+      impressum: {
+        title: "Impressum",
+        link: "Impressum"
+      },
+      privacy: {
+        title: "Datenschutzerklärung",
+        link: "Datenschutzerklärung"
+      }
     }
   }
 };

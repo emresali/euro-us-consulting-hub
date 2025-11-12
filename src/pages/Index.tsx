@@ -15,7 +15,10 @@ import {
   Settings,
   FileText,
   BarChart3,
-  RefreshCw
+  RefreshCw,
+  Linkedin,
+  Mail,
+  Phone
 } from "lucide-react";
 import heroImage from "@/assets/hero-consulting.jpg";
 import esitLogo from "@/assets/esit-logo-light.png";
@@ -402,15 +405,41 @@ const Index = () => {
             <div>
               <h4 className="font-semibold mb-4">{t.footer.connect}</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#contact" className="hover:text-primary transition-colors">{t.nav.contact}</a></li>
-                <li><a href="https://linkedin.com" className="hover:text-primary transition-colors">LinkedIn</a></li>
-                <li><a href="#cases" className="hover:text-primary transition-colors">{t.nav.cases}</a></li>
+                <li>
+                  <a href="#contact" className="hover:text-primary transition-colors flex items-center gap-2">
+                    <Mail className="w-4 h-4" />
+                    {t.nav.contact}
+                  </a>
+                </li>
+                <li>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors flex items-center gap-2">
+                    <Linkedin className="w-4 h-4" />
+                    LinkedIn
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+1234567890" className="hover:text-primary transition-colors flex items-center gap-2">
+                    <Phone className="w-4 h-4" />
+                    {t.nav.contact}
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
-          <div className="border-t pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; {new Date().getFullYear()} {t.footer.copyright}</p>
-            <p className="mt-2">{t.footer.tagline}</p>
+          <div className="border-t pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
+              <p>&copy; {new Date().getFullYear()} {t.footer.copyright}</p>
+              <div className="flex gap-4">
+                <a href="/impressum" className="hover:text-primary transition-colors">
+                  {t.legal.impressum.link}
+                </a>
+                <span>•</span>
+                <a href="/privacy-policy" className="hover:text-primary transition-colors">
+                  {t.legal.privacy.link}
+                </a>
+              </div>
+            </div>
+            <p className="mt-4 text-center text-muted-foreground">{t.footer.tagline}</p>
           </div>
         </div>
       </footer>
