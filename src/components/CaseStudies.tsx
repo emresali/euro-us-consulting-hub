@@ -1,12 +1,16 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Building2, TrendingUp, Users, CheckCircle } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { Building2, TrendingUp, Users, CheckCircle, ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations/translations";
+import { useState } from "react";
 
 const CaseStudies = () => {
   const { language } = useLanguage();
   const t = translations[language].caseStudies;
+  const [selectedCase, setSelectedCase] = useState<number | null>(null);
+  
   const caseStudies = [
     {
       icon: Building2,
@@ -53,66 +57,120 @@ const CaseStudies = () => {
   ];
 
   return (
-    <section id="cases" className="py-20 relative overflow-hidden" style={{ background: 'var(--section-secondary-bg)' }}>
-      <div className="absolute inset-0 bg-gradient-to-b from-accent/5 to-transparent pointer-events-none" />
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.title}</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            {t.subtitle}
-          </p>
-        </div>
+    <>
+      <section id="cases" className="py-24 relative overflow-hidden" style={{ background: 'var(--section-secondary-bg)' }}>
+        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(180,54%,97%)] via-accent/5 to-[hsl(200,20%,98%)] pointer-events-none" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">{t.title}</h2>
+            <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
+              {t.subtitle}
+            </p>
+          </div>
 
-        <div className="grid lg:grid-cols-3 gap-8">
-          {caseStudies.map((study, index) => (
-            <Card 
-              key={index}
-              className="group hover:shadow-lg transition-all duration-300 border-border/50"
-              style={{ boxShadow: 'var(--shadow-card)' }}
-            >
-              <CardHeader>
-                <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                    <study.icon className="w-6 h-6 text-primary" />
+          <div className="grid lg:grid-cols-3 gap-8">
+            {caseStudies.map((study, index) => (
+              <Card 
+                key={index}
+                className="group hover:shadow-xl transition-all duration-300 border-border/50 cursor-pointer hover:-translate-y-2"
+                style={{ boxShadow: 'var(--shadow-card)' }}
+                onClick={() => setSelectedCase(index)}
+              >
+                <CardHeader>
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors group-hover:scale-110">
+                      <study.icon className="w-7 h-7 text-primary" />
+                    </div>
+                    <ArrowRight className="w-5 h-5 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
-                </div>
-                <div className="text-sm text-muted-foreground mb-2">{study.location}</div>
-                <CardTitle className="text-xl mb-2">{study.title}</CardTitle>
-                <CardDescription className="text-base">{study.company}</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-sm mb-2">{t.challenge}</h4>
-                  <p className="text-sm text-muted-foreground">{study.challenge}</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-sm mb-2">{t.solution}</h4>
-                  <p className="text-sm text-muted-foreground">{study.solution}</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-sm mb-2">{t.results}</h4>
-                  <ul className="space-y-2">
-                    {study.results.map((result, i) => (
-                      <li key={i} className="flex items-start gap-2 text-sm">
-                        <CheckCircle className="w-4 h-4 text-accent shrink-0 mt-0.5" />
-                        <span>{result}</span>
-                      </li>
+                  <div className="text-sm text-foreground/60 mb-2 font-medium">{study.location}</div>
+                  <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">{study.title}</CardTitle>
+                  <CardDescription className="text-base font-medium">{study.company}</CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-sm mb-2 text-foreground">{t.challenge}</h4>
+                    <p className="text-sm text-foreground/70 line-clamp-2">{study.challenge}</p>
+                  </div>
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    {study.tags.slice(0, 2).map((tag, i) => (
+                      <Badge key={i} variant="secondary" className="text-xs font-medium">
+                        {tag}
+                      </Badge>
                     ))}
-                  </ul>
+                    {study.tags.length > 2 && (
+                      <Badge variant="secondary" className="text-xs">+{study.tags.length - 2}</Badge>
+                    )}
+                  </div>
+                  <p className="text-sm text-primary font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+                    {t.readMore || "Read full case study"} <ArrowRight className="w-4 h-4" />
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Case Study Dialog */}
+      {selectedCase !== null && (
+        <Dialog open={selectedCase !== null} onOpenChange={() => setSelectedCase(null)}>
+          <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+            <DialogHeader>
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
+                  {(() => {
+                    const Icon = caseStudies[selectedCase].icon;
+                    return <Icon className="w-7 h-7 text-primary" />;
+                  })()}
                 </div>
-                <div className="flex flex-wrap gap-2 pt-2">
-                  {study.tags.map((tag, i) => (
-                    <Badge key={i} variant="secondary" className="text-xs">
+                <div>
+                  <DialogTitle className="text-2xl">{caseStudies[selectedCase].title}</DialogTitle>
+                  <DialogDescription className="text-base font-medium">
+                    {caseStudies[selectedCase].company} • {caseStudies[selectedCase].location}
+                  </DialogDescription>
+                </div>
+              </div>
+            </DialogHeader>
+            
+            <div className="space-y-6 pt-4">
+              <div>
+                <h3 className="text-lg font-bold mb-3 text-foreground">{t.challenge}</h3>
+                <p className="text-base text-foreground/80 leading-relaxed">{caseStudies[selectedCase].challenge}</p>
+              </div>
+              
+              <div>
+                <h3 className="text-lg font-bold mb-3 text-foreground">{t.solution}</h3>
+                <p className="text-base text-foreground/80 leading-relaxed">{caseStudies[selectedCase].solution}</p>
+              </div>
+              
+              <div>
+                <h3 className="text-lg font-bold mb-3 text-foreground">{t.results}</h3>
+                <ul className="space-y-3">
+                  {caseStudies[selectedCase].results.map((result, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                      <span className="text-base text-foreground/80">{result}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div>
+                <h3 className="text-lg font-bold mb-3 text-foreground">{t.expertise || "Expertise Areas"}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {caseStudies[selectedCase].tags.map((tag, i) => (
+                    <Badge key={i} variant="secondary" className="text-sm font-medium px-3 py-1">
                       {tag}
                     </Badge>
                   ))}
                 </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
-    </section>
+              </div>
+            </div>
+          </DialogContent>
+        </Dialog>
+      )}
+    </>
   );
 };
 

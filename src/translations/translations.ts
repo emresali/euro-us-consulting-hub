@@ -49,7 +49,9 @@ export const translations = {
       subtitle: "Real results from European and US organizations transforming their IT operations",
       challenge: "Challenge",
       solution: "Solution",
-      results: "Results"
+      results: "Results",
+      readMore: "Read full case study",
+      expertise: "Expertise Areas"
     },
     about: {
       title: "Your IT Transformation Partner",
@@ -153,7 +155,9 @@ export const translations = {
       subtitle: "Echte Ergebnisse von europäischen und US-amerikanischen Organisationen, die ihre IT-Operationen transformieren",
       challenge: "Herausforderung",
       solution: "Lösung",
-      results: "Ergebnisse"
+      results: "Ergebnisse",
+      readMore: "Vollständige Fallstudie lesen",
+      expertise: "Expertise-Bereiche"
     },
     about: {
       title: "Ihr IT-Transformationspartner",

@@ -132,9 +132,9 @@ const Index = () => {
                   className="rounded-full w-full shadow-2xl border-4 border-white/10"
                   style={{ boxShadow: 'var(--shadow-elevated)' }}
                 />
-                <div className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground px-8 py-4 rounded-xl shadow-lg animate-pulse-glow">
-                  <p className="font-bold text-xl">{t.hero.yearsExperience.split(' ')[0]}</p>
-                  <p className="text-sm">{t.hero.expert}</p>
+                <div className="absolute -bottom-6 -right-6 bg-primary/90 backdrop-blur-md text-primary-foreground px-6 py-4 rounded-2xl shadow-2xl border border-primary-foreground/20">
+                  <p className="font-bold text-2xl">{t.hero.yearsExperience.split(' ')[0]}</p>
+                  <p className="text-sm font-medium">{t.hero.yearsExperience.split(' ').slice(1).join(' ')}</p>
                 </div>
               </div>
               <div className="absolute -bottom-12 -left-12 w-80 h-80 bg-primary/20 rounded-full blur-3xl" />
@@ -143,16 +143,16 @@ const Index = () => {
           </div>
         </div>
         {/* Smooth transition gradient */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[hsl(180,54%,97%)] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent via-[hsl(180,54%,98%)] to-[hsl(180,54%,97%)] pointer-events-none" />
       </section>
 
       {/* Services Section */}
       <section id="services" className="py-24 relative" style={{ background: 'var(--section-primary-bg)' }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(180,54%,97%)] via-primary/5 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(180,54%,97%)] via-primary/8 to-[hsl(200,20%,98%)] pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">{t.services.title}</h2>
-            <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">{t.services.title}</h2>
+            <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
               {t.services.subtitle}
             </p>
           </div>
@@ -167,13 +167,13 @@ const Index = () => {
                 }}
               >
                 <CardHeader>
-                  <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                    <service.icon className="w-7 h-7 text-primary group-hover:text-accent transition-colors" />
+                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                    <service.icon className="w-8 h-8 text-primary group-hover:text-accent transition-colors" />
                   </div>
-                  <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
+                  <CardTitle className="text-2xl mb-3">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base leading-relaxed">
+                  <CardDescription className="text-base leading-relaxed text-foreground/70">
                     {service.description}
                   </CardDescription>
                 </CardContent>
@@ -188,6 +188,7 @@ const Index = () => {
 
       {/* About Section with Profile */}
       <section id="about" className="py-24 relative overflow-hidden" style={{ background: 'var(--section-accent-bg)' }}>
+        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(200,20%,98%)] via-primary/5 to-[hsl(180,54%,96%)] pointer-events-none" />
         <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
         <div className="container mx-auto px-4 relative z-10">
@@ -208,11 +209,11 @@ const Index = () => {
             </div>
             <div className="order-1 md:order-2 space-y-8 animate-slide-in-right">
               <div>
-                <h2 className="text-3xl md:text-5xl font-bold mb-6">{t.about.title}</h2>
-                <p className="text-lg text-muted-foreground mb-4">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6">{t.about.title}</h2>
+                <p className="text-lg text-foreground/75 mb-4 leading-relaxed">
                   {t.about.subtitle1}
                 </p>
-                <p className="text-lg text-muted-foreground">
+                <p className="text-lg text-foreground/75 leading-relaxed">
                   {t.about.subtitle2}
                 </p>
               </div>
@@ -250,12 +251,12 @@ const Index = () => {
 
       {/* Contact Section */}
       <section id="contact" className="py-24 relative overflow-hidden" style={{ background: 'var(--section-secondary-bg)' }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/5 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(180,54%,96%)] via-accent/8 to-[hsl(200,20%,96%)] pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold mb-4">{t.contact.title}</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">{t.contact.title}</h2>
+              <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
                 {t.contact.subtitle}
               </p>
             </div>
