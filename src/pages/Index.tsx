@@ -124,9 +124,19 @@ const Index = () => {
                   </a>
                 </Button>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-3">
                 <Globe className="w-5 h-5" />
-                <span className="font-medium">{t.hero.euUseCoverage}</span>
+                <div className="flex items-center gap-2">
+                  <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="Germany">🇩🇪</span>
+                  <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="Netherlands">🇳🇱</span>
+                  <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="France">🇫🇷</span>
+                  <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="Luxembourg">🇱🇺</span>
+                  <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="Switzerland">🇨🇭</span>
+                  <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="Austria">🇦🇹</span>
+                  <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="Belgium">🇧🇪</span>
+                  <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="United Kingdom">🇬🇧</span>
+                  <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="United States">🇺🇸</span>
+                </div>
               </div>
             </div>
             <div className="hidden md:flex justify-center relative">
