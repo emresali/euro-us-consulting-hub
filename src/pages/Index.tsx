@@ -76,23 +76,6 @@ const Index = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(180,54%,57%,0.1),transparent_50%)]" />
         </div>
         
-        {/* Decorative ESIT branding accent */}
-        <div className="absolute bottom-12 left-12 pointer-events-none select-none hidden lg:block">
-          <div className="relative">
-            <div className="text-[8rem] font-bold tracking-tight leading-none">
-              <span className="text-primary/15 blur-[1px]">E</span>
-              <span className="text-primary/20">S</span>
-              <span className="text-primary/15">I</span>
-              <span className="text-primary/20">T</span>
-            </div>
-            <div className="absolute inset-0 text-[8rem] font-bold tracking-tight leading-none bg-gradient-to-br from-primary/25 via-accent/20 to-primary/15 bg-clip-text text-transparent animate-float">
-              <span>E</span>
-              <span>S</span>
-              <span>I</span>
-              <span>T</span>
-            </div>
-          </div>
-        </div>
         
         {/* Subtle profile image in header - transparent and integrated */}
         <div className="absolute top-20 right-8 hidden lg:block opacity-20 hover:opacity-30 transition-opacity duration-500 z-10">
