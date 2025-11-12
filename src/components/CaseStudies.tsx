@@ -1,88 +1,48 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import { Building2, TrendingUp, Users, CheckCircle, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations/translations";
-import { useState } from "react";
+import { Link } from "react-router-dom";
+import { caseStudies } from "@/data/caseStudies";
 
 const CaseStudies = () => {
   const { language } = useLanguage();
   const t = translations[language].caseStudies;
-  const [selectedCase, setSelectedCase] = useState<number | null>(null);
-  
-  const caseStudies = [
-    {
-      icon: Building2,
-      company: "Global Financial Services",
-      location: "Frankfurt, Germany",
-      title: "Enterprise PMO Transformation",
-      challenge: "Needed to establish a centralized PMO to manage 50+ concurrent projects across 5 countries.",
-      solution: "Implemented comprehensive PMO framework with standardized processes, governance structures, and reporting dashboards.",
-      results: [
-        "40% improvement in project delivery times",
-        "€2M+ cost savings in first year",
-        "95% stakeholder satisfaction rate"
-      ],
-      tags: ["IT-PMO", "Change Management", "Process Optimization"]
-    },
-    {
-      icon: Users,
-      company: "Dutch Tech Scale-up",
-      location: "Amsterdam, Netherlands",
-      title: "Agile Transformation at Scale",
-      challenge: "Engineering teams struggling with coordination and delivery velocity as company grew from 50 to 200+ employees.",
-      solution: "Led comprehensive Agile transformation with SAFe framework implementation, trained 12 Scrum teams, established CoE.",
-      results: [
-        "65% increase in deployment frequency",
-        "50% reduction in time-to-market",
-        "Enhanced cross-team collaboration"
-      ],
-      tags: ["Scrum Master", "Agile", "Team Coaching"]
-    },
-    {
-      icon: TrendingUp,
-      company: "US Manufacturing Corp",
-      location: "Chicago, USA",
-      title: "Data-Driven Process Optimization",
-      challenge: "Legacy manufacturing processes with limited visibility and inefficient workflows causing delivery delays.",
-      solution: "Conducted comprehensive business analysis, designed new data analytics framework, implemented automated reporting.",
-      results: [
-        "30% operational efficiency gain",
-        "Real-time visibility into production metrics",
-        "$1.5M annual cost reduction"
-      ],
-      tags: ["Business Analysis", "Data Analytics", "Process Management"]
-    }
-  ];
 
   return (
-    <>
-      <section id="cases" className="py-24 relative overflow-hidden" style={{ background: 'var(--section-secondary-bg)' }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(180,54%,97%)] via-accent/5 to-[hsl(200,20%,98%)] pointer-events-none" />
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">{t.title}</h2>
-            <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-              {t.subtitle}
-            </p>
-          </div>
+    <section id="cases" className="py-24 relative overflow-hidden" style={{ background: 'var(--section-secondary-bg)' }}>
+      <div className="absolute inset-0 bg-gradient-to-b from-[hsl(180,54%,97%)] via-accent/5 to-[hsl(200,20%,98%)] pointer-events-none" />
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">{t.title}</h2>
+          <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
+            {t.subtitle}
+          </p>
+        </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (
+        <div className="grid lg:grid-cols-3 gap-8">
+          {caseStudies.map((study) => (
+            <Link key={study.id} to={`/case-studies/${study.id}`}>
               <Card 
-                key={index}
-                className="group hover:shadow-xl transition-all duration-300 border-border/50 cursor-pointer hover:-translate-y-2"
+                className="group hover:shadow-xl transition-all duration-300 border-border/50 cursor-pointer hover:-translate-y-2 h-full overflow-hidden"
                 style={{ boxShadow: 'var(--shadow-card)' }}
-                onClick={() => setSelectedCase(index)}
               >
-                <CardHeader>
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors group-hover:scale-110">
-                      <study.icon className="w-7 h-7 text-primary" />
+                {/* Image Preview */}
+                {study.image && (
+                  <div className="relative h-48 overflow-hidden">
+                    <div 
+                      className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500"
+                      style={{ backgroundImage: `url(${study.image})` }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/90" />
+                    <div className="absolute top-4 right-4 w-12 h-12 rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center border border-primary/30">
+                      <study.icon className="w-6 h-6 text-primary" />
                     </div>
-                    <ArrowRight className="w-5 h-5 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
+                )}
+                
+                <CardHeader>
                   <div className="text-sm text-foreground/60 mb-2 font-medium">{study.location}</div>
                   <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">{study.title}</CardTitle>
                   <CardDescription className="text-base font-medium">{study.company}</CardDescription>
@@ -107,70 +67,11 @@ const CaseStudies = () => {
                   </p>
                 </CardContent>
               </Card>
-            ))}
-          </div>
+            </Link>
+          ))}
         </div>
-      </section>
-
-      {/* Case Study Dialog */}
-      {selectedCase !== null && (
-        <Dialog open={selectedCase !== null} onOpenChange={() => setSelectedCase(null)}>
-          <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
-            <DialogHeader>
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center">
-                  {(() => {
-                    const Icon = caseStudies[selectedCase].icon;
-                    return <Icon className="w-7 h-7 text-primary" />;
-                  })()}
-                </div>
-                <div>
-                  <DialogTitle className="text-2xl">{caseStudies[selectedCase].title}</DialogTitle>
-                  <DialogDescription className="text-base font-medium">
-                    {caseStudies[selectedCase].company} • {caseStudies[selectedCase].location}
-                  </DialogDescription>
-                </div>
-              </div>
-            </DialogHeader>
-            
-            <div className="space-y-6 pt-4">
-              <div>
-                <h3 className="text-lg font-bold mb-3 text-foreground">{t.challenge}</h3>
-                <p className="text-base text-foreground/80 leading-relaxed">{caseStudies[selectedCase].challenge}</p>
-              </div>
-              
-              <div>
-                <h3 className="text-lg font-bold mb-3 text-foreground">{t.solution}</h3>
-                <p className="text-base text-foreground/80 leading-relaxed">{caseStudies[selectedCase].solution}</p>
-              </div>
-              
-              <div>
-                <h3 className="text-lg font-bold mb-3 text-foreground">{t.results}</h3>
-                <ul className="space-y-3">
-                  {caseStudies[selectedCase].results.map((result, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                      <span className="text-base text-foreground/80">{result}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              
-              <div>
-                <h3 className="text-lg font-bold mb-3 text-foreground">{t.expertise || "Expertise Areas"}</h3>
-                <div className="flex flex-wrap gap-2">
-                  {caseStudies[selectedCase].tags.map((tag, i) => (
-                    <Badge key={i} variant="secondary" className="text-sm font-medium px-3 py-1">
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </DialogContent>
-        </Dialog>
-      )}
-    </>
+      </div>
+    </section>
   );
 };
 
