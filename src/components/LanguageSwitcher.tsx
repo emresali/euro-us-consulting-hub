@@ -10,10 +10,10 @@ const LanguageSwitcher = () => {
       <SheetTrigger asChild>
         <Button 
           variant="outline" 
-          className="fixed top-20 right-4 z-50 shadow-lg hover:shadow-xl transition-all hover:scale-105 px-3 py-2 h-auto gap-2"
+          className="fixed top-20 right-4 z-50 shadow-xl hover:shadow-2xl transition-all hover:scale-105 px-5 py-6 h-auto gap-3 text-lg font-bold border-2 hover:border-primary bg-card"
         >
-          <span className="text-2xl">{language === 'en' ? '🇬🇧' : '🇩🇪'}</span>
-          <span className="font-semibold text-sm uppercase">{language}</span>
+          <span className="text-4xl">{language === 'en' ? '🇺🇸' : '🇩🇪'}</span>
+          <span className="font-bold text-base uppercase tracking-wide">{language === 'en' ? 'English' : 'Deutsch'}</span>
         </Button>
       </SheetTrigger>
       <SheetContent side="right" className="w-[280px]">
@@ -29,7 +29,7 @@ const LanguageSwitcher = () => {
                 : 'border-border hover:border-primary/50'
             }`}
           >
-            <span className="text-4xl">🇬🇧</span>
+            <span className="text-4xl">🇺🇸</span>
             <div className="text-left">
               <div className="font-semibold">English</div>
               <div className="text-sm text-muted-foreground">English</div>
