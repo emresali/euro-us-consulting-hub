@@ -11,16 +11,16 @@ const CustomerReferences = () => {
   ];
 
   return (
-    <section className="relative py-16 overflow-hidden">
-      {/* Smooth gradient background that blends with surrounding sections */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[hsl(215,25%,15%)] via-background/60 to-[hsl(180,54%,97%)]" />
+    <section className="relative py-12 overflow-hidden">
+      {/* Reduced gradient overlap - more compact */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[hsl(215,25%,15%,0.6)] via-background/80 to-[hsl(180,54%,97%)]" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
-          <p className="text-base uppercase tracking-widest text-primary/90 font-bold mb-3 animate-fade-in">
+        <div className="text-center mb-14">
+          <p className="text-lg uppercase tracking-[0.3em] text-primary font-bold mb-4 animate-fade-in">
             Trusted By
           </p>
-          <h3 className="text-3xl md:text-4xl font-bold text-foreground animate-fade-in">
+          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground animate-fade-in">
             Leading Organizations
           </h3>
         </div>
