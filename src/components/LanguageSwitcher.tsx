@@ -1,7 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { Languages } from "lucide-react";
 
 const LanguageSwitcher = () => {
   const { language, setLanguage } = useLanguage();
@@ -9,8 +8,12 @@ const LanguageSwitcher = () => {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="outline" size="icon" className="fixed top-20 right-4 z-50 shadow-lg hover:shadow-xl transition-shadow">
-          <Languages className="h-5 w-5" />
+        <Button 
+          variant="outline" 
+          className="fixed top-20 right-4 z-50 shadow-lg hover:shadow-xl transition-all hover:scale-105 px-3 py-2 h-auto gap-2"
+        >
+          <span className="text-2xl">{language === 'en' ? '🇬🇧' : '🇩🇪'}</span>
+          <span className="font-semibold text-sm uppercase">{language}</span>
         </Button>
       </SheetTrigger>
       <SheetContent side="right" className="w-[280px]">
