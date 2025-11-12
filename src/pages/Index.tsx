@@ -332,26 +332,45 @@ const Index = () => {
                   </p>
                 </Card>
 
-                <Card className="p-8 bg-gradient-to-br from-primary/5 to-accent/5" style={{ boxShadow: 'var(--shadow-card)' }}>
-                  <h3 className="text-xl font-bold mb-4">{t.contact.serviceAreas}</h3>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold mb-2 flex items-center gap-2">
-                        <Globe className="w-4 h-4 text-primary" />
-                        {t.contact.europe}
-                      </h4>
-                      <p className="text-sm text-muted-foreground ml-6">
-                        Germany • Netherlands • France
-                      </p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-2 flex items-center gap-2">
-                        <Globe className="w-4 h-4 text-primary" />
-                        {t.contact.northAmerica}
-                      </h4>
-                      <p className="text-sm text-muted-foreground ml-6">
-                        United States
-                      </p>
+                <Card className="p-8 bg-gradient-to-br from-primary/10 via-primary/5 to-accent/5 backdrop-blur-sm border-2 border-primary/20 overflow-hidden" style={{ boxShadow: 'var(--shadow-card)' }}>
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl" />
+                  <div className="relative">
+                    <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+                      <Globe className="w-6 h-6 text-primary" />
+                      {t.contact.serviceAreas}
+                    </h3>
+                    <div className="space-y-6">
+                      <div className="p-5 rounded-xl bg-card/50 backdrop-blur-sm border border-primary/20">
+                        <h4 className="font-bold mb-4 text-lg flex items-center gap-2 text-foreground">
+                          <Globe className="w-5 h-5 text-primary" />
+                          {t.contact.europe}
+                        </h4>
+                        <div className="flex items-center gap-3 flex-wrap mb-3">
+                          <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="Germany">🇩🇪</span>
+                          <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="Netherlands">🇳🇱</span>
+                          <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="France">🇫🇷</span>
+                          <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="Luxembourg">🇱🇺</span>
+                          <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="Switzerland">🇨🇭</span>
+                          <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="Austria">🇦🇹</span>
+                          <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="Belgium">🇧🇪</span>
+                          <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="United Kingdom">🇬🇧</span>
+                        </div>
+                        <p className="text-sm text-foreground/70">
+                          Germany • Netherlands • France • Luxembourg • Switzerland • Austria • Belgium • United Kingdom
+                        </p>
+                      </div>
+                      <div className="p-5 rounded-xl bg-card/50 backdrop-blur-sm border border-accent/20">
+                        <h4 className="font-bold mb-4 text-lg flex items-center gap-2 text-foreground">
+                          <Globe className="w-5 h-5 text-primary" />
+                          {t.contact.northAmerica}
+                        </h4>
+                        <div className="flex items-center gap-3 flex-wrap mb-3">
+                          <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="United States">🇺🇸</span>
+                        </div>
+                        <p className="text-sm text-foreground/70">
+                          United States
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </Card>
