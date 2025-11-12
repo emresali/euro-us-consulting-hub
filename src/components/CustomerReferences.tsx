@@ -12,8 +12,8 @@ const CustomerReferences = () => {
 
   return (
     <section className="relative py-12 overflow-hidden">
-      {/* Reduced gradient overlap - more compact */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[hsl(215,25%,15%,0.6)] via-background/80 to-[hsl(180,54%,97%)]" />
+      {/* More subtle gradient overlap */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[hsl(215,25%,15%,0.4)] via-background/90 to-[hsl(180,54%,97%)]" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-14">

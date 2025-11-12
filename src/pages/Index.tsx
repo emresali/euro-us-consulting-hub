@@ -140,8 +140,8 @@ const Index = () => {
             </div>
           </div>
         </div>
-        {/* Smooth transition gradient - more compact */}
-        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-b from-transparent via-[hsl(215,25%,15%,0.3)] to-[hsl(215,25%,15%,0.6)] pointer-events-none" />
+        {/* Smooth transition gradient - smaller and more subtle */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-[hsl(215,25%,15%,0.2)] to-[hsl(215,25%,15%,0.4)] pointer-events-none" />
       </section>
 
       {/* Customer References */}
