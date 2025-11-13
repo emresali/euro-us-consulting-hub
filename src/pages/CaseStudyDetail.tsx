@@ -21,7 +21,7 @@ const CaseStudyDetail = () => {
   const Icon = caseStudy.icon;
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden w-full max-w-[100vw]">
       {/* Hero Section with Image */}
       <div className="relative h-[60vh] overflow-hidden">
         <div 
