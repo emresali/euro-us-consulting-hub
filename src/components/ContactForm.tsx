@@ -37,8 +37,8 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid md:grid-cols-2 gap-6">
+    <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
+      <div className="grid md:grid-cols-2 gap-4 md:gap-6">
         <div className="space-y-2">
           <Label htmlFor="name">{t.name} *</Label>
           <Input
@@ -62,7 +62,7 @@ const ContactForm = () => {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-4 md:gap-6">
         <div className="space-y-2">
           <Label htmlFor="company">{t.company}</Label>
           <Input
@@ -96,8 +96,8 @@ const ContactForm = () => {
         />
       </div>
 
-      <div className="flex items-center gap-4">
-        <Button type="submit" variant="hero" size="lg" disabled={isSubmitting}>
+      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 md:gap-4">
+        <Button type="submit" variant="hero" size="lg" disabled={isSubmitting} className="w-full sm:w-auto">
           {isSubmitting ? (
             <>
               <Loader2 className="w-4 h-4 animate-spin" />
@@ -110,9 +110,9 @@ const ContactForm = () => {
             </>
           )}
         </Button>
-        <a href="tel:+1234567890" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+        <a href="tel:+1234567890" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors w-full sm:w-auto justify-center sm:justify-start">
           <Phone className="w-4 h-4" />
-          <span className="text-sm">{t.callDirectly}</span>
+          <span className="text-xs md:text-sm">{t.callDirectly}</span>
         </a>
       </div>
 

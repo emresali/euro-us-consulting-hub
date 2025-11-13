@@ -11,26 +11,26 @@ const CustomerReferences = () => {
   ];
 
   return (
-    <section className="relative py-12 overflow-hidden">
+    <section className="relative py-8 md:py-12 overflow-hidden">
       {/* More subtle gradient overlap */}
       <div className="absolute inset-0 bg-gradient-to-b from-[hsl(215,25%,15%,0.4)] via-background/90 to-[hsl(180,54%,97%)]" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-14">
-          <h3 className="text-4xl md:text-5xl font-bold text-foreground animate-fade-in mb-2">
+        <div className="text-center mb-8 md:mb-14">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground animate-fade-in mb-1 md:mb-2">
             Leading Organizations
           </h3>
-          <p className="text-base text-foreground/60 font-medium">
+          <p className="text-sm md:text-base text-foreground/60 font-medium">
             Trusted partners in digital transformation
           </p>
         </div>
 
         <div className="relative overflow-hidden">
-          <div className="flex gap-24 items-center animate-scroll">
+          <div className="flex gap-12 md:gap-24 items-center animate-scroll">
             {customers.map((customer, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-48 h-24 flex items-center justify-center opacity-50 hover:opacity-100 transition-all duration-300 hover:scale-110"
+                className="flex-shrink-0 w-32 h-16 md:w-48 md:h-24 flex items-center justify-center opacity-50 hover:opacity-100 transition-all duration-300 hover:scale-110"
               >
                 <img
                   src={customer.logo}
@@ -43,7 +43,7 @@ const CustomerReferences = () => {
             {customers.map((customer, index) => (
               <div
                 key={`duplicate-${index}`}
-                className="flex-shrink-0 w-48 h-24 flex items-center justify-center opacity-50 hover:opacity-100 transition-all duration-300 hover:scale-110"
+                className="flex-shrink-0 w-32 h-16 md:w-48 md:h-24 flex items-center justify-center opacity-50 hover:opacity-100 transition-all duration-300 hover:scale-110"
               >
                 <img
                   src={customer.logo}
