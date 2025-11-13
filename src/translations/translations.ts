@@ -42,6 +42,18 @@ export const translations = {
       changeManagement: {
         title: "Change & Escalation Management",
         description: "Strategic change management, stakeholder engagement, and expert escalation management to navigate complex organizational transformations."
+      },
+      productOwner: {
+        title: "Product Owner",
+        description: "Strategic product vision, backlog management, and stakeholder alignment to maximize product value and drive business outcomes."
+      },
+      devOps: {
+        title: "DevOps Consulting",
+        description: "CI/CD pipeline optimization, automation strategy, and DevOps culture transformation for faster and more reliable software delivery."
+      },
+      digitalTransformation: {
+        title: "Digital Transformation",
+        description: "End-to-end digital strategy, technology roadmap development, and organizational change leadership for successful digital evolution."
       }
     },
     caseStudies: {
@@ -166,6 +178,18 @@ export const translations = {
       changeManagement: {
         title: "Change & Eskalationsmanagement",
         description: "Strategisches Change Management, Stakeholder-Engagement und Experten-Eskalationsmanagement zur Navigation komplexer Organisationstransformationen."
+      },
+      productOwner: {
+        title: "Product Owner",
+        description: "Strategische Produktvision, Backlog-Management und Stakeholder-Ausrichtung zur Maximierung des Produktwerts und zur Erzielung von Geschäftsergebnissen."
+      },
+      devOps: {
+        title: "DevOps-Beratung",
+        description: "CI/CD-Pipeline-Optimierung, Automatisierungsstrategie und DevOps-Kulturtransformation für schnellere und zuverlässigere Software-Bereitstellung."
+      },
+      digitalTransformation: {
+        title: "Digitale Transformation",
+        description: "End-to-End-Digitalstrategie, Technologie-Roadmap-Entwicklung und organisatorische Change-Führung für erfolgreiche digitale Evolution."
       }
     },
     caseStudies: {
