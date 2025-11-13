@@ -125,7 +125,13 @@ const Index = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Globe className="w-5 h-5" />
-                <div className="flex items-center gap-2">
+                {/* Mobile: Show only EU and US flags */}
+                <div className="flex md:hidden items-center gap-2">
+                  <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="European Union">🇪🇺</span>
+                  <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="United States">🇺🇸</span>
+                </div>
+                {/* Desktop: Show all country flags */}
+                <div className="hidden md:flex items-center gap-2">
                   <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="Germany">🇩🇪</span>
                   <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="Netherlands">🇳🇱</span>
                   <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="France">🇫🇷</span>
@@ -274,7 +280,13 @@ const Index = () => {
                       <p className="text-base text-foreground/80 leading-relaxed mb-4">
                         {t.about.international.description}
                       </p>
-                      <div className="flex items-center gap-3 flex-wrap">
+                      {/* Mobile: Show only EU and US flags */}
+                      <div className="flex md:hidden items-center gap-3 flex-wrap">
+                        <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="European Union">🇪🇺</span>
+                        <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="United States">🇺🇸</span>
+                      </div>
+                      {/* Desktop: Show all country flags */}
+                      <div className="hidden md:flex items-center gap-3 flex-wrap">
                         <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="Germany">🇩🇪</span>
                         <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="Netherlands">🇳🇱</span>
                         <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="France">🇫🇷</span>
@@ -414,7 +426,12 @@ const Index = () => {
                           <Globe className="w-5 h-5 text-primary" />
                           {t.contact.europe}
                         </h4>
-                        <div className="flex items-center gap-3 flex-wrap mb-3">
+                        {/* Mobile: Show only EU flag */}
+                        <div className="flex md:hidden items-center gap-3 flex-wrap mb-3">
+                          <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="European Union">🇪🇺</span>
+                        </div>
+                        {/* Desktop: Show all country flags */}
+                        <div className="hidden md:flex items-center gap-3 flex-wrap mb-3">
                           <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="Germany">🇩🇪</span>
                           <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="Netherlands">🇳🇱</span>
                           <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="France">🇫🇷</span>
