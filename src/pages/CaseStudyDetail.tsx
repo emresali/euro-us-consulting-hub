@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, CheckCircle, MapPin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations/translations";
-import CustomCursor from "@/components/CustomCursor";
+
 
 const CaseStudyDetail = () => {
   const { id } = useParams<{ id: string }>();
@@ -22,7 +22,6 @@ const CaseStudyDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <CustomCursor />
       {/* Hero Section with Image */}
       <div className="relative h-[60vh] overflow-hidden">
         <div 
