@@ -174,10 +174,10 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-[hsl(180,54%,97%)] via-primary/8 to-[hsl(200,20%,98%)] pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-20 animate-fade-in-up">
-            <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-8 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">
               {t.services.title}
             </h2>
-            <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
+            <p className="text-sm md:text-base lg:text-lg text-foreground/70 max-w-2xl mx-auto px-4">
               {t.services.subtitle}
             </p>
           </div>
@@ -337,10 +337,10 @@ const Index = () => {
                 </div>
                 
                 <div className="space-y-4">
-                  <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent px-4">
                     {t.linkedin.title}
                   </h2>
-                  <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed px-4">
                     {t.linkedin.description}
                   </p>
                 </div>
