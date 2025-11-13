@@ -348,19 +348,19 @@ const Index = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
                   <Button 
                     size="lg" 
-                    className="bg-[#0077B5] hover:bg-[#00669C] text-white font-semibold px-6 py-5 md:px-8 md:py-6 text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group/btn w-full sm:w-auto"
+                    className="bg-[#0077B5] hover:bg-[#00669C] text-white font-semibold px-4 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 text-xs sm:text-base md:text-lg rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group/btn w-full sm:w-auto whitespace-normal sm:whitespace-nowrap"
                     asChild
                   >
-                    <a href="https://www.linkedin.com/company/esit-consulting-exponential-scale" target="_blank" rel="noopener noreferrer">
-                      <Linkedin className="w-4 h-4 md:w-5 md:h-5 mr-2 group-hover/btn:animate-pulse" />
-                      {t.linkedin.visitButton}
+                    <a href="https://www.linkedin.com/company/esit-consulting-exponential-scale" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center">
+                      <Linkedin className="w-4 h-4 md:w-5 md:h-5 mr-2 group-hover/btn:animate-pulse flex-shrink-0" />
+                      <span className="text-center">{t.linkedin.visitButton}</span>
                     </a>
                   </Button>
                   
                   <Button 
                     size="lg" 
                     variant="outline"
-                    className="font-semibold px-6 py-5 md:px-8 md:py-6 text-base md:text-lg rounded-xl hover:bg-primary/10 border-2 border-primary/30 hover:border-primary/60 hover:scale-105 transition-all duration-300 w-full sm:w-auto"
+                    className="font-semibold px-4 py-4 sm:px-6 sm:py-5 md:px-8 md:py-6 text-xs sm:text-base md:text-lg rounded-xl hover:bg-primary/10 border-2 border-primary/30 hover:border-primary/60 hover:scale-105 transition-all duration-300 w-full sm:w-auto"
                     asChild
                   >
                     <a href="https://www.linkedin.com/company/esit-consulting-exponential-scale" target="_blank" rel="noopener noreferrer">
