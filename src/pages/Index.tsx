@@ -98,7 +98,7 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="text-white">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 leading-tight">
                 {t.hero.title}
               </h1>
               <p className="text-base sm:text-lg md:text-xl mb-6 md:mb-8 text-white/90 leading-relaxed">
@@ -230,7 +230,7 @@ const Index = () => {
             </div>
             <div className="order-1 md:order-2 space-y-6 md:space-y-8 animate-slide-in-right">
               <div>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 lg:mb-8 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">{t.about.title}</h2>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 lg:mb-8 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">{t.about.title}</h2>
                 <p className="text-base md:text-lg text-foreground/75 mb-3 md:mb-4 leading-relaxed">
                   {t.about.subtitle1}
                 </p>
@@ -383,12 +383,12 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-[hsl(180,54%,96%)] via-accent/8 to-[hsl(200,20%,96%)] pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12 md:mb-16 lg:mb-20">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-8 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">{t.contact.title}</h2>
-              <p className="text-base md:text-lg lg:text-xl text-foreground/70 max-w-2xl mx-auto px-4">
-                {t.contact.subtitle}
-              </p>
-            </div>
+        <div className="text-center mb-12 md:mb-16 lg:mb-20">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-8 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">{t.contact.title}</h2>
+          <p className="text-sm md:text-base lg:text-lg text-foreground/70 max-w-2xl mx-auto px-4">
+            {t.contact.subtitle}
+          </p>
+        </div>
             
             <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
               <Card className="p-6 md:p-8" style={{ boxShadow: 'var(--shadow-elevated)' }}>
