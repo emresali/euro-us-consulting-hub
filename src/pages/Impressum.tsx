@@ -86,7 +86,7 @@ const Impressum = () => {
                   exali AG<br />
                   Franz-Kobinger-Str. 9<br />
                   86157 Augsburg<br />
-                  Coverage area: Europe
+                  Coverage area: Worldwide
                 </p>
               </section>
 
@@ -201,7 +201,7 @@ const Impressum = () => {
                   86157 Augsburg<br />
                   <br />
                   Geltungsraum der Versicherung:<br />
-                  Europa
+                  Weltweit
                 </p>
               </section>
 
