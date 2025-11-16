@@ -1,13 +1,13 @@
 const CustomerReferences = () => {
   const customers = [
-    { name: "L'Oréal", logo: "/images/loreal-logo.png", scale: "scale-[1.8]" },
-    { name: "DDA", logo: "/images/dda-logo.avif", scale: "scale-100" },
-    { name: "Fürsie", logo: "/images/fursie-logo.png", scale: "scale-100" },
-    { name: "Lacroix", logo: "/images/lacroix-logo.webp", scale: "scale-110" },
-    { name: "L'Oréal", logo: "/images/loreal-logo.png", scale: "scale-[1.8]" },
-    { name: "DDA", logo: "/images/dda-logo.avif", scale: "scale-100" },
-    { name: "Fürsie", logo: "/images/fursie-logo.png", scale: "scale-100" },
-    { name: "Lacroix", logo: "/images/lacroix-logo.webp", scale: "scale-110" },
+    { name: "L'Oréal", logo: "/images/loreal-logo.png", scale: "scale-[1.8]", position: "" },
+    { name: "DDA", logo: "/images/dda-logo.avif", scale: "scale-100", position: "" },
+    { name: "Fürsie", logo: "/images/fursie-logo.png", scale: "scale-100", position: "" },
+    { name: "Lacroix", logo: "/images/lacroix-logo.webp", scale: "scale-110", position: "-translate-y-1" },
+    { name: "L'Oréal", logo: "/images/loreal-logo.png", scale: "scale-[1.8]", position: "" },
+    { name: "DDA", logo: "/images/dda-logo.avif", scale: "scale-100", position: "" },
+    { name: "Fürsie", logo: "/images/fursie-logo.png", scale: "scale-100", position: "" },
+    { name: "Lacroix", logo: "/images/lacroix-logo.webp", scale: "scale-110", position: "-translate-y-1" },
   ];
 
   return (
@@ -35,7 +35,7 @@ const CustomerReferences = () => {
                 <img
                   src={customer.logo}
                   alt={customer.name}
-                  className={`max-w-full max-h-full object-contain ${customer.scale}`}
+                  className={`max-w-full max-h-full object-contain ${customer.scale} ${customer.position}`}
                 />
               </div>
             ))}
@@ -48,7 +48,7 @@ const CustomerReferences = () => {
                 <img
                   src={customer.logo}
                   alt={customer.name}
-                  className={`max-w-full max-h-full object-contain ${customer.scale}`}
+                  className={`max-w-full max-h-full object-contain ${customer.scale} ${customer.position}`}
                 />
               </div>
             ))}
