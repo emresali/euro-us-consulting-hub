@@ -35,7 +35,7 @@ const CustomerReferences = () => {
                 <img
                   src={customer.logo}
                   alt={customer.name}
-                  className="max-w-full max-h-full object-contain"
+                  className={`max-w-full max-h-full object-contain ${customer.name === "L'Oréal" ? "scale-150" : ""}`}
                 />
               </div>
             ))}
@@ -48,7 +48,7 @@ const CustomerReferences = () => {
                 <img
                   src={customer.logo}
                   alt={customer.name}
-                  className="max-w-full max-h-full object-contain"
+                  className={`max-w-full max-h-full object-contain ${customer.name === "L'Oréal" ? "scale-150" : ""}`}
                 />
               </div>
             ))}
