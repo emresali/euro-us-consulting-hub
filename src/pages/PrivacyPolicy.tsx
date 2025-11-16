@@ -96,12 +96,12 @@ const PrivacyPolicy = () => {
                 <p className="text-foreground/80 leading-relaxed">
                   The responsible party for data processing on this website is:<br /><br />
                   ESIT-Consulting<br />
-                  [Your Name]<br />
-                  [Street Address]<br />
-                  [Postal Code] [City]<br />
-                  [Country]<br /><br />
-                  Email: contact@esit-consulting.com<br />
-                  Phone: [Your Phone Number]
+                  Emre Sali<br />
+                  Lievergesberg 59<br />
+                  50769 Cologne<br />
+                  Germany<br /><br />
+                  Email: sali@esit-consulting.de<br />
+                  Phone: +4917641418299
                 </p>
               </section>
 
