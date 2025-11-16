@@ -12,6 +12,8 @@ export const translations = {
       subtitle: "Expert IT-PMO, Scrum Master, and Business Analysis consulting for European and US organizations seeking transformational results.",
       exploreServices: "Explore Services",
       scheduleConsultation: "Schedule Consultation",
+      basedIn: "Based in Germany",
+      servingClients: "Serving clients in",
       euUseCoverage: "EU & US Coverage",
       yearsExperience: "5+ Years Experience",
       expert: "Expert"
@@ -148,6 +150,8 @@ export const translations = {
       subtitle: "Expertenberatung für IT-PMO, Scrum Master und Business Analysis für europäische und US-amerikanische Organisationen, die transformative Ergebnisse anstreben.",
       exploreServices: "Dienstleistungen erkunden",
       scheduleConsultation: "Beratung vereinbaren",
+      basedIn: "Standort Deutschland",
+      servingClients: "Kunden betreut in",
       euUseCoverage: "EU & USA Abdeckung",
       yearsExperience: "5+ Jahre Erfahrung",
       expert: "Experte"
