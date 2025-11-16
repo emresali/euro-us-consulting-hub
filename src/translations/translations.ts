@@ -50,8 +50,8 @@ export const translations = {
         description: "Strategic product vision, backlog management, and stakeholder alignment to maximize product value and drive business outcomes."
       },
       devOps: {
-        title: "DevOps Consulting",
-        description: "CI/CD pipeline optimization, automation strategy, and DevOps culture transformation for faster and more reliable software delivery."
+        title: "ERP & Cloud Migration",
+        description: "Expert PMO and project leadership for ERP implementations (MS Dynamics, SAP) and cloud migration projects (Google Cloud, Azure) with comprehensive project management."
       },
       digitalTransformation: {
         title: "Digital Transformation",
@@ -188,8 +188,8 @@ export const translations = {
         description: "Strategische Produktvision, Backlog-Management und Stakeholder-Ausrichtung zur Maximierung des Produktwerts und zur Erzielung von Geschäftsergebnissen."
       },
       devOps: {
-        title: "DevOps-Beratung",
-        description: "CI/CD-Pipeline-Optimierung, Automatisierungsstrategie und DevOps-Kulturtransformation für schnellere und zuverlässigere Software-Bereitstellung."
+        title: "ERP & Cloud-Migration",
+        description: "Experte als PMO und Projektleiter für ERP-Implementierungen (MS Dynamics, SAP) und Cloud-Migrationsprojekte (Google Cloud, Azure) mit umfassendem Projektmanagement."
       },
       digitalTransformation: {
         title: "Digitale Transformation",
