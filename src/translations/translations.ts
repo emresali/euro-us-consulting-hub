@@ -150,7 +150,7 @@ export const translations = {
       subtitle: "Expertenberatung für IT-PMO, Scrum Master und Business Analysis für europäische und US-amerikanische Organisationen, die transformative Ergebnisse anstreben.",
       exploreServices: "Dienstleistungen erkunden",
       scheduleConsultation: "Beratung vereinbaren",
-      basedIn: "Mit Sitz in Deutschland",
+      basedIn: "Sitz in Deutschland",
       servingClients: "Kunden betreut in",
       euUseCoverage: "EU & USA Abdeckung",
       yearsExperience: "5+ Jahre Erfahrung",
