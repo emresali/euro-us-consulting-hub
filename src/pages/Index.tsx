@@ -132,10 +132,12 @@ const Index = () => {
               
               {/* Location & Service Area */}
               <div className="flex flex-col gap-4 mt-2">
-                {/* Based in Germany Badge - Elegant Design */}
-                <div className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-sm text-white px-3 py-2 rounded-lg border border-white/20 shadow-sm w-fit">
-                  <span className="text-xl">🇩🇪</span>
-                  <span className="text-sm font-medium tracking-wide">{t.hero.basedIn}</span>
+                {/* Based in Germany Badge - Enhanced with Glow */}
+                <div className="inline-flex items-center gap-3 bg-white/15 backdrop-blur-md text-white px-4 py-2.5 rounded-xl border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 w-fit animate-pulse-glow" style={{
+                  boxShadow: '0 0 20px rgba(255, 206, 0, 0.15), 0 0 40px rgba(255, 206, 0, 0.1)'
+                }}>
+                  <span className="text-2xl">🇩🇪</span>
+                  <span className="text-base font-semibold tracking-wide">{t.hero.basedIn}</span>
                 </div>
                 
                 {/* International Service Coverage */}
