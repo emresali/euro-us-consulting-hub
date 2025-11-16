@@ -22,7 +22,7 @@ const LanguageSwitcher = () => {
         </span>
         <span className="text-muted-foreground">/</span>
         <span className={`flex items-center gap-1 ${language === 'en' ? 'font-bold text-foreground' : 'text-muted-foreground'}`}>
-          <span className="text-base">🇺🇸</span>
+          <span className="text-base">🇬🇧</span>
           <span>EN</span>
         </span>
       </span>
