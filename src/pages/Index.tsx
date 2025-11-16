@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { 
   Briefcase, 
   Target, 
@@ -21,7 +22,8 @@ import {
   Phone,
   Package,
   GitBranch,
-  Rocket
+  Rocket,
+  Menu
 } from "lucide-react";
 import heroImage from "@/assets/hero-consulting.jpg";
 import esitLogo from "@/assets/esit-logo-light.png";
@@ -64,19 +66,44 @@ const Index = () => {
     <div className="min-h-screen bg-background overflow-x-hidden w-full max-w-[100vw]">
       {/* Header */}
       <header className="border-b bg-card/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
-        <div className="container mx-auto px-4 py-3 md:py-4 flex justify-between items-center">
-          <img src={esitLogo} alt="ESIT-Consulting" className="h-8 md:h-12" />
+        <div className="container mx-auto px-3 md:px-4 py-2.5 md:py-4 flex justify-between items-center">
+          <img src={esitLogo} alt="ESIT-Consulting" className="h-7 md:h-12" />
+          
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex gap-8">
             <a href="#services" className="text-foreground hover:text-primary transition-colors font-semibold text-base tracking-wide">{t.nav.services}</a>
             <a href="#cases" className="text-foreground hover:text-primary transition-colors font-semibold text-base tracking-wide">{t.nav.cases}</a>
             <a href="#about" className="text-foreground hover:text-primary transition-colors font-semibold text-base tracking-wide">{t.nav.about}</a>
             <a href="#contact" className="text-foreground hover:text-primary transition-colors font-semibold text-base tracking-wide">{t.nav.contact}</a>
           </nav>
-          <div className="flex items-center gap-2 md:gap-4">
+          
+          <div className="flex items-center gap-2">
             <LanguageSwitcher />
-            <Button variant="hero" size="sm" className="text-xs md:text-sm px-3 md:px-4" asChild>
+            
+            {/* Desktop CTA Button */}
+            <Button variant="hero" size="sm" className="hidden md:flex text-sm px-4" asChild>
               <a href="#contact">{t.nav.getInTouch}</a>
             </Button>
+            
+            {/* Mobile Menu */}
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="md:hidden">
+                  <Menu className="h-5 w-5" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[280px]">
+                <nav className="flex flex-col gap-6 mt-8">
+                  <a href="#services" className="text-foreground hover:text-primary transition-colors font-semibold text-lg">{t.nav.services}</a>
+                  <a href="#cases" className="text-foreground hover:text-primary transition-colors font-semibold text-lg">{t.nav.cases}</a>
+                  <a href="#about" className="text-foreground hover:text-primary transition-colors font-semibold text-lg">{t.nav.about}</a>
+                  <a href="#contact" className="text-foreground hover:text-primary transition-colors font-semibold text-lg">{t.nav.contact}</a>
+                  <Button variant="hero" className="mt-4 w-full" asChild>
+                    <a href="#contact">{t.nav.getInTouch}</a>
+                  </Button>
+                </nav>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </header>
