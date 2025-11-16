@@ -21,7 +21,7 @@ import {
   Mail,
   Phone,
   Package,
-  GitBranch,
+  Cloud,
   Rocket,
   Menu
 } from "lucide-react";
@@ -43,13 +43,13 @@ const Index = () => {
 
   const services = [
     { icon: Target, title: t.services.itPmo.title, description: t.services.itPmo.description },
+    { icon: Cloud, title: t.services.devOps.title, description: t.services.devOps.description },
     { icon: Users, title: t.services.scrumMaster.title, description: t.services.scrumMaster.description },
     { icon: Package, title: t.services.productOwner.title, description: t.services.productOwner.description },
     { icon: Briefcase, title: t.services.processManagement.title, description: t.services.processManagement.description },
+    { icon: CheckCircle, title: t.services.changeManagement.title, description: t.services.changeManagement.description },
     { icon: LineChart, title: t.services.businessAnalysis.title, description: t.services.businessAnalysis.description },
     { icon: Database, title: t.services.dataAnalytics.title, description: t.services.dataAnalytics.description },
-    { icon: CheckCircle, title: t.services.changeManagement.title, description: t.services.changeManagement.description },
-    { icon: GitBranch, title: t.services.devOps.title, description: t.services.devOps.description },
     { icon: Rocket, title: t.services.digitalTransformation.title, description: t.services.digitalTransformation.description }
   ];
 
