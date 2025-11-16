@@ -132,16 +132,22 @@ const Index = () => {
               
               {/* Location & Service Area */}
               <div className="flex flex-col gap-4 mt-2">
-                {/* Based in Germany Badge - Enhanced with Glow */}
-                <div className="inline-flex items-center gap-3 bg-white/15 backdrop-blur-md text-white px-4 py-2.5 rounded-xl border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300 w-fit animate-pulse-glow" style={{
-                  boxShadow: '0 0 20px rgba(255, 206, 0, 0.15), 0 0 40px rgba(255, 206, 0, 0.1)'
+                {/* Based in Germany Badge - Enhanced with Hover Glow */}
+                <div className="inline-flex items-center gap-3 bg-white/15 backdrop-blur-md text-white px-4 py-2.5 rounded-xl border border-white/30 shadow-lg transition-all duration-300 w-fit hover:bg-white/20 hover:border-white/40" style={{
+                  boxShadow: '0 0 15px rgba(255, 206, 0, 0.1)'
+                }} 
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 0 25px rgba(255, 206, 0, 0.25), 0 0 45px rgba(255, 206, 0, 0.15)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '0 0 15px rgba(255, 206, 0, 0.1)';
                 }}>
                   <span className="text-2xl">🇩🇪</span>
                   <span className="text-base font-semibold tracking-wide">{t.hero.basedIn}</span>
                 </div>
                 
                 {/* International Service Coverage */}
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2 pl-4">
                   <div className="flex items-center gap-2 text-white/70 text-xs uppercase tracking-wider font-medium">
                     <Globe className="w-3.5 h-3.5" />
                     <span>{t.hero.servingClients}</span>
