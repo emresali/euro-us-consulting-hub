@@ -74,7 +74,7 @@ export const translations = {
       coreExpertise: "Core Expertise",
       international: {
         title: "International Expertise",
-        description: "Seamlessly working with German, Dutch, French, and US clients."
+        description: "Offering services internationally with proven project experience in Germany, France, Switzerland, and Austria."
       },
       results: {
         title: "Results-Focused",
@@ -212,7 +212,7 @@ export const translations = {
       coreExpertise: "Kernkompetenzen",
       international: {
         title: "Internationale Expertise",
-        description: "Nahtlose Zusammenarbeit mit deutschen, niederländischen, französischen und US-amerikanischen Kunden."
+        description: "Internationales Dienstleistungsangebot mit nachgewiesener Projekterfahrung in Deutschland, Frankreich, Schweiz und Österreich."
       },
       results: {
         title: "Ergebnisorientiert",
