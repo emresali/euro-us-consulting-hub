@@ -13,7 +13,7 @@ const LanguageSwitcher = () => {
       variant="outline"
       size="sm"
       onClick={toggleLanguage}
-      className="font-semibold min-w-[100px] md:min-w-[120px] border-2 text-xs md:text-sm px-2 md:px-4 bg-background/80 hover:bg-background"
+      className="font-semibold min-w-[100px] md:min-w-[120px] border-2 text-xs md:text-sm px-2 md:px-4 bg-muted/50 hover:bg-muted"
     >
       <span className="flex items-center gap-1.5 md:gap-2">
         <span className={`flex items-center gap-1 ${language === 'de' ? 'font-bold text-foreground' : 'text-muted-foreground'}`}>
