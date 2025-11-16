@@ -1,11 +1,11 @@
 const CustomerReferences = () => {
   const customers = [
     { name: "L'Oréal", logo: "/images/loreal-logo.png", scale: "scale-[2.8]", position: "" },
-    { name: "DDA Consulting", logo: "/images/dda-consulting-logo.png", scale: "scale-[1.8]", position: "" },
+    { name: "DDA Consulting", logo: "/images/dda-consulting-logo.png", scale: "scale-[2.8]", position: "" },
     { name: "Fürsie", logo: "/images/fursie-logo.png", scale: "scale-100", position: "" },
     { name: "Lacroix", logo: "/images/lacroix-logo.webp", scale: "scale-110", position: "-translate-y-3" },
     { name: "L'Oréal", logo: "/images/loreal-logo.png", scale: "scale-[2.8]", position: "" },
-    { name: "DDA Consulting", logo: "/images/dda-consulting-logo.png", scale: "scale-[1.8]", position: "" },
+    { name: "DDA Consulting", logo: "/images/dda-consulting-logo.png", scale: "scale-[2.8]", position: "" },
     { name: "Fürsie", logo: "/images/fursie-logo.png", scale: "scale-100", position: "" },
     { name: "Lacroix", logo: "/images/lacroix-logo.webp", scale: "scale-110", position: "-translate-y-3" },
   ];
