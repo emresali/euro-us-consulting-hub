@@ -482,15 +482,19 @@ const Index = () => {
                         <div className="flex md:hidden items-center gap-2 flex-wrap mb-2">
                           <span className="text-3xl hover:scale-125 transition-transform duration-300 cursor-default" title="European Union">🇪🇺</span>
                         </div>
-                        {/* Desktop: Show country flags with proven experience */}
+                        {/* Desktop: Show all serving countries */}
                         <div className="hidden md:flex items-center gap-3 flex-wrap mb-3">
                           <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="Germany">🇩🇪</span>
+                          <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="Netherlands">🇳🇱</span>
                           <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="France">🇫🇷</span>
+                          <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="Luxembourg">🇱🇺</span>
                           <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="Switzerland">🇨🇭</span>
                           <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="Austria">🇦🇹</span>
+                          <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="Belgium">🇧🇪</span>
+                          <span className="text-4xl hover:scale-125 transition-transform duration-300 cursor-default" title="United Kingdom">🇬🇧</span>
                         </div>
                         <p className="text-sm text-foreground/70">
-                          Germany • France • Switzerland • Austria
+                          Germany • Netherlands • France • Luxembourg • Switzerland • Austria • Belgium • United Kingdom
                         </p>
                       </div>
                       <div className="p-4 md:p-5 rounded-xl bg-card/50 backdrop-blur-sm border border-accent/20">
