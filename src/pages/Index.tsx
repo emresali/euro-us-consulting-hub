@@ -129,24 +129,37 @@ const Index = () => {
                   </a>
                 </Button>
               </div>
-              <div className="flex items-center gap-3">
-                <Globe className="w-5 h-5" />
-                {/* Mobile: Show only EU and US flags */}
-                <div className="flex md:hidden items-center gap-2">
-                  <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="European Union">🇪🇺</span>
-                  <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="United States">🇺🇸</span>
+              
+              {/* Based in Germany - Prominent Badge */}
+              <div className="inline-flex items-center gap-2 bg-primary/90 backdrop-blur-md text-primary-foreground px-4 py-2.5 rounded-full font-semibold shadow-lg border border-primary-foreground/20 mb-4">
+                <span className="text-2xl">🇩🇪</span>
+                <span className="text-sm md:text-base">{t.hero.basedIn}</span>
+              </div>
+              
+              {/* International Service Coverage */}
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center gap-2 text-white/80 text-sm">
+                  <Globe className="w-4 h-4" />
+                  <span>{t.hero.servingClients}:</span>
                 </div>
-                {/* Desktop: Show all country flags */}
-                <div className="hidden md:flex items-center gap-2">
-                  <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="Germany">🇩🇪</span>
-                  <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="Netherlands">🇳🇱</span>
-                  <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="France">🇫🇷</span>
-                  <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="Luxembourg">🇱🇺</span>
-                  <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="Switzerland">🇨🇭</span>
-                  <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="Austria">🇦🇹</span>
-                  <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="Belgium">🇧🇪</span>
-                  <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="United Kingdom">🇬🇧</span>
-                  <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="United States">🇺🇸</span>
+                <div className="flex items-center gap-3 pl-6">
+                  {/* Mobile: Show only EU and US flags */}
+                  <div className="flex md:hidden items-center gap-2">
+                    <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="European Union">🇪🇺</span>
+                    <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="United States">🇺🇸</span>
+                  </div>
+                  {/* Desktop: Show all country flags */}
+                  <div className="hidden md:flex items-center gap-2">
+                    <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="Germany">🇩🇪</span>
+                    <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="Netherlands">🇳🇱</span>
+                    <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="France">🇫🇷</span>
+                    <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="Luxembourg">🇱🇺</span>
+                    <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="Switzerland">🇨🇭</span>
+                    <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="Austria">🇦🇹</span>
+                    <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="Belgium">🇧🇪</span>
+                    <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="United Kingdom">🇬🇧</span>
+                    <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="United States">🇺🇸</span>
+                  </div>
                 </div>
               </div>
             </div>
