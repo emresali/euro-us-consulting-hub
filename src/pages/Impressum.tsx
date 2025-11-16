@@ -49,19 +49,19 @@ const Impressum = () => {
               <section>
                 <h3 className="text-xl font-bold text-foreground mb-3">Service Provider</h3>
                 <p className="text-foreground/80 leading-relaxed">
-                  ESIT-Consulting<br />
-                  [Your Name]<br />
-                  [Street Address]<br />
-                  [Postal Code] [City]<br />
-                  [Country]
+                  Emre Sali<br />
+                  IT-Consulting<br />
+                  Lievergesberg 59<br />
+                  50769 Köln<br />
+                  Germany
                 </p>
               </section>
 
               <section>
                 <h3 className="text-xl font-bold text-foreground mb-3">Contact</h3>
                 <p className="text-foreground/80 leading-relaxed">
-                  Email: contact@esit-consulting.com<br />
-                  Phone: [Your Phone Number]
+                  Email: sali@esit-consulting.de<br />
+                  Phone: +49 176 41418299
                 </p>
               </section>
 
@@ -69,16 +69,24 @@ const Impressum = () => {
                 <h3 className="text-xl font-bold text-foreground mb-3">VAT ID</h3>
                 <p className="text-foreground/80 leading-relaxed">
                   VAT identification number according to § 27a VAT Tax Act:<br />
-                  [Your VAT ID]
+                  DE455245273
+                </p>
+              </section>
+
+              <section>
+                <h3 className="text-xl font-bold text-foreground mb-3">Business Identification Number</h3>
+                <p className="text-foreground/80 leading-relaxed">
+                  DE455245273-00001
                 </p>
               </section>
 
               <section>
                 <h3 className="text-xl font-bold text-foreground mb-3">Professional Liability Insurance</h3>
                 <p className="text-foreground/80 leading-relaxed">
-                  [Insurance Company Name]<br />
-                  [Insurance Company Address]<br />
-                  Coverage area: [Coverage Details]
+                  exali AG<br />
+                  Franz-Kobinger-Str. 9<br />
+                  86157 Augsburg<br />
+                  Coverage area: Europe
                 </p>
               </section>
 
@@ -86,8 +94,17 @@ const Impressum = () => {
                 <h3 className="text-xl font-bold text-foreground mb-3">Responsible for Content</h3>
                 <p className="text-foreground/80 leading-relaxed">
                   Responsible for content according to § 55 Abs. 2 RStV:<br />
-                  [Your Name]<br />
-                  [Address as above]
+                  Emre Sali<br />
+                  Lievergesberg 59, 50769 Köln
+                </p>
+              </section>
+
+              <section>
+                <h3 className="text-xl font-bold text-foreground mb-3">Source</h3>
+                <p className="text-foreground/80 leading-relaxed">
+                  <a href="https://www.e-recht24.de" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    https://www.e-recht24.de
+                  </a>
                 </p>
               </section>
 
@@ -144,19 +161,19 @@ const Impressum = () => {
               <section>
                 <h3 className="text-xl font-bold text-foreground mb-3">Diensteanbieter</h3>
                 <p className="text-foreground/80 leading-relaxed">
-                  ESIT-Consulting<br />
-                  [Ihr Name]<br />
-                  [Straße und Hausnummer]<br />
-                  [PLZ] [Ort]<br />
-                  [Land]
+                  Emre Sali<br />
+                  IT-Consulting<br />
+                  Lievergesberg 59<br />
+                  50769 Köln<br />
+                  Deutschland
                 </p>
               </section>
 
               <section>
                 <h3 className="text-xl font-bold text-foreground mb-3">Kontakt</h3>
                 <p className="text-foreground/80 leading-relaxed">
-                  E-Mail: contact@esit-consulting.com<br />
-                  Telefon: [Ihre Telefonnummer]
+                  E-Mail: sali@esit-consulting.de<br />
+                  Telefon: +4917641418299
                 </p>
               </section>
 
@@ -164,25 +181,43 @@ const Impressum = () => {
                 <h3 className="text-xl font-bold text-foreground mb-3">Umsatzsteuer-ID</h3>
                 <p className="text-foreground/80 leading-relaxed">
                   Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:<br />
-                  [Ihre USt-IdNr.]
+                  DE455245273
                 </p>
               </section>
 
               <section>
-                <h3 className="text-xl font-bold text-foreground mb-3">Berufshaftpflichtversicherung</h3>
+                <h3 className="text-xl font-bold text-foreground mb-3">Wirtschaftsidentifikationsnummer</h3>
                 <p className="text-foreground/80 leading-relaxed">
-                  [Name der Versicherung]<br />
-                  [Adresse der Versicherung]<br />
-                  Geltungsbereich: [Geltungsbereich]
+                  DE455245273-00001
                 </p>
               </section>
 
               <section>
-                <h3 className="text-xl font-bold text-foreground mb-3">Verantwortlich für den Inhalt</h3>
+                <h3 className="text-xl font-bold text-foreground mb-3">Angaben zur Berufshaftpflichtversicherung</h3>
                 <p className="text-foreground/80 leading-relaxed">
-                  Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:<br />
-                  [Ihr Name]<br />
-                  [Adresse wie oben]
+                  Name und Sitz des Versicherers:<br />
+                  exali AG<br />
+                  Franz-Kobinger-Str. 9<br />
+                  86157 Augsburg<br />
+                  <br />
+                  Geltungsraum der Versicherung:<br />
+                  Europa
+                </p>
+              </section>
+
+              <section>
+                <h3 className="text-xl font-bold text-foreground mb-3">Redaktionell verantwortlich</h3>
+                <p className="text-foreground/80 leading-relaxed">
+                  Emre Sali
+                </p>
+              </section>
+
+              <section>
+                <h3 className="text-xl font-bold text-foreground mb-3">Quelle</h3>
+                <p className="text-foreground/80 leading-relaxed">
+                  <a href="https://www.e-recht24.de" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    https://www.e-recht24.de
+                  </a>
                 </p>
               </section>
 
