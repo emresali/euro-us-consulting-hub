@@ -1,15 +1,15 @@
 const CustomerReferences = () => {
   const customers = [
-    { name: "Deloitte", logo: "/images/deloitte-logo.png" },
-    { name: "L'Oréal", logo: "/images/loreal-logo.png" },
-    { name: "DDA", logo: "/images/dda-logo-new.jpg" },
-    { name: "Fürsie", logo: "/images/fursie-logo.png" },
-    { name: "Lacroix", logo: "/images/lacroix-logo.webp" },
-    { name: "Deloitte", logo: "/images/deloitte-logo.png" },
-    { name: "L'Oréal", logo: "/images/loreal-logo.png" },
-    { name: "DDA", logo: "/images/dda-logo-new.jpg" },
-    { name: "Fürsie", logo: "/images/fursie-logo.png" },
-    { name: "Lacroix", logo: "/images/lacroix-logo.webp" },
+    { name: "Deloitte", logo: "/images/deloitte-logo.png", scale: "scale-100" },
+    { name: "L'Oréal", logo: "/images/loreal-logo.png", scale: "scale-150" },
+    { name: "DDA", logo: "/images/dda-logo.avif", scale: "scale-110" },
+    { name: "Fürsie", logo: "/images/fursie-logo.png", scale: "scale-125" },
+    { name: "Lacroix", logo: "/images/lacroix-logo.webp", scale: "scale-100" },
+    { name: "Deloitte", logo: "/images/deloitte-logo.png", scale: "scale-100" },
+    { name: "L'Oréal", logo: "/images/loreal-logo.png", scale: "scale-150" },
+    { name: "DDA", logo: "/images/dda-logo.avif", scale: "scale-110" },
+    { name: "Fürsie", logo: "/images/fursie-logo.png", scale: "scale-125" },
+    { name: "Lacroix", logo: "/images/lacroix-logo.webp", scale: "scale-100" },
   ];
 
   return (
@@ -37,7 +37,7 @@ const CustomerReferences = () => {
                 <img
                   src={customer.logo}
                   alt={customer.name}
-                  className={`max-w-full max-h-full object-contain ${customer.name === "L'Oréal" ? "scale-150" : ""}`}
+                  className={`max-w-full max-h-full object-contain ${customer.scale}`}
                 />
               </div>
             ))}
@@ -50,7 +50,7 @@ const CustomerReferences = () => {
                 <img
                   src={customer.logo}
                   alt={customer.name}
-                  className={`max-w-full max-h-full object-contain ${customer.name === "L'Oréal" ? "scale-150" : ""}`}
+                  className={`max-w-full max-h-full object-contain ${customer.scale}`}
                 />
               </div>
             ))}
