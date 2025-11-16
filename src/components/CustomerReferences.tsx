@@ -2,11 +2,11 @@ const CustomerReferences = () => {
   const customers = [
     { name: "Deloitte", logo: "/images/deloitte-logo.png" },
     { name: "L'Oréal", logo: "/images/loreal-logo.png" },
-    { name: "DDA", logo: "/images/dda-logo.avif" },
+    { name: "DDA", logo: "/images/dda-logo-new.jpg" },
     { name: "Lacroix", logo: "/images/lacroix-logo.webp" },
     { name: "Deloitte", logo: "/images/deloitte-logo.png" },
     { name: "L'Oréal", logo: "/images/loreal-logo.png" },
-    { name: "DDA", logo: "/images/dda-logo.avif" },
+    { name: "DDA", logo: "/images/dda-logo-new.jpg" },
     { name: "Lacroix", logo: "/images/lacroix-logo.webp" },
   ];
 
