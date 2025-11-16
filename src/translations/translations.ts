@@ -86,7 +86,9 @@ export const translations = {
       description: "Stay updated with our latest insights, success stories, and industry expertise. Join our growing professional community.",
       visitButton: "Visit Our Company Page",
       followButton: "Follow Us",
-      subtitle: "Be part of our professional network and never miss an update"
+      subtitle: "Be part of our professional network and never miss an update",
+      feedTitle: "Latest Updates & Insights",
+      feedDescription: "Stay informed with our most recent posts, industry insights, and success stories"
     },
     contact: {
       title: "Let's Work Together",
@@ -224,7 +226,9 @@ export const translations = {
       description: "Bleiben Sie auf dem Laufenden über unsere neuesten Erkenntnisse, Erfolgsgeschichten und Branchenexpertise. Werden Sie Teil unserer wachsenden professionellen Community.",
       visitButton: "Besuchen Sie unsere Unternehmensseite",
       followButton: "Folgen Sie uns",
-      subtitle: "Seien Sie Teil unseres professionellen Netzwerks und verpassen Sie keine Updates"
+      subtitle: "Seien Sie Teil unseres professionellen Netzwerks und verpassen Sie keine Updates",
+      feedTitle: "Neueste Updates & Einblicke",
+      feedDescription: "Bleiben Sie informiert mit unseren aktuellsten Beiträgen, Brancheneinblicken und Erfolgsgeschichten"
     },
     contact: {
       title: "Lassen Sie uns zusammenarbeiten",

@@ -430,6 +430,47 @@ const Index = () => {
         </div>
       </section>
 
+      {/* LinkedIn Feed Section */}
+      <section className="py-12 md:py-16 lg:py-20 relative overflow-hidden" style={{ background: 'var(--section-accent-bg)' }}>
+        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(200,20%,98%)] via-primary/5 to-[hsl(180,54%,97%)] pointer-events-none" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-8 md:mb-12 animate-fade-in-up">
+            <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent px-4">
+              {t.linkedin.feedTitle}
+            </h2>
+            <p className="text-sm md:text-base lg:text-lg text-foreground/70 max-w-2xl mx-auto px-4">
+              {t.linkedin.feedDescription}
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-card/80 backdrop-blur-sm rounded-2xl p-4 md:p-6 shadow-xl border border-border/50">
+              <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+              <script 
+                type="IN/CompanyProfile" 
+                data-id="105085027" 
+                data-format="inline" 
+                data-related="false"
+              />
+              <noscript>
+                <div className="text-center p-8">
+                  <p className="text-foreground/70 mb-4">
+                    {language === 'en' 
+                      ? 'Please enable JavaScript to view our latest LinkedIn posts.' 
+                      : 'Bitte aktivieren Sie JavaScript, um unsere neuesten LinkedIn-Beiträge zu sehen.'}
+                  </p>
+                  <Button variant="outline" asChild>
+                    <a href="https://www.linkedin.com/company/esit-consulting-exponential-scale" target="_blank" rel="noopener noreferrer">
+                      {language === 'en' ? 'Visit LinkedIn' : 'LinkedIn besuchen'}
+                    </a>
+                  </Button>
+                </div>
+              </noscript>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-12 md:py-20 lg:py-24 relative overflow-hidden" style={{ background: 'var(--section-secondary-bg)' }}>
         <div className="absolute inset-0 bg-gradient-to-b from-[hsl(180,54%,96%)] via-accent/8 to-[hsl(200,20%,96%)] pointer-events-none" />
