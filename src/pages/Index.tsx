@@ -131,7 +131,7 @@ const Index = () => {
               </div>
               
               {/* Location & Service Area */}
-              <div className="flex flex-col gap-3 mt-2">
+              <div className="flex flex-col gap-4 mt-2">
                 {/* Based in Germany Badge - Elegant Design */}
                 <div className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-sm text-white px-3 py-2 rounded-lg border border-white/20 shadow-sm w-fit">
                   <span className="text-xl">🇩🇪</span>
@@ -139,11 +139,12 @@ const Index = () => {
                 </div>
                 
                 {/* International Service Coverage */}
-                <div className="flex items-center gap-2 text-white/70 text-xs uppercase tracking-wider font-medium">
-                  <Globe className="w-3.5 h-3.5" />
-                  <span>{t.hero.servingClients}</span>
-                </div>
-                <div className="flex items-center gap-2.5">
+                <div className="flex flex-col gap-2">
+                  <div className="flex items-center gap-2 text-white/70 text-xs uppercase tracking-wider font-medium">
+                    <Globe className="w-3.5 h-3.5" />
+                    <span>{t.hero.servingClients}</span>
+                  </div>
+                  <div className="flex items-center gap-2.5">
                   {/* Mobile: Show only EU and US flags */}
                   <div className="flex md:hidden items-center gap-2">
                     <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="European Union">🇪🇺</span>
@@ -161,6 +162,7 @@ const Index = () => {
                     <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="United Kingdom">🇬🇧</span>
                     <span className="text-2xl hover:scale-125 transition-transform duration-300 cursor-default" title="United States">🇺🇸</span>
                   </div>
+                </div>
                 </div>
               </div>
             </div>
