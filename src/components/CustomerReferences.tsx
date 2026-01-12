@@ -11,10 +11,12 @@ const CustomerReferences = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-10 md:mb-14">
-          <p className="text-sm md:text-base text-foreground/50 font-medium tracking-wide uppercase">
+        <div className="flex items-center justify-center gap-6 mb-10 md:mb-14">
+          <div className="h-px w-12 md:w-20 bg-gradient-to-r from-transparent to-primary/30" />
+          <p className="text-xs md:text-sm text-foreground/60 font-semibold tracking-[0.2em] uppercase">
             Trusted by
           </p>
+          <div className="h-px w-12 md:w-20 bg-gradient-to-l from-transparent to-primary/30" />
         </div>
 
         <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 lg:gap-20">
