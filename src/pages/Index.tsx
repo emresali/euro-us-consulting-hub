@@ -43,15 +43,15 @@ const Index = () => {
   const t = translations[language];
 
   const services = [
-    { icon: Target, title: t.services.itPmo.title, description: t.services.itPmo.description },
-    { icon: Cloud, title: t.services.devOps.title, description: t.services.devOps.description },
-    { icon: Users, title: t.services.scrumMaster.title, description: t.services.scrumMaster.description },
-    { icon: Package, title: t.services.productOwner.title, description: t.services.productOwner.description },
-    { icon: Settings, title: t.services.processManagement.title, description: t.services.processManagement.description },
-    { icon: RefreshCw, title: t.services.changeManagement.title, description: t.services.changeManagement.description },
-    { icon: LineChart, title: t.services.businessAnalysis.title, description: t.services.businessAnalysis.description },
-    { icon: BarChart3, title: t.services.dataAnalytics.title, description: t.services.dataAnalytics.description },
-    { icon: Rocket, title: t.services.digitalTransformation.title, description: t.services.digitalTransformation.description }
+    { icon: Target, title: t.services.itPmo.title, intro: t.services.itPmo.intro, points: t.services.itPmo.points },
+    { icon: Cloud, title: t.services.devOps.title, intro: t.services.devOps.intro, points: t.services.devOps.points },
+    { icon: Users, title: t.services.scrumMaster.title, intro: t.services.scrumMaster.intro, points: t.services.scrumMaster.points },
+    { icon: Package, title: t.services.productOwner.title, intro: t.services.productOwner.intro, points: t.services.productOwner.points },
+    { icon: Settings, title: t.services.processManagement.title, intro: t.services.processManagement.intro, points: t.services.processManagement.points },
+    { icon: RefreshCw, title: t.services.changeManagement.title, intro: t.services.changeManagement.intro, points: t.services.changeManagement.points },
+    { icon: LineChart, title: t.services.businessAnalysis.title, intro: t.services.businessAnalysis.intro, points: t.services.businessAnalysis.points },
+    { icon: BarChart3, title: t.services.dataAnalytics.title, intro: t.services.dataAnalytics.intro, points: t.services.dataAnalytics.points },
+    { icon: Rocket, title: t.services.digitalTransformation.title, intro: t.services.digitalTransformation.intro, points: t.services.digitalTransformation.points }
   ];
 
   const expertise = [
@@ -220,10 +220,18 @@ const Index = () => {
                   </div>
                   <CardTitle className="text-xl md:text-2xl font-semibold tracking-tight">{service.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="relative pt-0">
-                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                    {service.description}
+                <CardContent className="relative pt-0 space-y-3">
+                  <p className="text-sm md:text-base text-foreground/70 leading-relaxed">
+                    {service.intro}
                   </p>
+                  <ul className="space-y-1.5">
+                    {service.points.map((point, i) => (
+                      <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <span className="w-1.5 h-1.5 rounded-sm bg-primary/70 shrink-0" />
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
                 </CardContent>
               </Card>
             ))}
