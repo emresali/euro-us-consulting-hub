@@ -224,10 +224,10 @@ const Index = () => {
                   <p className="text-sm md:text-base text-foreground/70 leading-relaxed">
                     {service.intro}
                   </p>
-                  <ul className="space-y-1.5">
+                  <ul className="space-y-2">
                     {service.points.map((point, i) => (
-                      <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <span className="w-1.5 h-1.5 rounded-sm bg-primary/70 shrink-0" />
+                      <li key={i} className="flex items-center gap-2.5 text-sm md:text-base text-foreground/80">
+                        <span className="w-1.5 h-1.5 rounded-sm bg-primary shrink-0" />
                         {point}
                       </li>
                     ))}
