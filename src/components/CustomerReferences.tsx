@@ -11,9 +11,9 @@ const CustomerReferences = () => {
   ];
 
   return (
-    <section className="relative py-8 md:py-12 overflow-hidden">
-      {/* More subtle gradient overlap */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[hsl(215,25%,15%,0.4)] via-background/90 to-[hsl(180,54%,97%)]" />
+    <section className="relative py-8 md:py-12 overflow-hidden bg-transparent">
+      {/* Smooth gradient transition from hero to services */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-8 md:mb-14">
