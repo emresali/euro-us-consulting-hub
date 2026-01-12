@@ -1,6 +1,6 @@
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations/translations";
-import esitLogo from "@/assets/esit-logo-light.png";
+import esitLogo from "@/assets/esit-logo-transparent.png";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";

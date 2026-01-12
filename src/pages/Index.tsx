@@ -26,7 +26,7 @@ import {
   Menu
 } from "lucide-react";
 import heroImage from "@/assets/hero-consulting.jpg";
-import esitLogo from "@/assets/esit-logo-light.png";
+import esitLogo from "@/assets/esit-logo-transparent.png";
 import profileImage from "@/assets/profile-2.jpg";
 import profileHero from "@/assets/profile-hero.jpg";
 import ContactForm from "@/components/ContactForm";
