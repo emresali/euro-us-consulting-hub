@@ -28,6 +28,7 @@ import {
 import heroImage from "@/assets/hero-consulting.jpg";
 import esitLogo from "@/assets/esit-logo-transparent.png";
 import profileImage from "@/assets/profile-2.jpg";
+import esIcon from "@/assets/es-icon.png";
 import profileHero from "@/assets/profile-hero.jpg";
 import ContactForm from "@/components/ContactForm";
 import CaseStudies from "@/components/CaseStudies";
@@ -563,7 +564,10 @@ const Index = () => {
           </div>
           <div className="border-t pt-6 md:pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4 text-xs md:text-sm text-muted-foreground">
-              <p>&copy; {new Date().getFullYear()} {t.footer.copyright}</p>
+              <div className="flex items-center gap-3">
+                <img src={esIcon} alt="ES" className="h-8 w-8 rounded-lg" />
+                <p>&copy; {new Date().getFullYear()} {t.footer.copyright}</p>
+              </div>
               <div className="flex gap-3 md:gap-4">
                 <a href="/impressum" className="hover:text-primary transition-colors">
                   {t.legal.impressum.link}
