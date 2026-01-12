@@ -9,7 +9,7 @@ export const translations = {
     },
     hero: {
       title: "Driving Excellence in IT Project Delivery",
-      subtitle: "Expert IT-PMO, Product Owner, Scrum Master and Business Analysis consulting for European and US organizations seeking transformational results.",
+      subtitle: "IT-PMO • Product Owner • Scrum Master • Business Analyst — Delivering expert consulting for European and US organizations seeking transformational results.",
       exploreServices: "Explore Services",
       scheduleConsultation: "Schedule Consultation",
       basedIn: "Based in Germany",
