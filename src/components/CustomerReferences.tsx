@@ -1,9 +1,9 @@
 const CustomerReferences = () => {
   const customers = [
-    { name: "L'Oréal", logo: "/images/loreal-logo.png", scale: "scale-[2.8]" },
-    { name: "DDA Consulting", logo: "/images/dda-consulting-logo.png", scale: "scale-[2.8]" },
-    { name: "Fürsie", logo: "/images/fursie-logo.png", scale: "scale-125" },
-    { name: "Lacroix", logo: "/images/lacroix-logo.webp", scale: "scale-150" },
+    { name: "L'Oréal", logo: "/images/loreal-logo.png", scale: "scale-[3.2]" },
+    { name: "DDA Consulting", logo: "/images/dda-consulting-logo.png", scale: "scale-[3.2]" },
+    { name: "Fürsie", logo: "/images/fursie-logo.png", scale: "scale-110" },
+    { name: "Lacroix", logo: "/images/lacroix-logo.webp", scale: "scale-125" },
   ];
 
   return (
@@ -17,11 +17,11 @@ const CustomerReferences = () => {
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 lg:gap-28">
+        <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 lg:gap-20">
           {customers.map((customer, index) => (
             <div
               key={index}
-              className="w-32 h-16 md:w-44 md:h-24 lg:w-52 lg:h-28 flex items-center justify-center opacity-50 hover:opacity-90 transition-opacity duration-300"
+              className="w-28 h-14 md:w-40 md:h-20 flex items-center justify-center opacity-50 hover:opacity-90 transition-opacity duration-300"
             >
               <img
                 src={customer.logo}
