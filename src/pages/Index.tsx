@@ -32,7 +32,6 @@ import esIcon from "@/assets/es-icon.png";
 import profileHero from "@/assets/profile-hero.jpg";
 import ContactForm from "@/components/ContactForm";
 import CaseStudies from "@/components/CaseStudies";
-import GlobalReach from "@/components/GlobalReach";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 import CustomerReferences from "@/components/CustomerReferences";
@@ -159,18 +158,12 @@ const Index = () => {
                 </Button>
               </div>
               
-              {/* Location Badge - Simplified */}
-              <div className="flex items-center gap-3 mt-2">
-                <div className="inline-flex items-center gap-3 bg-white/15 backdrop-blur-md text-white px-4 py-2.5 rounded-xl border border-white/30 shadow-lg transition-all duration-300 hover:bg-white/20 hover:border-white/40" 
-                  style={{ boxShadow: '0 0 15px rgba(255, 206, 0, 0.1)' }}
-                >
-                  <span className="text-2xl">🇩🇪</span>
-                  <span className="text-base font-semibold tracking-wide">{t.hero.basedIn}</span>
-                </div>
-                <div className="hidden md:flex items-center gap-2 text-white/60 text-sm">
-                  <Globe className="w-4 h-4" />
-                  <span>{language === 'en' ? 'Serving EU & US' : 'EU & US Kunden'}</span>
-                </div>
+              {/* Location Badge - Clean & Simple */}
+              <div className="inline-flex items-center gap-3 bg-white/15 backdrop-blur-md text-white px-5 py-3 rounded-xl border border-white/30 shadow-lg transition-all duration-300 hover:bg-white/20 hover:border-white/40 mt-2">
+                <Globe className="w-5 h-5 text-primary" />
+                <span className="text-base font-semibold tracking-wide">
+                  {language === 'en' ? 'Based in Germany • Serving EU & US Clients' : 'Standort Deutschland • EU & US Kunden'}
+                </span>
               </div>
             </div>
             <div className="hidden md:flex justify-center relative">
@@ -374,9 +367,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* Global Reach Section */}
-      <GlobalReach />
 
       {/* Contact Section */}
       <section id="contact" className="py-12 md:py-20 lg:py-24 relative overflow-hidden" style={{ background: 'var(--section-secondary-bg)' }}>
