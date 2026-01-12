@@ -23,39 +23,48 @@ export const translations = {
       subtitle: "Comprehensive IT consulting solutions tailored to your organization's needs",
       itPmo: {
         title: "IT-PMO",
-        description: "Strategic IT project portfolio management, governance frameworks, and PMO establishment for enterprise transformation."
+        intro: "Central control point for your IT initiatives.",
+        points: ["Portfolio & Resource Management", "Governance Frameworks", "PMO Setup & Optimization"]
       },
       scrumMaster: {
         title: "Scrum Master",
-        description: "Expert facilitation of Agile teams, sprint planning, and coaching organizations in modern software delivery practices."
+        intro: "Enabling high-performing agile teams.",
+        points: ["Sprint Facilitation", "Team Coaching", "Impediment Resolution"]
       },
       processManagement: {
         title: "Process Management",
-        description: "Business process optimization, workflow automation, and operational excellence consulting for efficiency gains."
+        intro: "Streamlined operations for lasting efficiency.",
+        points: ["Process Optimization", "Workflow Automation", "Operational Excellence"]
       },
       businessAnalysis: {
         title: "Business Analysis",
-        description: "Requirements engineering, stakeholder management, and strategic business solution design for digital transformation."
+        intro: "Bridging business needs and technical solutions.",
+        points: ["Requirements Engineering", "Stakeholder Management", "Solution Design"]
       },
       dataAnalytics: {
         title: "Data Analytics",
-        description: "Data-driven insights, reporting frameworks, and analytics strategy to support informed business decision-making."
+        intro: "Data-driven decisions for competitive advantage.",
+        points: ["Reporting Frameworks", "Analytics Strategy", "KPI Development"]
       },
       changeManagement: {
         title: "Change & Escalation Management",
-        description: "Strategic change management, stakeholder engagement, and expert escalation management to navigate complex organizational transformations."
+        intro: "Navigating complex transformations smoothly.",
+        points: ["Stakeholder Engagement", "Risk Mitigation", "Escalation Handling"]
       },
       productOwner: {
         title: "Product Owner",
-        description: "Strategic product vision, backlog management, and stakeholder alignment to maximize product value and drive business outcomes."
+        intro: "Maximizing product value through strategic vision.",
+        points: ["Backlog Management", "Stakeholder Alignment", "Value Optimization"]
       },
       devOps: {
         title: "ERP & Cloud Migration",
-        description: "Expert PMO and project leadership for ERP implementations (MS Dynamics, SAP) and cloud migration projects (Google Cloud, Azure) with comprehensive project management."
+        intro: "Expert guidance for enterprise system transitions.",
+        points: ["MS Dynamics & SAP", "Google Cloud & Azure", "Migration Leadership"]
       },
       digitalTransformation: {
         title: "Digital Transformation",
-        description: "End-to-end digital strategy, technology roadmap development, and organizational change leadership for successful digital evolution."
+        intro: "End-to-end strategy for digital evolution.",
+        points: ["Technology Roadmaps", "Change Leadership", "Innovation Strategy"]
       }
     },
     caseStudies: {
@@ -161,39 +170,48 @@ export const translations = {
       subtitle: "Umfassende IT-Beratungslösungen, maßgeschneidert für die Bedürfnisse Ihrer Organisation",
       itPmo: {
         title: "IT-PMO",
-        description: "Strategisches IT-Projektportfoliomanagement, Governance-Frameworks und PMO-Etablierung für Unternehmenstransformation."
+        intro: "Zentrale Steuerung Ihrer IT-Initiativen.",
+        points: ["Portfolio & Ressourcen-Management", "Governance Frameworks", "PMO-Aufbau & Optimierung"]
       },
       scrumMaster: {
         title: "Scrum Master",
-        description: "Expertenmoderation von Agile-Teams, Sprint-Planung und Coaching von Organisationen in modernen Software-Delivery-Praktiken."
+        intro: "Befähigung agiler Hochleistungsteams.",
+        points: ["Sprint-Moderation", "Team-Coaching", "Hindernisbeseitigung"]
       },
       processManagement: {
         title: "Prozessmanagement",
-        description: "Geschäftsprozessoptimierung, Workflow-Automatisierung und operative Exzellenzberatung für Effizienzsteigerungen."
+        intro: "Optimierte Abläufe für nachhaltige Effizienz.",
+        points: ["Prozessoptimierung", "Workflow-Automatisierung", "Operative Exzellenz"]
       },
       businessAnalysis: {
         title: "Business Analysis",
-        description: "Requirements Engineering, Stakeholder-Management und strategisches Business Solution Design für digitale Transformation."
+        intro: "Brücke zwischen Fachbereich und IT.",
+        points: ["Requirements Engineering", "Stakeholder-Management", "Lösungsdesign"]
       },
       dataAnalytics: {
         title: "Datenanalyse",
-        description: "Datengestützte Erkenntnisse, Reporting-Frameworks und Analysestrategie zur Unterstützung fundierter Geschäftsentscheidungen."
+        intro: "Datenbasierte Entscheidungen für Wettbewerbsvorteile.",
+        points: ["Reporting-Frameworks", "Analyse-Strategie", "KPI-Entwicklung"]
       },
       changeManagement: {
         title: "Change & Eskalationsmanagement",
-        description: "Strategisches Change Management, Stakeholder-Engagement und Experten-Eskalationsmanagement zur Navigation komplexer Organisationstransformationen."
+        intro: "Komplexe Transformationen souverän meistern.",
+        points: ["Stakeholder-Engagement", "Risikominimierung", "Eskalationshandling"]
       },
       productOwner: {
         title: "Product Owner",
-        description: "Strategische Produktvision, Backlog-Management und Stakeholder-Ausrichtung zur Maximierung des Produktwerts und zur Erzielung von Geschäftsergebnissen."
+        intro: "Maximaler Produktwert durch strategische Vision.",
+        points: ["Backlog-Management", "Stakeholder-Ausrichtung", "Wertoptimierung"]
       },
       devOps: {
         title: "ERP & Cloud-Migration",
-        description: "Experte als PMO und Projektleiter für ERP-Implementierungen (MS Dynamics, SAP) und Cloud-Migrationsprojekte (Google Cloud, Azure) mit umfassendem Projektmanagement."
+        intro: "Expertenführung für Enterprise-System-Übergänge.",
+        points: ["MS Dynamics & SAP", "Google Cloud & Azure", "Migrations-Leadership"]
       },
       digitalTransformation: {
         title: "Digitale Transformation",
-        description: "End-to-End-Digitalstrategie, Technologie-Roadmap-Entwicklung und organisatorische Change-Führung für erfolgreiche digitale Evolution."
+        intro: "Ganzheitliche Strategie für digitale Evolution.",
+        points: ["Technologie-Roadmaps", "Change Leadership", "Innovationsstrategie"]
       }
     },
     caseStudies: {
