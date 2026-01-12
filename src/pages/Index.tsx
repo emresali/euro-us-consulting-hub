@@ -159,9 +159,9 @@ const Index = () => {
               </div>
               
               {/* Location Badge - Clean & Simple */}
-              <div className="inline-flex items-center gap-3 bg-white/15 backdrop-blur-md text-white px-5 py-3 rounded-xl border border-white/30 shadow-lg transition-all duration-300 hover:bg-white/20 hover:border-white/40 mt-2">
-                <Globe className="w-5 h-5 text-primary" />
-                <span className="text-base font-semibold tracking-wide">
+              <div className="inline-flex items-center gap-2 text-white/60 mt-4">
+                <Globe className="w-4 h-4" />
+                <span className="text-sm font-medium tracking-wide">
                   {language === 'en' ? 'Based in Germany • Serving EU & US Clients' : 'Standort Deutschland • EU & US Kunden'}
                 </span>
               </div>
