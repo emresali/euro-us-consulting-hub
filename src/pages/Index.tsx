@@ -203,26 +203,27 @@ const Index = () => {
               {t.services.subtitle}
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {services.map((service, index) => (
               <Card 
                 key={index} 
-                className="group hover:shadow-xl transition-all duration-500 border-border/50 hover:border-primary/30 hover:-translate-y-2 animate-fade-in-up"
+                className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 border-0 bg-gradient-to-br from-card to-card/80 hover:-translate-y-1 animate-fade-in-up"
                 style={{ 
-                  boxShadow: 'var(--shadow-card)',
+                  boxShadow: '0 4px 24px -4px hsl(var(--primary) / 0.08)',
                   animationDelay: `${index * 0.1}s`
                 }}
               >
-                <CardHeader>
-                  <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                    <service.icon className="w-8 h-8 text-primary group-hover:text-accent transition-colors" />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <CardHeader className="relative pb-2">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/15 transition-colors duration-300">
+                    <service.icon className="w-6 h-6 text-primary" />
                   </div>
-                  <CardTitle className="text-2xl mb-3">{service.title}</CardTitle>
+                  <CardTitle className="text-xl md:text-2xl font-semibold tracking-tight">{service.title}</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base leading-relaxed text-foreground/70">
+                <CardContent className="relative pt-0">
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                     {service.description}
-                  </CardDescription>
+                  </p>
                 </CardContent>
               </Card>
             ))}
