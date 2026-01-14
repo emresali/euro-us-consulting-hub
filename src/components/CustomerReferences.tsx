@@ -3,7 +3,7 @@ const CustomerReferences = () => {
     { name: "L'Oréal", logo: "/images/loreal-logo.png", scale: "scale-150" },
     { name: "DDA Consulting", logo: "/images/dda-consulting-logo.png", scale: "scale-150" },
     { name: "Fürsie", logo: "/images/fursie-logo.png", scale: "scale-75" },
-    { name: "Lacroix", logo: "/images/lacroix-logo.webp", scale: "scale-75" },
+    { name: "Lacroix", logo: "/images/lacroix-logo.webp", scale: "scale-90" },
   ];
 
   return (
