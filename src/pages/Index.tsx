@@ -371,13 +371,23 @@ const Index = () => {
           </div>
 
           {/* Consulting Approach - Horizontal Process Flow */}
-          <div className="mb-12">
-            <h3 className="font-bold text-xl md:text-2xl mb-8 md:mb-10 text-center bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+          <div 
+            className="rounded-2xl p-8 md:p-10 lg:p-12"
+            style={{ 
+              background: 'linear-gradient(135deg, #f0fafa 0%, #f5fbfb 100%)',
+              boxShadow: '0 2px 16px rgba(0,0,0,0.04)'
+            }}
+          >
+            <h3 className="font-bold text-xl md:text-2xl text-center bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
               {t.about.consultingApproach}
             </h3>
+            {/* Decorative underline */}
+            <div className="flex justify-center mt-3 mb-8 md:mb-10">
+              <div className="w-10 h-[3px] rounded-full bg-primary" />
+            </div>
             
             {/* Process Steps */}
-            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0 mb-10">
               {[
                 { num: 1, icon: Search, ...t.about.approach.discover },
                 { num: 2, icon: Lightbulb, ...t.about.approach.analyze },
@@ -386,9 +396,12 @@ const Index = () => {
               ].map((step, index) => (
                 <div key={step.num} className="flex items-center">
                   {/* Step */}
-                  <div className="flex flex-col items-center text-center group">
-                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-primary flex items-center justify-center mb-3 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      <step.icon className="w-6 h-6 md:w-7 md:h-7 text-primary-foreground" />
+                  <div 
+                    className="flex flex-col items-center text-center group animate-fade-in"
+                    style={{ animationDelay: `${index * 0.15}s` }}
+                  >
+                    <div className="w-16 h-16 md:w-18 md:h-18 lg:w-20 lg:h-20 rounded-full bg-primary flex items-center justify-center mb-3 shadow-lg group-hover:scale-110 group-hover:shadow-xl transition-all duration-300 cursor-pointer">
+                      <step.icon className="w-7 h-7 md:w-8 md:h-8 text-primary-foreground" />
                     </div>
                     <span className="font-bold text-foreground text-sm md:text-base mb-1">{step.title}</span>
                     <span className="text-xs md:text-sm text-foreground/60 max-w-[140px]">{step.description}</span>
@@ -396,29 +409,32 @@ const Index = () => {
                   
                   {/* Connector Arrow (not on last item) */}
                   {index < 3 && (
-                    <div className="hidden md:flex items-center mx-4 lg:mx-6">
-                      <div className="w-8 lg:w-12 h-0.5 bg-primary/30" />
-                      <ArrowRight className="w-4 h-4 text-primary/50 -ml-1" />
+                    <div 
+                      className="hidden md:flex items-center mx-4 lg:mx-8 animate-fade-in"
+                      style={{ animationDelay: `${(index + 1) * 0.15 + 0.1}s` }}
+                    >
+                      <div className="w-10 lg:w-14 h-[3px] bg-primary/60 rounded-full" />
+                      <ArrowRight className="w-5 h-5 text-primary -ml-1" />
                     </div>
                   )}
                 </div>
               ))}
             </div>
-          </div>
 
-          {/* Differentiators */}
-          <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-              <Languages className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-foreground/80">{t.about.differentiators.trilingual}</span>
-            </div>
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-              <Globe className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-foreground/80">{t.about.differentiators.euUs}</span>
-            </div>
-            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-              <Wrench className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-foreground/80">{t.about.differentiators.handsOn}</span>
+            {/* Differentiators */}
+            <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+              <div className="flex items-center gap-2 px-5 py-3 rounded-full bg-white border border-primary/20 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300 cursor-pointer">
+                <Languages className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium text-foreground/80">{t.about.differentiators.trilingual}</span>
+              </div>
+              <div className="flex items-center gap-2 px-5 py-3 rounded-full bg-white border border-primary/20 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300 cursor-pointer">
+                <Globe className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium text-foreground/80">{t.about.differentiators.euUs}</span>
+              </div>
+              <div className="flex items-center gap-2 px-5 py-3 rounded-full bg-white border border-primary/20 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-300 cursor-pointer">
+                <Wrench className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium text-foreground/80">{t.about.differentiators.handsOn}</span>
+              </div>
             </div>
           </div>
         </div>
