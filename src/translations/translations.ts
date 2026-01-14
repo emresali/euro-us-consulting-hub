@@ -67,6 +67,22 @@ export const translations = {
         points: ["Technology Roadmaps", "Change Leadership", "Innovation Strategy"]
       }
     },
+    engagement: {
+      title: "How We Can Work Together",
+      subtitle: "Flexible engagement models tailored to your needs",
+      projectRoles: {
+        title: "Project Roles",
+        subtitle: "Embed me in your team as:",
+        roles: ["IT-PMO Lead", "Scrum Master", "Product Owner", "Business Analyst"],
+        cta: "Discuss roles"
+      },
+      packages: {
+        title: "Consulting Packages",
+        subtitle: "Focused engagements for specific goals:",
+        items: ["ERP Migration Assessment", "PMO Setup & Optimization", "Process Audit", "Agile Transformation"],
+        cta: "View packages"
+      }
+    },
     caseStudies: {
       title: "Success Stories",
       subtitle: "Real results from European and US organizations transforming their IT operations",
@@ -224,6 +240,22 @@ export const translations = {
         title: "Digitale Transformation",
         intro: "Ganzheitliche Strategie für digitale Evolution.",
         points: ["Technologie-Roadmaps", "Change Leadership", "Innovationsstrategie"]
+      }
+    },
+    engagement: {
+      title: "Wie wir zusammenarbeiten können",
+      subtitle: "Flexible Zusammenarbeitsmodelle, zugeschnitten auf Ihre Bedürfnisse",
+      projectRoles: {
+        title: "Projektrollen",
+        subtitle: "Integrieren Sie mich in Ihr Team als:",
+        roles: ["IT-PMO Lead", "Scrum Master", "Product Owner", "Business Analyst"],
+        cta: "Rollen besprechen"
+      },
+      packages: {
+        title: "Beratungspakete",
+        subtitle: "Fokussierte Engagements für spezifische Ziele:",
+        items: ["ERP-Migrations-Assessment", "PMO-Aufbau & Optimierung", "Prozess-Audit", "Agile Transformation"],
+        cta: "Pakete ansehen"
       }
     },
     caseStudies: {
