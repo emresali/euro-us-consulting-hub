@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -196,11 +197,91 @@ const Index = () => {
       {/* Customer References - subtle tinted background */}
       <section className="relative bg-[hsl(180,25%,97%)]">
         <CustomerReferences />
-        {/* Bottom gradient to services section */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[hsl(180,40%,97%)] pointer-events-none" />
+        {/* Bottom gradient to next section */}
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[#f8fafa] pointer-events-none" />
       </section>
 
-      {/* Services Section */}
+      {/* Engagement Models Section - MOVED UP */}
+      <section className="py-16 md:py-20 relative" style={{ background: '#f8fafa' }}>
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent px-4">
+              {t.engagement.title}
+            </h2>
+            <p className="text-sm md:text-base lg:text-lg text-foreground/70 max-w-2xl mx-auto px-4">
+              {t.engagement.subtitle}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
+            {/* Project Roles Card */}
+            <Link to="/rollen" className="block">
+              <div 
+                className="bg-card rounded-xl p-8 md:p-10 border-l-4 border-l-primary transition-all duration-300 hover:-translate-y-1 cursor-pointer group h-full"
+                style={{ boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.1)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '0 2px 12px rgba(0,0,0,0.06)';
+                }}
+              >
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
+                  <Users className="w-7 h-7 text-primary" />
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">{t.engagement.projectRoles.title}</h3>
+                <p className="text-sm md:text-base text-foreground/60 mb-6">{t.engagement.projectRoles.subtitle}</p>
+                <ul className="space-y-3 mb-8">
+                  {t.engagement.projectRoles.roles.map((role, i) => (
+                    <li key={i} className="flex items-center gap-3 text-sm md:text-base text-foreground/80">
+                      <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
+                      {role}
+                    </li>
+                  ))}
+                </ul>
+                <span className="inline-flex items-center gap-2 text-primary font-semibold text-sm md:text-base border-2 border-primary/30 rounded-lg px-5 py-2.5 hover:bg-primary/5 hover:border-primary/50 transition-all group-hover:gap-3">
+                  {t.engagement.projectRoles.cta}
+                  <ArrowRight className="w-4 h-4" />
+                </span>
+              </div>
+            </Link>
+
+            {/* Consulting Packages Card */}
+            <Link to="/pakete" className="block">
+              <div 
+                className="bg-card rounded-xl p-8 md:p-10 border-l-4 border-l-[hsl(215,40%,35%)] transition-all duration-300 hover:-translate-y-1 cursor-pointer group h-full"
+                style={{ boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.1)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '0 2px 12px rgba(0,0,0,0.06)';
+                }}
+              >
+                <div className="w-14 h-14 rounded-xl bg-[hsl(215,40%,35%)]/10 flex items-center justify-center mb-6">
+                  <Package className="w-7 h-7 text-[hsl(215,40%,35%)]" />
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">{t.engagement.packages.title}</h3>
+                <p className="text-sm md:text-base text-foreground/60 mb-6">{t.engagement.packages.subtitle}</p>
+                <ul className="space-y-3 mb-8">
+                  {t.engagement.packages.items.map((item, i) => (
+                    <li key={i} className="flex items-center gap-3 text-sm md:text-base text-foreground/80">
+                      <span className="w-2 h-2 rounded-full bg-[hsl(215,40%,35%)] shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <span className="inline-flex items-center gap-2 text-[hsl(215,40%,35%)] font-semibold text-sm md:text-base border-2 border-[hsl(215,40%,35%)]/30 rounded-lg px-5 py-2.5 hover:bg-[hsl(215,40%,35%)]/5 hover:border-[hsl(215,40%,35%)]/50 transition-all group-hover:gap-3">
+                  {t.engagement.packages.cta}
+                  <ArrowRight className="w-4 h-4" />
+                </span>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section - MOVED DOWN */}
       <section id="services" className="py-16 relative bg-white">
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-20 animate-fade-in-up">
@@ -252,87 +333,15 @@ const Index = () => {
               </Card>
             )})}
           </div>
-        </div>
-      </section>
-
-      {/* Engagement Models Section */}
-      <section className="py-16 md:py-20 relative" style={{ background: '#f8fafa' }}>
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent px-4">
-              {t.engagement.title}
-            </h2>
-            <p className="text-sm md:text-base lg:text-lg text-foreground/70 max-w-2xl mx-auto px-4">
-              {t.engagement.subtitle}
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
-            {/* Project Roles Card */}
-            <div 
-              className="bg-card rounded-xl p-8 md:p-10 border-l-4 border-l-primary transition-all duration-300 hover:-translate-y-1 cursor-pointer group"
-              style={{ boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.1)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow = '0 2px 12px rgba(0,0,0,0.06)';
-              }}
-            >
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
-                <Users className="w-7 h-7 text-primary" />
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">{t.engagement.projectRoles.title}</h3>
-              <p className="text-sm md:text-base text-foreground/60 mb-6">{t.engagement.projectRoles.subtitle}</p>
-              <ul className="space-y-3 mb-8">
-                {t.engagement.projectRoles.roles.map((role, i) => (
-                  <li key={i} className="flex items-center gap-3 text-sm md:text-base text-foreground/80">
-                    <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
-                    {role}
-                  </li>
-                ))}
-              </ul>
-              <a 
-                href="#contact" 
-                className="inline-flex items-center gap-2 text-primary font-semibold text-sm md:text-base border-2 border-primary/30 rounded-lg px-5 py-2.5 hover:bg-primary/5 hover:border-primary/50 transition-all group-hover:gap-3"
-              >
-                {t.engagement.projectRoles.cta}
+          
+          {/* View All Services CTA */}
+          <div className="text-center mt-12">
+            <Button variant="outline" size="lg" className="border-2 border-primary/30 text-primary hover:bg-primary/5 hover:border-primary/50 font-semibold" asChild>
+              <Link to="/services" className="flex items-center gap-2">
+                {t.services.viewAll}
                 <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
-
-            {/* Consulting Packages Card */}
-            <div 
-              className="bg-card rounded-xl p-8 md:p-10 border-l-4 border-l-[hsl(215,40%,35%)] transition-all duration-300 hover:-translate-y-1 cursor-pointer group"
-              style={{ boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.1)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow = '0 2px 12px rgba(0,0,0,0.06)';
-              }}
-            >
-              <div className="w-14 h-14 rounded-xl bg-[hsl(215,40%,35%)]/10 flex items-center justify-center mb-6">
-                <Package className="w-7 h-7 text-[hsl(215,40%,35%)]" />
-              </div>
-              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">{t.engagement.packages.title}</h3>
-              <p className="text-sm md:text-base text-foreground/60 mb-6">{t.engagement.packages.subtitle}</p>
-              <ul className="space-y-3 mb-8">
-                {t.engagement.packages.items.map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-sm md:text-base text-foreground/80">
-                    <span className="w-2 h-2 rounded-full bg-[hsl(215,40%,35%)] shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <a 
-                href="#contact" 
-                className="inline-flex items-center gap-2 text-[hsl(215,40%,35%)] font-semibold text-sm md:text-base border-2 border-[hsl(215,40%,35%)]/30 rounded-lg px-5 py-2.5 hover:bg-[hsl(215,40%,35%)]/5 hover:border-[hsl(215,40%,35%)]/50 transition-all group-hover:gap-3"
-              >
-                {t.engagement.packages.cta}
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
