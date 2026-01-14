@@ -25,26 +25,30 @@ const CaseStudies = () => {
           {caseStudies.map((study) => (
             <Link key={study.id} to={`/case-studies/${study.id}`}>
               <Card 
-                className="group hover:shadow-xl transition-all duration-300 border-border/50 cursor-pointer hover:-translate-y-2 h-full overflow-hidden"
-                style={{ boxShadow: 'var(--shadow-card)' }}
+                className="group transition-all duration-300 border-border/50 cursor-pointer hover:-translate-y-1 h-full overflow-hidden bg-card rounded-xl"
+                style={{ boxShadow: '0 2px 12px rgba(0,0,0,0.06)' }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.1)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '0 2px 12px rgba(0,0,0,0.06)';
+                }}
               >
-                {/* Image Preview */}
-                {study.image && (
-                  <div className="relative h-40 md:h-48 overflow-hidden">
-                    <div 
-                      className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-500"
-                      style={{ backgroundImage: `url(${study.image})` }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background/90" />
-                    <div className="absolute top-3 right-3 md:top-4 md:right-4 w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center border border-primary/30">
-                      <study.icon className="w-5 h-5 md:w-6 md:h-6 text-primary" />
-                    </div>
+                {/* Metrics Header */}
+                <div className="relative h-32 md:h-40 bg-gradient-to-br from-[hsl(180,40%,28%)] via-[hsl(180,45%,35%)] to-[hsl(180,50%,45%)] flex flex-col items-center justify-center overflow-hidden">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,hsl(180,54%,57%,0.3),transparent_50%)]" />
+                  <div className="relative z-10 text-center">
+                    <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-1">{study.metric}</div>
+                    <div className="text-sm md:text-base text-white/90 font-medium">{study.metricLabel}</div>
                   </div>
-                )}
+                  <div className="absolute top-3 right-3 md:top-4 md:right-4 w-9 h-9 md:w-10 md:h-10 rounded-lg bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/20">
+                    <study.icon className="w-4 h-4 md:w-5 md:h-5 text-white" />
+                  </div>
+                </div>
                 
-                <CardHeader className="pb-3 md:pb-6">
-                  <div className="text-xs md:text-sm text-foreground/60 mb-1 md:mb-2 font-medium">{study.location}</div>
-                  <CardTitle className="text-lg md:text-xl mb-1 md:mb-2 group-hover:text-primary transition-colors">{study.title}</CardTitle>
+                <CardHeader className="pb-3 md:pb-4">
+                  <div className="text-xs md:text-sm text-foreground/60 mb-1 font-medium">{study.location}</div>
+                  <CardTitle className="text-lg md:text-xl mb-1 group-hover:text-primary transition-colors">{study.title}</CardTitle>
                   <CardDescription className="text-sm md:text-base font-medium">{study.company}</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-3 md:space-y-4">
@@ -53,14 +57,11 @@ const CaseStudies = () => {
                     <p className="text-xs md:text-sm text-foreground/70 line-clamp-2">{study.challenge}</p>
                   </div>
                   <div className="flex flex-wrap gap-1.5 md:gap-2 pt-1 md:pt-2">
-                    {study.tags.slice(0, 2).map((tag, i) => (
-                      <Badge key={i} variant="secondary" className="text-xs font-medium">
+                    {study.tags.map((tag, i) => (
+                      <Badge key={i} className="text-xs font-medium bg-primary text-primary-foreground hover:bg-primary/90">
                         {tag}
                       </Badge>
                     ))}
-                    {study.tags.length > 2 && (
-                      <Badge variant="secondary" className="text-xs">+{study.tags.length - 2}</Badge>
-                    )}
                   </div>
                   <p className="text-xs md:text-sm text-primary font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
                     {t.readMore || "Read full case study"} <ArrowRight className="w-3 h-3 md:w-4 md:h-4" />
