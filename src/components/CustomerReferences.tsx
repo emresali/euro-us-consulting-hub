@@ -2,9 +2,8 @@ const CustomerReferences = () => {
   const customers = [
     { name: "L'Oréal", logo: "/images/loreal-logo.png" },
     { name: "DDA Consulting", logo: "/images/dda-consulting-logo.png" },
-    { name: "SAE IT-Systems", logo: "/images/sae-logo.png" },
     { name: "Fürsie", logo: "/images/fursie-logo.png" },
-    { name: "Lacroix", logo: "/images/lacroix-logo.webp" },
+    { name: "Lacroix", logo: "/images/lacroix-logo.webp", scale: "scale-75" },
   ];
 
   return (
@@ -30,7 +29,7 @@ const CustomerReferences = () => {
               <img
                 src={customer.logo}
                 alt={customer.name}
-                className="max-h-full max-w-full object-contain"
+                className={`max-h-full max-w-full object-contain ${customer.scale || ''}`}
               />
             </div>
           ))}
