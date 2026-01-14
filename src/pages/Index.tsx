@@ -115,7 +115,7 @@ const Index = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(215,25%,15%)] via-[hsl(215,25%,15%,0.95)] to-[hsl(215,25%,15%,0.7)]" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[hsl(215,25%,22%)] via-[hsl(215,25%,22%,0.95)] to-[hsl(215,25%,22%,0.7)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(180,54%,57%,0.1),transparent_50%)]" />
         </div>
         
@@ -185,12 +185,11 @@ const Index = () => {
           </div>
         </div>
         {/* Subtle transition gradient */}
-        <div className="absolute bottom-0 left-0 right-0 h-[100px] bg-gradient-to-b from-transparent to-[hsl(180,30%,96%)] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-[60px] bg-gradient-to-b from-transparent to-[hsl(180,25%,97%)] pointer-events-none" />
       </section>
 
       {/* Customer References - subtle tinted background */}
-      <section className="relative bg-[hsl(180,30%,96%)]">
-        <CustomerReferences />
+      <section className="relative bg-[hsl(180,25%,97%)]">
         <CustomerReferences />
         {/* Bottom gradient to services section */}
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[hsl(180,40%,97%)] pointer-events-none" />
