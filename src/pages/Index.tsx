@@ -183,31 +183,31 @@ const Index = () => {
               <div className="absolute -top-12 -right-12 w-80 h-80 bg-accent/20 rounded-full blur-3xl" />
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Trusted By Section - Clean white background */}
-      <section className="py-6 md:py-8 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <div className="h-px w-12 md:w-16 bg-gradient-to-r from-transparent to-foreground/20" />
-            <p className="text-xs md:text-sm text-foreground/50 font-semibold tracking-[0.2em] uppercase">
-              Trusted by
-            </p>
-            <div className="h-px w-12 md:w-16 bg-gradient-to-l from-transparent to-foreground/20" />
-          </div>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16">
-            <div className="w-24 h-10 md:w-32 md:h-12 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300">
-              <img src="/images/loreal-logo.png" alt="L'Oréal" className="max-w-full max-h-full object-contain scale-[2.5]" />
-            </div>
-            <div className="w-24 h-10 md:w-32 md:h-12 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300">
-              <img src="/images/dda-consulting-logo.png" alt="DDA Consulting" className="max-w-full max-h-full object-contain scale-[2.5]" />
-            </div>
-            <div className="w-24 h-10 md:w-32 md:h-12 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300">
-              <img src="/images/fursie-logo.png" alt="Fürsie" className="max-w-full max-h-full object-contain scale-100" />
-            </div>
-            <div className="w-24 h-10 md:w-32 md:h-12 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300">
-              <img src="/images/lacroix-logo.webp" alt="Lacroix" className="max-w-full max-h-full object-contain scale-110" />
+          
+          {/* Trusted By - Floating white container */}
+          <div className="mt-12 md:mt-16 mb-8 md:mb-12">
+            <div className="bg-white rounded-2xl shadow-[0_4px_24px_rgba(0,0,0,0.12)] px-8 md:px-16 lg:px-20 py-8 md:py-10 mx-auto max-w-4xl">
+              <div className="flex items-center justify-center gap-4 mb-6">
+                <div className="h-px w-10 md:w-14 bg-gradient-to-r from-transparent to-gray-300" />
+                <p className="text-xs md:text-sm text-gray-500 font-semibold tracking-[0.2em] uppercase">
+                  Trusted by
+                </p>
+                <div className="h-px w-10 md:w-14 bg-gradient-to-l from-transparent to-gray-300" />
+              </div>
+              <div className="flex flex-wrap justify-center items-center gap-8 md:gap-10 lg:gap-14">
+                <div className="w-20 h-8 md:w-28 md:h-10 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+                  <img src="/images/loreal-logo.png" alt="L'Oréal" className="max-w-full max-h-full object-contain scale-[2.2]" />
+                </div>
+                <div className="w-20 h-8 md:w-28 md:h-10 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+                  <img src="/images/dda-consulting-logo.png" alt="DDA Consulting" className="max-w-full max-h-full object-contain scale-[2.2]" />
+                </div>
+                <div className="w-20 h-8 md:w-28 md:h-10 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+                  <img src="/images/fursie-logo.png" alt="Fürsie" className="max-w-full max-h-full object-contain scale-100" />
+                </div>
+                <div className="w-20 h-8 md:w-28 md:h-10 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+                  <img src="/images/lacroix-logo.webp" alt="Lacroix" className="max-w-full max-h-full object-contain scale-105" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
