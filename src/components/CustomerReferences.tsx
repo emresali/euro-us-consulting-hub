@@ -7,8 +7,8 @@ const CustomerReferences = () => {
   ];
 
   return (
-    <section className="relative py-12 md:py-16 overflow-hidden bg-transparent">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
+    <div className="relative py-12 md:py-16 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-[hsl(180,30%,97%)] via-[hsl(180,25%,98%)] to-background pointer-events-none" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex items-center justify-center gap-6 mb-10 md:mb-14">
@@ -34,7 +34,7 @@ const CustomerReferences = () => {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
