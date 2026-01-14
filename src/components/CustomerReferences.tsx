@@ -21,16 +21,16 @@ const CustomerReferences = () => {
           <div className="h-px w-12 md:w-20 bg-gradient-to-l from-transparent to-primary/30" />
         </div>
 
-        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-16 lg:gap-20">
+        <div className="flex flex-wrap justify-center items-center gap-10 md:gap-14 lg:gap-16">
           {customers.map((customer, index) => (
             <div
               key={index}
-              className="h-12 md:h-16 flex items-center justify-center opacity-40 hover:opacity-70 transition-opacity duration-300"
+              className="w-24 md:w-32 h-10 md:h-12 flex items-center justify-center opacity-40 hover:opacity-70 transition-opacity duration-300"
             >
               <img
                 src={customer.logo}
                 alt={customer.name}
-                className="h-full w-auto object-contain"
+                className="max-h-full max-w-full object-contain"
               />
             </div>
           ))}
