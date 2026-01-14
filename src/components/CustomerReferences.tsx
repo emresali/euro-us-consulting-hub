@@ -7,8 +7,9 @@ const CustomerReferences = () => {
   ];
 
   return (
-    <div className="relative py-12 md:py-16 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-[hsl(180,30%,97%)] via-[hsl(180,25%,98%)] to-background pointer-events-none" />
+    <div className="relative py-16 md:py-20 overflow-hidden">
+      {/* Subtle radial glow for depth */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(180,40%,93%,0.5),transparent_70%)] pointer-events-none" />
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex items-center justify-center gap-6 mb-10 md:mb-14">
