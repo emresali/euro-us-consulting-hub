@@ -81,6 +81,18 @@ export const translations = {
       subtitle1: "As a seasoned IT professional, I bring comprehensive expertise in project management, agile methodologies, and strategic business analysis to drive your organization's success.",
       subtitle2: "With extensive experience across multiple domains, I deliver comprehensive solutions that bridge technology, process, and people - helping European and US clients achieve transformational results.",
       coreExpertise: "Core Expertise",
+      consultingApproach: "My Consulting Approach",
+      approach: {
+        discover: { title: "Discover", description: "Understand your goals & challenges" },
+        analyze: { title: "Analyze", description: "Define solutions & roadmap" },
+        implement: { title: "Implement", description: "Hands-on execution with you" },
+        optimize: { title: "Optimize", description: "Measure & improve continuously" }
+      },
+      differentiators: {
+        trilingual: "Trilingual: DE/EN/TR",
+        euUs: "EU & US Experience",
+        handsOn: "Hands-on, not just PowerPoints"
+      },
       international: {
         title: "International Expertise",
         description: "Offering services internationally with proven project experience in Germany, France, Switzerland, and Austria."
@@ -228,6 +240,18 @@ export const translations = {
       subtitle1: "Als erfahrener IT-Profi bringe ich umfassende Expertise in Projektmanagement, agilen Methoden und strategischer Business-Analyse ein, um den Erfolg Ihrer Organisation voranzutreiben.",
       subtitle2: "Mit umfangreicher Erfahrung in mehreren Bereichen liefere ich ganzheitliche Lösungen, die Technologie, Prozesse und Menschen verbinden - und helfe europäischen und US-amerikanischen Kunden, transformative Ergebnisse zu erzielen.",
       coreExpertise: "Kernkompetenzen",
+      consultingApproach: "Mein Beratungsansatz",
+      approach: {
+        discover: { title: "Entdecken", description: "Ihre Ziele & Herausforderungen verstehen" },
+        analyze: { title: "Analysieren", description: "Lösungen & Roadmap definieren" },
+        implement: { title: "Umsetzen", description: "Hands-on Umsetzung mit Ihnen" },
+        optimize: { title: "Optimieren", description: "Kontinuierlich messen & verbessern" }
+      },
+      differentiators: {
+        trilingual: "Dreisprachig: DE/EN/TR",
+        euUs: "EU & US Erfahrung",
+        handsOn: "Hands-on, nicht nur PowerPoints"
+      },
       international: {
         title: "Internationale Expertise",
         description: "Internationales Dienstleistungsangebot mit nachgewiesener Projekterfahrung in Deutschland, Frankreich, Schweiz und Österreich."
