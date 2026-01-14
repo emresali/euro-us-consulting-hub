@@ -201,8 +201,7 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-16 relative" style={{ background: 'var(--section-primary-bg)' }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(180,54%,97%)] via-primary/8 to-[hsl(200,20%,98%)] pointer-events-none" />
+      <section id="services" className="py-16 relative bg-white">
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-20 animate-fade-in-up">
             <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold mb-8 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent px-4">
@@ -213,10 +212,12 @@ const Index = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {services.map((service, index) => (
+            {services.map((service, index) => {
+              const isLastOdd = services.length % 3 === 1 && index === services.length - 1;
+              return (
               <Card 
                 key={index} 
-                className="group relative overflow-hidden transition-all duration-300 border border-border/50 bg-gradient-to-br from-card to-card/80 rounded-xl animate-fade-in-up hover:-translate-y-1 hover:border-l-[3px] hover:border-l-primary"
+                className={`group relative overflow-hidden transition-all duration-300 border border-border/50 bg-card rounded-xl animate-fade-in-up hover:-translate-y-1 hover:border-l-[3px] hover:border-l-primary ${isLastOdd ? 'lg:col-start-2' : ''}`}
                 style={{ 
                   boxShadow: '0 2px 12px rgba(0,0,0,0.06)',
                   animationDelay: `${index * 0.1}s`
@@ -249,13 +250,13 @@ const Index = () => {
                   </ul>
                 </CardContent>
               </Card>
-            ))}
+            )})}
           </div>
         </div>
       </section>
 
       {/* Engagement Models Section */}
-      <section className="py-16 md:py-20 relative" style={{ background: 'hsl(210, 20%, 98%)' }}>
+      <section className="py-16 md:py-20 relative" style={{ background: '#f8fafa' }}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent px-4">
@@ -340,8 +341,7 @@ const Index = () => {
       <CaseStudies />
 
       {/* About Section with Profile */}
-      <section id="about" className="py-12 md:py-20 lg:py-24 relative overflow-hidden" style={{ background: 'var(--section-accent-bg)' }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(200,20%,98%)] via-primary/5 to-[hsl(180,54%,96%)] pointer-events-none" />
+      <section id="about" className="py-12 md:py-20 lg:py-24 relative overflow-hidden bg-white">
         <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
         <div className="container mx-auto px-4 relative z-10">
@@ -482,8 +482,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-12 md:py-20 lg:py-24 relative overflow-hidden" style={{ background: 'var(--section-secondary-bg)' }}>
-        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(180,54%,96%)] via-accent/8 to-[hsl(200,20%,96%)] pointer-events-none" />
+      <section id="contact" className="py-12 md:py-20 lg:py-24 relative overflow-hidden" style={{ background: '#f8fafa' }}>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto">
         <div className="text-center mb-12 md:mb-16 lg:mb-20">
