@@ -198,16 +198,16 @@ const Index = () => {
           </div>
           <div className="flex justify-center items-center gap-12 md:gap-16 lg:gap-20 flex-wrap">
             <div className="h-10 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300">
-              <img src="/images/loreal-logo.png" alt="L'Oréal" className="h-10 w-auto object-contain" />
+              <img src="/images/loreal-logo.png" alt="L'Oréal" className="h-10 w-auto object-contain scale-[3.5]" />
             </div>
             <div className="h-10 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300">
-              <img src="/images/dda-consulting-logo.png" alt="DDA Consulting" className="h-10 w-auto object-contain" />
+              <img src="/images/dda-consulting-logo.png" alt="DDA Consulting" className="h-10 w-auto object-contain scale-[3.5]" />
             </div>
             <div className="h-10 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300">
-              <img src="/images/fursie-logo.png" alt="Fürsie" className="h-10 w-auto object-contain" />
+              <img src="/images/fursie-logo.png" alt="Fürsie" className="h-10 w-auto object-contain scale-[1.3]" />
             </div>
             <div className="h-10 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300">
-              <img src="/images/lacroix-logo.webp" alt="Lacroix" className="h-10 w-auto object-contain" />
+              <img src="/images/lacroix-logo.webp" alt="Lacroix" className="h-10 w-auto object-contain scale-[1.4]" />
             </div>
           </div>
         </div>
