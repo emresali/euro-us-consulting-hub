@@ -14,6 +14,8 @@ export interface CaseStudy {
   detailedChallenge?: string;
   detailedSolution?: string;
   additionalResults?: string[];
+  metric: string;
+  metricLabel: string;
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -23,7 +25,8 @@ export const caseStudies: CaseStudy[] = [
     company: "Global Financial Services",
     location: "Frankfurt, Germany",
     title: "Enterprise PMO Transformation",
-    image: "/images/case-study-pmo.jpg",
+    metric: "50+",
+    metricLabel: "Projects Consolidated",
     challenge: "Needed to establish a centralized PMO to manage 50+ concurrent projects across 5 countries.",
     solution: "Implemented comprehensive PMO framework with standardized processes, governance structures, and reporting dashboards.",
     results: [
@@ -39,7 +42,8 @@ export const caseStudies: CaseStudy[] = [
     company: "Dutch Tech Scale-up",
     location: "Amsterdam, Netherlands",
     title: "Agile Transformation at Scale",
-    image: "/images/case-study-agile.jpg",
+    metric: "200+",
+    metricLabel: "Team Members Scaled",
     challenge: "Engineering teams struggling with coordination and delivery velocity as company grew from 50 to 200+ employees.",
     solution: "Led comprehensive Agile transformation with SAFe framework implementation, trained 12 Scrum teams, established CoE.",
     results: [
@@ -55,7 +59,8 @@ export const caseStudies: CaseStudy[] = [
     company: "US Manufacturing Corp",
     location: "Chicago, USA",
     title: "Data-Driven Process Optimization",
-    image: "/images/case-study-data.jpg",
+    metric: "40%",
+    metricLabel: "Faster Delivery",
     challenge: "Legacy manufacturing processes with limited visibility and inefficient workflows causing delivery delays.",
     solution: "Conducted comprehensive business analysis, designed new data analytics framework, implemented automated reporting.",
     results: [
