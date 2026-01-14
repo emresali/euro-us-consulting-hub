@@ -184,12 +184,14 @@ const Index = () => {
             </div>
           </div>
         </div>
-        {/* Smooth transition gradient - smaller and more subtle */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent via-[hsl(215,25%,15%,0.2)] to-[hsl(215,25%,15%,0.4)] pointer-events-none" />
+        {/* Smooth transition gradient to Customer References */}
+        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent via-[hsl(var(--esit-dark-bg)/0.3)] to-[hsl(180,40%,97%)] pointer-events-none" />
       </section>
 
-      {/* Customer References */}
-      <CustomerReferences />
+      {/* Customer References with tinted background */}
+      <section className="relative bg-[hsl(180,30%,97%)]">
+        <CustomerReferences />
+      </section>
 
       {/* Services Section */}
       <section id="services" className="py-16 relative" style={{ background: 'var(--section-primary-bg)' }}>
