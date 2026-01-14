@@ -183,38 +183,38 @@ const Index = () => {
               <div className="absolute -top-12 -right-12 w-80 h-80 bg-accent/20 rounded-full blur-3xl" />
             </div>
           </div>
-          
-          {/* Trusted By - Floating white container */}
-          <div className="mt-10 md:mt-14 mb-4 md:mb-8">
-            <div className="bg-white rounded-xl shadow-[0_2px_12px_rgba(0,0,0,0.08)] border border-black/5 px-6 md:px-12 lg:px-16 py-5 md:py-6 mx-auto max-w-4xl">
-              <div className="flex items-center justify-center gap-4 mb-4">
-                <div className="h-px w-10 md:w-14 bg-gradient-to-r from-transparent to-gray-300" />
-                <p className="text-xs md:text-sm text-gray-500 font-semibold tracking-[0.2em] uppercase">
-                  Trusted by
-                </p>
-                <div className="h-px w-10 md:w-14 bg-gradient-to-l from-transparent to-gray-300" />
-              </div>
-              <div className="flex justify-center items-center gap-8 md:gap-12 lg:gap-14">
-                <div className="h-10 md:h-12 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
-                  <img src="/images/loreal-logo.png" alt="L'Oréal" className="h-full w-auto object-contain scale-[3]" />
-                </div>
-                <div className="h-10 md:h-12 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
-                  <img src="/images/dda-consulting-logo.png" alt="DDA Consulting" className="h-full w-auto object-contain scale-[3]" />
-                </div>
-                <div className="h-10 md:h-12 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
-                  <img src="/images/fursie-logo.png" alt="Fürsie" className="h-full w-auto object-contain scale-[1.4]" />
-                </div>
-                <div className="h-10 md:h-12 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
-                  <img src="/images/lacroix-logo.webp" alt="Lacroix" className="h-full w-auto object-contain scale-[1.5]" />
-                </div>
-              </div>
+        </div>
+      </section>
+
+      {/* Trusted By Section - Clean separate section */}
+      <section className="py-12 md:py-14 bg-[#f9fafb]">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <div className="h-px w-10 md:w-14 bg-gradient-to-r from-transparent to-gray-300" />
+            <p className="text-xs text-[#9ca3af] font-semibold tracking-[0.15em] uppercase">
+              Trusted by
+            </p>
+            <div className="h-px w-10 md:w-14 bg-gradient-to-l from-transparent to-gray-300" />
+          </div>
+          <div className="flex justify-center items-center gap-12 md:gap-16 lg:gap-20 flex-wrap">
+            <div className="flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300">
+              <img src="/images/loreal-logo.png" alt="L'Oréal" className="h-8 md:h-9 w-auto object-contain" />
+            </div>
+            <div className="flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300">
+              <img src="/images/dda-consulting-logo.png" alt="DDA Consulting" className="h-8 md:h-9 w-auto object-contain" />
+            </div>
+            <div className="flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300">
+              <img src="/images/fursie-logo.png" alt="Fürsie" className="h-8 md:h-9 w-auto object-contain" />
+            </div>
+            <div className="flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300">
+              <img src="/images/lacroix-logo.webp" alt="Lacroix" className="h-8 md:h-9 w-auto object-contain" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Section - Light teal background */}
-      <section id="services" className="py-16 relative bg-[#f5fafa]">
+      {/* Services Section - White background */}
+      <section id="services" className="py-16 relative bg-white">
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-20 animate-fade-in-up">
             <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold mb-8 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent px-4">
