@@ -195,7 +195,7 @@ const Index = () => {
             </div>
             <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16 pb-8">
               <div className="w-24 h-10 md:w-32 md:h-12 flex items-center justify-center opacity-50 hover:opacity-80 transition-opacity duration-300">
-                <img src="/images/loreal-logo.svg" alt="L'Oréal" className="max-w-full max-h-full object-contain brightness-0 invert scale-[2.5]" />
+                <img src="/images/loreal-logo.png" alt="L'Oréal" className="max-w-full max-h-full object-contain brightness-0 invert scale-[2.5]" />
               </div>
               <div className="w-24 h-10 md:w-32 md:h-12 flex items-center justify-center opacity-50 hover:opacity-80 transition-opacity duration-300">
                 <img src="/images/dda-consulting-logo.png" alt="DDA Consulting" className="max-w-full max-h-full object-contain brightness-0 invert scale-[2.5]" />
