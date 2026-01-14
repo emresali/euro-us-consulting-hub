@@ -21,6 +21,7 @@ export const translations = {
     services: {
       title: "Professional Services",
       subtitle: "Comprehensive IT consulting solutions tailored to your organization's needs",
+      viewAll: "View all services",
       itPmo: {
         title: "IT-PMO",
         intro: "Central control point for your IT initiatives.",
@@ -196,6 +197,7 @@ export const translations = {
     services: {
       title: "Professionelle Dienstleistungen",
       subtitle: "Umfassende IT-Beratungslösungen, maßgeschneidert für die Bedürfnisse Ihrer Organisation",
+      viewAll: "Alle Dienstleistungen ansehen",
       itPmo: {
         title: "IT-PMO",
         intro: "Zentrale Steuerung Ihrer IT-Initiativen.",
