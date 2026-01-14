@@ -1,9 +1,9 @@
 const CustomerReferences = () => {
   const customers = [
-    { name: "L'Oréal", logo: "/images/loreal-logo.png", scale: "scale-[3.2]" },
-    { name: "DDA Consulting", logo: "/images/dda-consulting-logo.png", scale: "scale-[3.2]" },
+    { name: "L'Oréal", logo: "/images/loreal-logo.png", scale: "scale-[4]" },
+    { name: "DDA Consulting", logo: "/images/dda-consulting-logo.png", scale: "scale-[2.8]", extraGap: true },
     { name: "Fürsie", logo: "/images/fursie-logo.png", scale: "scale-110" },
-    { name: "Lacroix", logo: "/images/lacroix-logo.webp", scale: "scale-125 -translate-y-2" },
+    { name: "Lacroix", logo: "/images/lacroix-logo.webp", scale: "scale-100" },
   ];
 
   return (
@@ -24,7 +24,7 @@ const CustomerReferences = () => {
           {customers.map((customer, index) => (
             <div
               key={index}
-              className="h-10 md:h-11 flex items-center justify-center opacity-50 hover:opacity-90 transition-opacity duration-300"
+              className={`h-10 md:h-11 flex items-center justify-center opacity-50 hover:opacity-90 transition-opacity duration-300 ${customer.extraGap ? 'mr-6 md:mr-10' : ''}`}
             >
               <img
                 src={customer.logo}
