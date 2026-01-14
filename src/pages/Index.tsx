@@ -23,7 +23,12 @@ import {
   Package,
   Cloud,
   Rocket,
-  Menu
+  Menu,
+  Search,
+  Lightbulb,
+  Wrench,
+  TrendingUp,
+  Languages
 } from "lucide-react";
 import heroImage from "@/assets/hero-consulting.jpg";
 import esitLogo from "@/assets/esit-logo-transparent.png";
@@ -258,20 +263,21 @@ const Index = () => {
         <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+          {/* Top section: Photo + Intro */}
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center mb-16">
             <div className="order-2 md:order-1 animate-slide-in-left">
               <div className="relative">
                 <img 
                   src={profileImage} 
                   alt="Professional consultant portrait" 
-                  className="rounded-2xl shadow-lg w-full hover:scale-105 transition-transform duration-500"
+                  className="rounded-2xl shadow-lg w-full max-w-md mx-auto hover:scale-105 transition-transform duration-500"
                   style={{ boxShadow: 'var(--shadow-card-hover)' }}
                 />
               </div>
             </div>
-            <div className="order-1 md:order-2 space-y-6 md:space-y-8 animate-slide-in-right">
+            <div className="order-1 md:order-2 space-y-6 animate-slide-in-right">
               <div>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 lg:mb-8 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">{t.about.title}</h2>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">{t.about.title}</h2>
                 <p className="text-base md:text-lg text-foreground/75 mb-3 md:mb-4 leading-relaxed">
                   {t.about.subtitle1}
                 </p>
@@ -279,52 +285,58 @@ const Index = () => {
                   {t.about.subtitle2}
                 </p>
               </div>
-              
-              <div className="space-y-4 md:space-y-6">
-                <h3 className="font-bold text-xl md:text-2xl mb-4 md:mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">{t.about.coreExpertise}</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
-                  {expertise.map((item, index) => {
-                    const IconComponent = item.icon;
-                    return (
-                      <div 
-                        key={index} 
-                        className="group relative p-4 md:p-6 rounded-xl md:rounded-2xl bg-gradient-to-br from-card via-card to-primary/5 backdrop-blur-sm border-2 border-primary/30 hover:border-primary/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl animate-fade-in overflow-hidden"
-                        style={{ 
-                          animationDelay: `${index * 0.1}s`,
-                          boxShadow: '0 4px 20px rgba(var(--primary-rgb), 0.1)'
-                        }}
-                      >
-                        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                        <div className="relative flex items-center gap-3 md:gap-4">
-                          <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl bg-gradient-to-br from-primary/30 to-accent/20 flex items-center justify-center group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 shrink-0 shadow-lg">
-                            <IconComponent className="w-5 h-5 md:w-7 md:h-7 text-primary group-hover:text-accent transition-colors duration-500" />
-                          </div>
-                          <span className="text-foreground font-bold text-sm md:text-base group-hover:text-primary transition-colors duration-300">{item.text}</span>
-                        </div>
-                        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
+            </div>
+          </div>
 
-              <div className="pt-4 md:pt-6">
-                <div className="relative p-8 rounded-2xl bg-gradient-to-br from-accent/15 via-accent/10 to-primary/5 backdrop-blur-sm border-2 border-accent/30 overflow-hidden group hover:shadow-2xl transition-all duration-500">
-                  <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full blur-3xl" />
-                  <div className="relative flex items-start gap-4">
-                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-accent/40 to-primary/20 flex items-center justify-center shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-500">
-                      <Target className="w-7 h-7 text-accent" />
+          {/* Consulting Approach - Horizontal Process Flow */}
+          <div className="mb-12">
+            <h3 className="font-bold text-xl md:text-2xl mb-8 md:mb-10 text-center bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+              {t.about.consultingApproach}
+            </h3>
+            
+            {/* Process Steps */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-0">
+              {[
+                { num: 1, icon: Search, ...t.about.approach.discover },
+                { num: 2, icon: Lightbulb, ...t.about.approach.analyze },
+                { num: 3, icon: Wrench, ...t.about.approach.implement },
+                { num: 4, icon: TrendingUp, ...t.about.approach.optimize }
+              ].map((step, index) => (
+                <div key={step.num} className="flex items-center">
+                  {/* Step */}
+                  <div className="flex flex-col items-center text-center group">
+                    <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-primary flex items-center justify-center mb-3 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                      <step.icon className="w-6 h-6 md:w-7 md:h-7 text-primary-foreground" />
                     </div>
-                    <div className="flex-1">
-                      <h4 className="font-bold text-xl mb-3 text-foreground">{t.about.results.title}</h4>
-                      <p className="text-base text-foreground/80 leading-relaxed">
-                        {t.about.results.description}
-                      </p>
-                    </div>
+                    <span className="font-bold text-foreground text-sm md:text-base mb-1">{step.title}</span>
+                    <span className="text-xs md:text-sm text-foreground/60 max-w-[140px]">{step.description}</span>
                   </div>
+                  
+                  {/* Connector Arrow (not on last item) */}
+                  {index < 3 && (
+                    <div className="hidden md:flex items-center mx-4 lg:mx-6">
+                      <div className="w-8 lg:w-12 h-0.5 bg-primary/30" />
+                      <ArrowRight className="w-4 h-4 text-primary/50 -ml-1" />
+                    </div>
+                  )}
                 </div>
-              </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Differentiators */}
+          <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+              <Languages className="w-4 h-4 text-primary" />
+              <span className="text-sm font-medium text-foreground/80">{t.about.differentiators.trilingual}</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+              <Globe className="w-4 h-4 text-primary" />
+              <span className="text-sm font-medium text-foreground/80">{t.about.differentiators.euUs}</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+              <Wrench className="w-4 h-4 text-primary" />
+              <span className="text-sm font-medium text-foreground/80">{t.about.differentiators.handsOn}</span>
             </div>
           </div>
         </div>
