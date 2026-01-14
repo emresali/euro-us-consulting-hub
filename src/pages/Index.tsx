@@ -184,17 +184,14 @@ const Index = () => {
             </div>
           </div>
         </div>
-        {/* Extended smooth transition gradient - 200px for natural flow */}
-        <div className="absolute bottom-0 left-0 right-0 h-[200px] bg-gradient-to-b from-transparent via-[hsl(215,25%,15%,0.6)] to-[hsl(180,35%,95%)] pointer-events-none" />
-      </section>
-
-      {/* Customer References - light teal background for smooth visual flow */}
-      <section className="relative bg-[hsl(180,35%,95%)]">
-        {/* Top gradient overlay for seamless blend */}
-        <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-[hsl(180,35%,95%)] to-transparent pointer-events-none" />
-        <CustomerReferences />
-        {/* Bottom gradient to services section */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[hsl(180,40%,97%)] pointer-events-none" />
+        
+        {/* Trusted By - integrated into hero gradient */}
+        <div className="relative z-10 mt-12 md:mt-16 pb-8">
+          <CustomerReferences />
+        </div>
+        
+        {/* Bottom gradient transition to services */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[hsl(180,40%,97%)] pointer-events-none" />
       </section>
 
       {/* Services Section */}
