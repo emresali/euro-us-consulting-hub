@@ -25,7 +25,7 @@ const CustomerReferences = () => {
           {customers.map((customer, index) => (
             <div
               key={index}
-              className="h-6 md:h-7 flex items-center justify-center opacity-30 hover:opacity-60 transition-opacity duration-300"
+              className="h-12 md:h-16 flex items-center justify-center opacity-40 hover:opacity-70 transition-opacity duration-300"
             >
               <img
                 src={customer.logo}
