@@ -197,17 +197,17 @@ const Index = () => {
             <div className="h-px w-10 md:w-14 bg-gradient-to-l from-transparent to-gray-300" />
           </div>
           <div className="flex justify-center items-center gap-12 md:gap-16 lg:gap-20 flex-wrap">
-            <div className="flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300">
-              <img src="/images/loreal-logo.png" alt="L'Oréal" className="h-8 md:h-9 w-auto object-contain" />
+            <div className="h-10 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300">
+              <img src="/images/loreal-logo.png" alt="L'Oréal" className="h-10 w-auto object-contain" />
             </div>
-            <div className="flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300">
-              <img src="/images/dda-consulting-logo.png" alt="DDA Consulting" className="h-8 md:h-9 w-auto object-contain" />
+            <div className="h-10 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300">
+              <img src="/images/dda-consulting-logo.png" alt="DDA Consulting" className="h-10 w-auto object-contain" />
             </div>
-            <div className="flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300">
-              <img src="/images/fursie-logo.png" alt="Fürsie" className="h-8 md:h-9 w-auto object-contain" />
+            <div className="h-10 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300">
+              <img src="/images/fursie-logo.png" alt="Fürsie" className="h-10 w-auto object-contain" />
             </div>
-            <div className="flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300">
-              <img src="/images/lacroix-logo.webp" alt="Lacroix" className="h-8 md:h-9 w-auto object-contain" />
+            <div className="h-10 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300">
+              <img src="/images/lacroix-logo.webp" alt="Lacroix" className="h-10 w-auto object-contain" />
             </div>
           </div>
         </div>
