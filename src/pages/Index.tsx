@@ -211,16 +211,22 @@ const Index = () => {
             {services.map((service, index) => (
               <Card 
                 key={index} 
-                className="group relative overflow-hidden hover:shadow-2xl transition-all duration-500 border-0 bg-gradient-to-br from-card to-card/80 hover:-translate-y-1 animate-fade-in-up"
+                className="group relative overflow-hidden transition-all duration-300 border border-border/50 bg-gradient-to-br from-card to-card/80 rounded-xl animate-fade-in-up hover:-translate-y-1 hover:border-l-[3px] hover:border-l-primary"
                 style={{ 
-                  boxShadow: '0 4px 24px -4px hsl(var(--primary) / 0.08)',
+                  boxShadow: '0 2px 12px rgba(0,0,0,0.06)',
                   animationDelay: `${index * 0.1}s`
                 }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 8px 24px rgba(0,0,0,0.1)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = '0 2px 12px rgba(0,0,0,0.06)';
+                }}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <CardHeader className="relative pb-2">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/15 transition-colors duration-300">
-                    <service.icon className="w-6 h-6 text-primary" />
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/15 transition-colors duration-300">
+                    <service.icon className="w-7 h-7 text-primary" />
                   </div>
                   <CardTitle className="text-xl md:text-2xl font-semibold tracking-tight">{service.title}</CardTitle>
                 </CardHeader>
@@ -229,9 +235,9 @@ const Index = () => {
                     {service.intro}
                   </p>
                   <ul className="space-y-2">
-                    {service.points.map((point, i) => (
+                    {service.points.slice(0, 3).map((point, i) => (
                       <li key={i} className="flex items-center gap-2.5 text-sm md:text-base text-foreground/80">
-                        <span className="w-1.5 h-1.5 rounded-sm bg-primary shrink-0" />
+                        <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
                         {point}
                       </li>
                     ))}
