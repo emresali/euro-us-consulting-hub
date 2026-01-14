@@ -110,13 +110,13 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-[500px] md:min-h-[700px] flex items-center justify-center overflow-hidden pt-28 md:pt-32 pb-12 md:pb-16">
+      <section className="relative min-h-[500px] md:min-h-[700px] flex items-center justify-center overflow-hidden py-12 md:py-0">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-[hsl(215,25%,15%)] via-[hsl(215,25%,15%,0.95)] to-[hsl(215,25%,15%,0.7)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(180,54%,57%,0.08),transparent_35%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(180,54%,57%,0.1),transparent_50%)]" />
         </div>
         
         
@@ -184,37 +184,22 @@ const Index = () => {
             </div>
           </div>
         </div>
+        {/* Extended smooth transition gradient - 200px for natural flow */}
+        <div className="absolute bottom-0 left-0 right-0 h-[200px] bg-gradient-to-b from-transparent via-[hsl(215,25%,15%,0.6)] to-[hsl(180,35%,95%)] pointer-events-none" />
       </section>
 
-      {/* Trusted By Section - Clean separate section */}
-      <section className="py-12 md:py-14 bg-[#f9fafb]">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-center gap-4 mb-8">
-            <div className="h-px w-10 md:w-14 bg-gradient-to-r from-transparent to-gray-300" />
-            <p className="text-xs text-[#9ca3af] font-semibold tracking-[0.15em] uppercase">
-              Trusted by
-            </p>
-            <div className="h-px w-10 md:w-14 bg-gradient-to-l from-transparent to-gray-300" />
-          </div>
-          <div className="flex justify-center items-center gap-12 md:gap-16 lg:gap-20 flex-wrap">
-            <div className="h-10 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300">
-              <img src="/images/loreal-logo.png" alt="L'Oréal" className="h-10 w-auto object-contain scale-[3.5]" />
-            </div>
-            <div className="h-10 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300">
-              <img src="/images/dda-consulting-logo.png" alt="DDA Consulting" className="h-10 w-auto object-contain scale-[3.5]" />
-            </div>
-            <div className="h-10 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300">
-              <img src="/images/fursie-logo.png" alt="Fürsie" className="h-10 w-auto object-contain scale-[1.3]" />
-            </div>
-            <div className="h-10 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300">
-              <img src="/images/lacroix-logo.webp" alt="Lacroix" className="h-10 w-auto object-contain scale-[1.4]" />
-            </div>
-          </div>
-        </div>
+      {/* Customer References - light teal background for smooth visual flow */}
+      <section className="relative bg-[hsl(180,35%,95%)]">
+        {/* Top gradient overlay for seamless blend */}
+        <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-[hsl(180,35%,95%)] to-transparent pointer-events-none" />
+        <CustomerReferences />
+        {/* Bottom gradient to services section */}
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-[hsl(180,40%,97%)] pointer-events-none" />
       </section>
 
-      {/* Services Section - White background */}
-      <section id="services" className="py-16 relative bg-white">
+      {/* Services Section */}
+      <section id="services" className="py-16 relative" style={{ background: 'var(--section-primary-bg)' }}>
+        <div className="absolute inset-0 bg-gradient-to-b from-[hsl(180,54%,97%)] via-primary/8 to-[hsl(200,20%,98%)] pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-20 animate-fade-in-up">
             <h2 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-bold mb-8 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent px-4">
