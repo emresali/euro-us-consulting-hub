@@ -110,7 +110,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-[500px] md:min-h-[700px] flex items-center justify-center overflow-hidden pt-20 md:pt-24 pb-12 md:pb-16">
+      <section className="relative min-h-[500px] md:min-h-[700px] flex items-center justify-center overflow-hidden pt-28 md:pt-32 pb-12 md:pb-16">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
@@ -186,26 +186,26 @@ const Index = () => {
           
           {/* Trusted By - Floating white container */}
           <div className="mt-10 md:mt-14 mb-4 md:mb-8">
-            <div className="bg-white rounded-xl shadow-[0_2px_12px_rgba(0,0,0,0.08)] border border-black/[0.06] px-6 md:px-12 lg:px-16 py-6 md:py-7 mx-auto max-w-4xl">
-              <div className="flex items-center justify-center gap-4 mb-5">
+            <div className="bg-white rounded-xl shadow-[0_2px_12px_rgba(0,0,0,0.08)] border border-black/5 px-6 md:px-12 lg:px-16 py-5 md:py-6 mx-auto max-w-4xl">
+              <div className="flex items-center justify-center gap-4 mb-4">
                 <div className="h-px w-10 md:w-14 bg-gradient-to-r from-transparent to-gray-300" />
                 <p className="text-xs md:text-sm text-gray-500 font-semibold tracking-[0.2em] uppercase">
                   Trusted by
                 </p>
                 <div className="h-px w-10 md:w-14 bg-gradient-to-l from-transparent to-gray-300" />
               </div>
-              <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10 lg:gap-12">
-                <div className="w-24 h-10 md:w-32 md:h-12 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
-                  <img src="/images/loreal-logo.png" alt="L'Oréal" className="max-w-full max-h-full object-contain scale-[2.6]" />
+              <div className="flex justify-center items-center gap-8 md:gap-12 lg:gap-14">
+                <div className="h-10 md:h-12 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+                  <img src="/images/loreal-logo.png" alt="L'Oréal" className="h-full w-auto object-contain scale-[3]" />
                 </div>
-                <div className="w-24 h-10 md:w-32 md:h-12 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
-                  <img src="/images/dda-consulting-logo.png" alt="DDA Consulting" className="max-w-full max-h-full object-contain scale-[2.6]" />
+                <div className="h-10 md:h-12 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+                  <img src="/images/dda-consulting-logo.png" alt="DDA Consulting" className="h-full w-auto object-contain scale-[3]" />
                 </div>
-                <div className="w-24 h-10 md:w-32 md:h-12 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
-                  <img src="/images/fursie-logo.png" alt="Fürsie" className="max-w-full max-h-full object-contain scale-[1.2]" />
+                <div className="h-10 md:h-12 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+                  <img src="/images/fursie-logo.png" alt="Fürsie" className="h-full w-auto object-contain scale-[1.4]" />
                 </div>
-                <div className="w-24 h-10 md:w-32 md:h-12 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
-                  <img src="/images/lacroix-logo.webp" alt="Lacroix" className="max-w-full max-h-full object-contain scale-[1.3]" />
+                <div className="h-10 md:h-12 flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+                  <img src="/images/lacroix-logo.webp" alt="Lacroix" className="h-full w-auto object-contain scale-[1.5]" />
                 </div>
               </div>
             </div>
