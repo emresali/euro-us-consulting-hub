@@ -1,9 +1,8 @@
 const CustomerReferences = () => {
   const customers = [
-    { name: "L'Oréal", logo: "/images/loreal-logo.png", mobileScale: "scale-125", desktopScale: "md:scale-150" },
-    { name: "DDA Consulting", logo: "/images/dda-consulting-logo.png", mobileScale: "scale-125", desktopScale: "md:scale-150" },
-    { name: "Fürsie", logo: "/images/fursie-logo.png", mobileScale: "scale-[0.6]", desktopScale: "md:scale-75" },
-    { name: "Lacroix", logo: "/images/lacroix-logo.webp", mobileScale: "scale-[0.7]", desktopScale: "md:scale-90" },
+    { name: "L'Oréal", logo: "/images/loreal-logo.png" },
+    { name: "Fürsie", logo: "/images/fursie-logo.png" },
+    { name: "Lacroix", logo: "/images/lacroix-logo.webp" },
   ];
 
   return (
@@ -20,16 +19,16 @@ const CustomerReferences = () => {
           <div className="h-px w-12 md:w-20 bg-gradient-to-l from-transparent to-primary/30" />
         </div>
 
-        <div className="flex flex-wrap justify-center items-center gap-6 md:gap-14 lg:gap-16">
+        <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20 lg:gap-24">
           {customers.map((customer, index) => (
             <div
               key={index}
-              className="w-20 md:w-32 h-8 md:h-12 flex items-center justify-center opacity-40 hover:opacity-70 transition-opacity duration-300"
+              className="h-12 md:h-16 flex items-center justify-center opacity-40 hover:opacity-70 transition-opacity duration-300"
             >
               <img
                 src={customer.logo}
                 alt={customer.name}
-                className={`max-h-full max-w-full object-contain ${customer.mobileScale} ${customer.desktopScale}`}
+                className="h-full w-auto object-contain"
               />
             </div>
           ))}
