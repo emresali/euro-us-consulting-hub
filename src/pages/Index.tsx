@@ -116,7 +116,7 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-[500px] md:min-h-[700px] flex items-center justify-center overflow-hidden py-12 md:py-0">
+      <section className="relative min-h-[550px] md:min-h-[700px] flex items-center justify-center overflow-hidden py-16 md:py-0">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroImage})` }}
@@ -125,26 +125,31 @@ const Index = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(180,54%,57%,0.1),transparent_50%)]" />
         </div>
         
-        
-        {/* Subtle profile image in header - transparent and integrated */}
-        <div className="absolute top-20 right-8 hidden lg:block opacity-20 hover:opacity-30 transition-opacity duration-500 z-10">
-          <img 
-            src={profileHero} 
-            alt="Consultant" 
-            className="w-64 h-64 object-cover rounded-full blur-[2px]"
-          />
-        </div>
-        
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="text-white">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 leading-tight">
-                {t.hero.title}
+              {/* Location Badge - Now at TOP */}
+              <div className="inline-flex items-center gap-2 text-white/70 mb-6">
+                <Globe className="w-4 h-4" />
+                <span className="text-sm font-medium tracking-wide">
+                  {language === 'en' ? 'Based in Germany • EU & US Clients' : 'Standort Deutschland • EU & US Kunden'}
+                </span>
+              </div>
+              
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-[1.1] tracking-tight">
+                {language === 'en' ? (
+                  <>IT Project Leadership<br />That Delivers</>
+                ) : (
+                  <>IT-Projektführung<br />Die Ergebnisse Liefert</>
+                )}
               </h1>
-              <p className="text-base sm:text-lg md:text-xl mb-6 md:mb-8 text-white/90 leading-relaxed">
-                {t.hero.subtitle}
+              <p className="text-base sm:text-lg md:text-xl mb-8 text-white/80 leading-relaxed max-w-xl">
+                {language === 'en' 
+                  ? 'I help organizations execute complex IT initiatives on time and within scope. From ERP migrations to agile transformations - hands-on expertise that bridges strategy and execution.'
+                  : 'Ich unterstütze Organisationen bei der termingerechten Umsetzung komplexer IT-Initiativen. Von ERP-Migrationen bis zu agilen Transformationen - Expertise, die Strategie und Umsetzung verbindet.'
+                }
               </p>
-              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-8 md:mb-12">
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-10">
                 <Button variant="hero" size="lg" asChild>
                   <a href="#services">
                     {t.hero.exploreServices}
@@ -164,29 +169,38 @@ const Index = () => {
                 </Button>
               </div>
               
-              {/* Location Badge - Clean & Simple */}
-              <div className="inline-flex items-center gap-2 text-white/60 mt-4">
-                <Globe className="w-4 h-4" />
-                <span className="text-sm font-medium tracking-wide">
-                  {language === 'en' ? 'Based in Germany • Serving EU & US Clients' : 'Standort Deutschland • EU & US Kunden'}
-                </span>
+              {/* Stats Row */}
+              <div className="flex flex-wrap gap-8 md:gap-12 pt-4 border-t border-white/10">
+                <div>
+                  <p className="text-2xl md:text-3xl font-bold text-white">50+</p>
+                  <p className="text-sm text-white/60">{language === 'en' ? 'Projects Delivered' : 'Projekte geliefert'}</p>
+                </div>
+                <div>
+                  <p className="text-2xl md:text-3xl font-bold text-white">5+ {language === 'en' ? 'Years' : 'Jahre'}</p>
+                  <p className="text-sm text-white/60">{language === 'en' ? 'Experience' : 'Erfahrung'}</p>
+                </div>
+                <div>
+                  <p className="text-2xl md:text-3xl font-bold text-white">8+</p>
+                  <p className="text-sm text-white/60">{language === 'en' ? 'Industries Served' : 'Branchen bedient'}</p>
+                </div>
               </div>
             </div>
             <div className="hidden md:flex justify-center relative">
-              <div className="relative z-10 w-96">
-                <img 
-                  src={profileHero} 
-                  alt="Professional IT Consultant" 
-                  className="rounded-full w-full shadow-2xl border-4 border-white/10"
-                  style={{ boxShadow: 'var(--shadow-elevated)' }}
-                />
-                <div className="absolute -bottom-6 -right-6 bg-primary/90 backdrop-blur-md text-primary-foreground px-6 py-4 rounded-2xl shadow-2xl border border-primary-foreground/20">
-                  <p className="font-bold text-2xl">{t.hero.yearsExperience.split(' ')[0]}</p>
-                  <p className="text-sm font-medium">{t.hero.yearsExperience.split(' ').slice(1).join(' ')}</p>
+              <div className="relative z-10 w-80 lg:w-96">
+                <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-3 border border-white/10">
+                  <img 
+                    src={profileHero} 
+                    alt="Professional IT Consultant" 
+                    className="rounded-xl w-full shadow-2xl"
+                  />
+                </div>
+                <div className="absolute -bottom-4 right-4 bg-white/95 backdrop-blur-md text-foreground px-5 py-3 rounded-xl shadow-2xl">
+                  <p className="font-bold text-lg text-foreground">{t.hero.yearsExperience.split(' ')[0]}</p>
+                  <p className="text-xs text-foreground/70 font-medium">{t.hero.yearsExperience.split(' ').slice(1).join(' ')}</p>
                 </div>
               </div>
-              <div className="absolute -bottom-12 -left-12 w-80 h-80 bg-primary/20 rounded-full blur-3xl" />
-              <div className="absolute -top-12 -right-12 w-80 h-80 bg-accent/20 rounded-full blur-3xl" />
+              <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-primary/20 rounded-full blur-3xl" />
+              <div className="absolute -top-12 -right-12 w-64 h-64 bg-accent/20 rounded-full blur-3xl" />
             </div>
           </div>
         </div>
