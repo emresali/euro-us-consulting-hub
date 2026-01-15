@@ -125,6 +125,15 @@ const Index = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,hsl(180,54%,57%,0.1),transparent_50%)]" />
         </div>
         
+        {/* Subtle profile image in header - transparent and integrated */}
+        <div className="absolute top-20 right-8 hidden lg:block opacity-20 hover:opacity-30 transition-opacity duration-500 z-10">
+          <img 
+            src={profileHero} 
+            alt="Consultant" 
+            className="w-64 h-64 object-cover rounded-full blur-[2px]"
+          />
+        </div>
+        
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="text-white">
