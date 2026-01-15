@@ -1,8 +1,8 @@
 const CustomerReferences = () => {
   const customers = [
-    { name: "L'Oréal", logo: "/images/loreal-logo.png", size: "h-28 md:h-40" },
-    { name: "Fürsie", logo: "/images/fursie-logo-new.png", size: "h-16 md:h-24" },
-    { name: "Lacroix", logo: "/images/lacroix-logo.webp", size: "h-16 md:h-24" },
+    { name: "L'Oréal", logo: "/images/loreal-logo.png", size: "h-36 md:h-52" },
+    { name: "Fürsie", logo: "/images/fursie-logo-new.png", size: "h-12 md:h-16" },
+    { name: "Lacroix", logo: "/images/lacroix-logo.webp", size: "h-12 md:h-16" },
   ];
 
   return (
