@@ -202,10 +202,6 @@ const Index = () => {
                   className="rounded-full w-full shadow-2xl border-4 border-white/10"
                   style={{ boxShadow: 'var(--shadow-elevated)' }}
                 />
-                <div className="absolute -bottom-6 -right-6 bg-white/95 backdrop-blur-md text-foreground px-6 py-4 rounded-2xl shadow-2xl">
-                  <p className="font-bold text-2xl text-foreground">{t.hero.yearsExperience.split(' ')[0]}</p>
-                  <p className="text-sm text-foreground/70 font-medium">{t.hero.yearsExperience.split(' ').slice(1).join(' ')}</p>
-                </div>
               </div>
               <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-primary/20 rounded-full blur-3xl" />
               <div className="absolute -top-12 -right-12 w-64 h-64 bg-accent/20 rounded-full blur-3xl" />
