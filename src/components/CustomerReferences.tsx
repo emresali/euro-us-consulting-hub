@@ -1,8 +1,8 @@
 const CustomerReferences = () => {
   const customers = [
-    { name: "L'Oréal", logo: "/images/loreal-logo.png", size: "h-36 md:h-52" },
-    { name: "Fürsie", logo: "/images/fursie-logo-new.png", size: "h-12 md:h-16" },
-    { name: "Lacroix", logo: "/images/lacroix-logo.webp", size: "h-12 md:h-16" },
+    { name: "L'Oréal", logo: "/images/loreal-logo.png", size: "h-36 md:h-52", extra: "" },
+    { name: "Fürsie", logo: "/images/fursie-logo-new.png", size: "h-12 md:h-16", extra: "" },
+    { name: "Lacroix", logo: "/images/lacroix-logo.webp", size: "h-10 md:h-12", extra: "-translate-y-1" },
   ];
 
   return (
@@ -23,7 +23,7 @@ const CustomerReferences = () => {
           {customers.map((customer, index) => (
             <div
               key={index}
-              className={`${customer.size} flex items-center justify-center opacity-40 hover:opacity-70 transition-opacity duration-300`}
+              className={`${customer.size} ${customer.extra} flex items-center justify-center opacity-40 hover:opacity-70 transition-opacity duration-300`}
             >
               <img
                 src={customer.logo}
